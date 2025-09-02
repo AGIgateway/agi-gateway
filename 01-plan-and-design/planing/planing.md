@@ -5,16 +5,23 @@
 3. BD - [aeccglobal](https://aeccglobal.com.bd/)
 4. IN - [shiksha](https://www.shiksha.com/)
 5. NP - [ausstudies](https://ausstudies.com/)
+6. [Crimson](https://www.crimsoneducation.org/nz/)
+7. [nzgateway](https://nzgateway.co.in/)
 
 
 ## Landing Page Common Setup
 
 1. Header
-    -
-    -
+- Home
+- Services
+- University
+- Study in New Zealand
+  - 
+
+
 
 2. Banner
-    - 3 banners -> 
+    - 3 banners -> Hasib
 3. Services Banner 
     - Visa
     - Offer Letters
@@ -28,7 +35,7 @@
 7. Teams Banner  / Advisory Banner
 8. Testomonial Banner
 9.  Book a Free Consultation Banner
-10. FAQ Banner
+10.  FAQ Banner
 11.  Contacts 
 12.  Footer
 
@@ -60,7 +67,7 @@
 8. Self accessment form > tell us about your back ground
 9. Add for About Us [choiceNZ](https://choicenewzealand.nz/about-us/)
 10. Map like nz gateway
-11. Contact form like [Crimson](https://www.crimsoneducation.org/nz/campaign/book-a-consult-nz/?utm_source=p_search&utm_medium=ga_ppc&utm_campaign=NZ_core_2024-11-26_search_crimson-education-branded_contact&utm_term=crimson%20education&gad_source=1&gad_campaignid=21950816117#form-builder-section)\
+11. Contact form like [Crimson](https://www.crimsoneducation.org/nz)
 
 ## Figma Collabration
 
