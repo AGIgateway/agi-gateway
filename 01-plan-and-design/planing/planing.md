@@ -10,8 +10,18 @@
 ## Landing Page Common Setup
 
 1. Header
+    -
+    -
+
 2. Banner
+    - 3 banners -> 
 3. Services Banner 
+    - Visa
+    - Offer Letters
+    - Test prep
+    - Self Assessment 
+    - Airport Pick up
+    - Translationn
 4. Study Location Banner
 5. Test Prep Banner
 6. Universties/ Contries Banner

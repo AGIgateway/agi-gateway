@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Global Colors */
+    --global-bg-1: #00000019;
+    --global-bg-2: #034e44;
+    --global-bg-3: #034e4475;
+    --global-bg-4: #e8f5e9;
+    --global-bg-5: #ede9d0;
+    --global-bg-6: #f5f7f9;
+    --global-bg-7: #ffffff;
+    --global-bg-8: #ffffff33;
+    --global-text-1: #034e44;
+    --global-text-2: #18191f;
+    --global-text-3: #4d4d4d;
+    --global-text-4: #717171;
+    --global-text-5: #88939e;
+    --global-text-6: #e8e8e3;
+    --global-text-7: #ffffff;
+
+    /* Header Colors */
+    --header-text-1: #ffffff;
+
+    /* Footer Colors */
+    --footer-bg-1: #263238;
+    --footer-text-1: #263238;
+    --footer-text-2: #d9dbe1;
+    --footer-text-3: #f5f7f9;
+  }
+}
+
+@layer utilities {
+  /* Global */
+  .bg-global-1 {
+    background-color: var(--global-bg-1);
+  }
+  .bg-global-2 {
+    background-color: var(--global-bg-2);
+  }
+  .bg-global-3 {
+    background-color: var(--global-bg-3);
+  }
+  .bg-global-4 {
+    background-color: var(--global-bg-4);
+  }
+  .bg-global-5 {
+    background-color: var(--global-bg-5);
+  }
+  .bg-global-6 {
+    background-color: var(--global-bg-6);
+  }
+  .bg-global-7 {
+    background-color: var(--global-bg-7);
+  }
+  .bg-global-8 {
+    background-color: var(--global-bg-8);
+  }
+  .text-global-1 {
+    color: var(--global-text-1);
+  }
+  .text-global-2 {
+    color: var(--global-text-2);
+  }
+  .text-global-3 {
+    color: var(--global-text-3);
+  }
+  .text-global-4 {
+    color: var(--global-text-4);
+  }
+  .text-global-5 {
+    color: var(--global-text-5);
+  }
+  .text-global-6 {
+    color: var(--global-text-6);
+  }
+  .text-global-7 {
+    color: var(--global-text-7);
+  }
+
+  /* Header */
+  .text-header-1 {
+    color: var(--header-text-1);
+  }
+
+  /* Footer */
+  .bg-footer-1 {
+    background-color: var(--footer-bg-1);
+  }
+  .text-footer-1 {
+    color: var(--footer-text-1);
+  }
+  .text-footer-2 {
+    color: var(--footer-text-2);
+  }
+  .text-footer-3 {
+    color: var(--footer-text-3);
+  }
+}
