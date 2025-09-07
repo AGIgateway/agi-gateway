@@ -28,7 +28,8 @@
     - Test prep
     - Self Assessment 
     - Airport Pick up
-    - Translationn
+    - Translation
+
 4. Study Location Banner
 5. Test Prep Banner
 6. Universties/ Contries Banner

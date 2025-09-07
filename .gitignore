@@ -21,6 +21,9 @@ Thumbs.db
 coverage/
 jest-test-results.json
 
+# Environment files
+.env
+
 # Optional: if using IDEs
 .vscode/
 .idea/
