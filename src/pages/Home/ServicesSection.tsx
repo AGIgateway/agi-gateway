@@ -12,21 +12,39 @@ const ServicesSection: React.FC = () => {
     {
       id: '1',
       icon: '/images/img_icon.svg',
-      title: 'Offer letter',
+      title: 'Course Guidance',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
     },
     {
       id: '2',
       icon: '/images/img_icon_green_50.svg',
-      title: 'Study Prep',
+      title: 'Admission Support',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
     },
     {
       id: '3',
       icon: '/images/img_icon_green_50_56x64.svg',
-      title: 'Visa Assistance',
+      title: 'Test Preparation',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
-    }
+    },
+    {
+      id: '4',
+      icon: '/images/img_icon_green_50_56x64.svg',
+      title: 'Visa Support',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
+    },
+    {
+      id: '5',
+      icon: '/images/img_icon.svg',
+      title: 'Pre-Departure Services',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
+    },
+    {
+      id: '6',
+      icon: '/images/img_icon_green_50.svg',
+      title: 'Career & Future Pathways',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad '
+    },
   ];
 
   return (
