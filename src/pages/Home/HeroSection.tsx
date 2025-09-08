@@ -46,10 +46,10 @@ const HeroSection: React.FC = () => {
                   <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[30px] w-full lg:w-[56%] text-center lg:text-left">
                     <div className="flex flex-col gap-3 sm:gap-4 lg:gap-[18px]">
                       <h1 className="text-[32px] sm:text-[48px] lg:text-[64px] font-semibold leading-tight text-global-3">
-                        We are here to assist with your Dreams
+                        We Connect Brillient Minds with World Class Education
                       </h1>
                       <p className="text-sm sm:text-base font-normal leading-5 text-global-4">
-                        Empowering Students to Study in New Zealand
+                        Empowering  Students to Study in New Zealand
                       </p>
                     </div>
                     <Button
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
                   {/* Image */}
                   <div className="w-full lg:w-[28%] flex justify-center">
                     <img
-                      src="/images/img_illustration.svg"
+                      src="/images/img_headshot.png"
                       alt="Educational illustration"
                       className="w-[280px] sm:w-[320px] lg:w-[390px] h-[290px] sm:h-[330px] lg:h-[406px] object-contain"
                     />
