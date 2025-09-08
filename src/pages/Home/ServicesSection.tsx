@@ -39,17 +39,17 @@ const ServicesSection: React.FC = () => {
               Our Services
             </h2>
           </div>
-          
+
           {/* Services Grid */}
-          <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[126px] px-0 lg:px-[144px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-8 lg:px-12">
             {services.map((service) => (
-              <div 
+              <div
                 key={service.id}
-                className="flex flex-col gap-2 items-center w-full lg:w-[298px] bg-global-7 rounded-lg shadow-[0px_2px_4px_#abbed133] p-4 sm:p-6 lg:p-[24px]"
+                className="flex flex-col gap-2 items-center w-full bg-global-7 rounded-lg shadow-[0px_2px_4px_#abbed133] p-4 sm:p-6 lg:p-[24px]"
               >
                 <div className="flex flex-col gap-3 sm:gap-4 lg:gap-[16px] items-center px-8 sm:px-12 lg:px-[56px]">
-                  <img 
-                    src={service.icon} 
+                  <img
+                    src={service.icon}
                     alt={service.title}
                     className="w-12 sm:w-14 lg:w-[64px] h-10 sm:h-12 lg:h-[56px] object-contain"
                   />

@@ -12,11 +12,11 @@
 ## Landing Page Common Setup
 
 1. Header
-- Home
-- Services
-- University
-- Study in New Zealand
-  - 
+   - Home
+   - Services
+   - Universities
+   - Study in New Zealand
+     - 
 
 
 
