@@ -33,6 +33,8 @@
 4. Study Location Banner
 5. Test Prep Banner
 6. Universties/ Contries Banner
+    - Ara Logo
+    - 
 7. Teams Banner  / Advisory Banner
 8. Testomonial Banner
 9.  Book a Free Consultation Banner

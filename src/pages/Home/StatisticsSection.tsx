@@ -49,19 +49,18 @@ const StatisticsSection: React.FC = () => {
               We reached here with our hard work and dedication
             </p>
           </div>
-          
+
           {/* Statistics Grid */}
           <div className="w-full lg:w-[46%]">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-[16px]">
               {statistics.map((stat, index) => (
-                <div 
+                <div
                   key={stat.id}
-                  className={`flex gap-3 sm:gap-4 lg:gap-[16px] items-center ${
-                    index % 2 === 0 ? 'justify-start' : 'justify-start sm:justify-end'
-                  }`}
+                  className={`flex gap-3 sm:gap-4 lg:gap-[16px] items-center ${index % 2 === 0 ? 'justify-start' : 'justify-start sm:justify-end'
+                    }`}
                 >
-                  <img 
-                    src={stat.icon} 
+                  <img
+                    src={stat.icon}
                     alt={stat.label}
                     className="w-10 sm:w-12 lg:w-[48px] h-10 sm:h-12 lg:h-[48px] object-contain flex-shrink-0"
                   />
