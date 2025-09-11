@@ -1,13 +1,13 @@
 import React, { Suspense } from 'react';
-import Header from '../../components/common/Header';
-import Footer from '../../components/common/Footer';
+import Header from '../layouts/Header/Header';
+import Footer from '../layouts/Footer/Footer';
 import HeroSection from './HeroSection';
-import ServicesSection from './ServicesSection';
-import UniversityPartnersSection from './UniversityPartnersSection';
-import WhyChooseUsSection from './WhyChooseUsSection';
+import ServicesSection from '../landing/ServicesSection';
+import UniversityPartnersSection from '../landing/UniversityPartnersSection';
+import WhyChooseUsSection from '../landing/WhyChooseUsSection';
 import StatisticsSection from './StatisticsSection';
-import SelfAssessmentSection from './SelfAssessmentSection';
-import TestimonialSection from './TestimonialSection';
+import SelfAssessmentSection from '../landing/SelfAssessmentSection';
+import TestimonialSection from '../landing/TestimonialSection';
 import BlogSection from './BlogSection';
 
 // Section data for better organization and maintainability

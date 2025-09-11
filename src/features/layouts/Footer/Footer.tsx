@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../ui/Button';
+import Button from '../../shared/ui/Button';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');

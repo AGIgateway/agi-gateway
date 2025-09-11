@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../ui/Button';
+import Button from '../../shared/ui/Button';
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
