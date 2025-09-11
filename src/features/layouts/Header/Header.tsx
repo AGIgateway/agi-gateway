@@ -1,92 +1,141 @@
-import React, { useState } from 'react';
-import Button from '../../shared/ui/Button';
+import React, { useState, useEffect, useRef } from 'react';
+import Button from '@/features/shared/ui/Button';
+import LogoLight from '@/assets/global/logo_light.svg';
+import LogoText from '@/assets/global/logo_text_light.svg';
+
+interface NavItem {
+  name: string;
+  active: boolean;
+}
+
+const NAV_ITEMS: NavItem[] = [
+  { name: 'Home', active: true },
+  { name: 'Services', active: false },
+  { name: 'Universities', active: false },
+  { name: 'Study in New Zealand', active: false },
+];
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
 
-  // Navigation items data
-  const navItems = [
-    { name: 'Home', active: true },
-    { name: 'Services', active: false },
-    { name: 'Universities', active: false },
-    { name: 'Study in New Zealand', active: false },
-    // { name: 'Resources', active: false },
-  ];
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuOpen]);
 
   return (
-    <header className="w-full bg-global-5 border border-black border-solid">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 sm:py-5 lg:py-[18px]">
+    <header
+      className="w-full border border-black bg-global-5"
+      role="banner"
+      aria-label="Site header"
+    >
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-4 sm:py-5 lg:py-5">
           {/* Logo Section */}
           <div className="flex items-center">
             <div className="flex items-center gap-3 sm:gap-4">
-              {/* Logo */}
-              <div className="relative w-[30px] h-[30px] flex items-center justify-center">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/favicon.svg"
+                  src={LogoLight}
                   alt="AGI Gateway Logo"
-                  className="w-full h-full object-contain"
+                  className="h-full w-full object-contain"
+                  loading="eager"
+                  width={32}
+                  height={32}
                 />
               </div>
-
-              {/* Logo Text */}
               <img
-                src="/images/img_group.svg"
+                src={LogoText}
                 alt="AGI Gateway"
-                className="w-[120px] sm:w-[150px] lg:w-[170px] h-[18px]"
+                className="h-5 w-32 sm:w-40 lg:w-44"
+                loading="eager"
+                width={176}
+                height={20}
               />
             </div>
           </div>
 
-          {/* Hamburger Menu Icon (Mobile only) */}
+          {/* Mobile Hamburger Button */}
           <button
-            className="block lg:hidden p-2"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            type="button"
+            className="block rounded p-2 lg:hidden focus:outline-none focus:ring-2 focus:ring-global-2"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
+            aria-controls="main-nav"
             onClick={toggleMenu}
           >
-            <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-5 h-0.5 bg-global-2 mb-1 transition-transform ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-              <span className={`block w-5 h-0.5 bg-global-2 mb-1 ${menuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`block w-5 h-0.5 bg-global-2 transition-transform ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+            <div className="flex h-6 w-6 flex-col items-center justify-center">
+              <span
+                className={`block h-0.5 w-5 bg-global-2 transition-transform ${menuOpen
+                  ? 'rotate-45 translate-y-1.5'
+                  : 'mb-1'
+                  }`}
+              />
+              <span
+                className={`block h-0.5 w-5 bg-global-2 transition-opacity ${menuOpen ? 'opacity-0' : 'my-1'}`}
+              />
+              <span
+                className={`block h-0.5 w-5 bg-global-2 transition-transform ${menuOpen
+                  ? '-rotate-45 -translate-y-1.5'
+                  : ''
+                  }`}
+              />
             </div>
           </button>
 
           {/* Navigation Menu */}
           <nav
-            className={`${menuOpen ? 'block' : 'hidden'} lg:block absolute lg:relative top-full lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-global-5 lg:bg-transparent z-50 lg:z-auto`}
+            id="main-nav"
+            ref={navRef}
+            className={`${menuOpen ? 'block animate-fadeIn' : 'hidden'} 
+              absolute left-0 top-full z-50 w-full bg-global-5 
+              lg:relative lg:top-auto lg:left-auto lg:block lg:w-auto lg:bg-transparent lg:z-0
+              transition-all duration-300 ease-in-out`}
             aria-label="Main navigation"
+            role="navigation"
           >
-            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-5 p-4 lg:p-0">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  role="menuitem"
-                  className={`text-sm sm:text-base font-${item.active ? 'medium' : 'normal'} text-global-2 hover:text-opacity-80 transition-colors w-full lg:w-auto text-center lg:text-left py-2 lg:py-0`}
-                  onClick={closeMenu}
-                >
-                  {item.name}
-                </button>
+            <ul className="flex flex-col items-center gap-4 p-4 lg:flex-row lg:gap-5 lg:p-0">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.name} className="w-full lg:w-auto">
+                  <button
+                    type="button"
+                    role="menuitem"
+                    aria-current={item.active ? 'page' : undefined}
+                    className={`w-full rounded px-4 py-2 text-center text-sm font-${item.active ? 'medium' : 'normal'} text-global-2 transition-colors hover:text-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-global-2 sm:text-base lg:w-auto lg:px-0 lg:py-0 lg:text-left`}
+                    onClick={closeMenu}
+                  >
+                    {item.name}
+                  </button>
+                </li>
               ))}
 
-              {/* Contact Button */}
-              <Button
-                variant="primary"
-                size="small"
-                className="bg-global-2 text-global-7 rounded-md px-4 py-2 sm:px-5 sm:py-2.5 text-sm font-medium w-full lg:w-auto mt-2 lg:mt-0"
-                onClick={closeMenu}
-              >
-                Get Started
-              </Button>
-            </div>
+              <li className="mt-2 w-full lg:mt-0 lg:w-auto">
+                <Button
+                  variant="primary"
+                  size="small"
+                  className="w-full rounded-md bg-global-2 px-4 py-2 text-sm font-medium text-global-7 sm:px-5 sm:py-2.5 lg:w-auto"
+                  onClick={closeMenu}
+                >
+                  Get Started
+                </Button>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>

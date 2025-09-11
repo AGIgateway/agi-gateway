@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../shared/ui/Button';
+import Button from '@/features/shared/ui/Button';
 
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

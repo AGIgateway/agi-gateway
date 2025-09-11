@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../shared/ui/Button';
+import LogoDark from '@/assets/global/logo_dark.svg';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -82,7 +83,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col items-start gap-3 sm:gap-4 lg:gap-3 w-full lg:w-[32%]">
               <div className="mt-12 sm:mt-16 lg:mt-[0px] mb-6 sm:mb-8 lg:mb-[32px]">
                 <img
-                  src="/images/img_group_2229.svg"
+                  src={LogoDark}
                   alt="AGI Gateway Logo"
                   className="w-[80px] sm:w-[90px] lg:w-[106px] h-[82px] sm:w-[95px] lg:h-[110px]"
                 />

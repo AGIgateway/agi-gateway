@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react';
-import Header from '../layouts/Header/Header';
-import Footer from '../layouts/Footer/Footer';
-import HeroSection from './HeroSection';
-import ServicesSection from '../landing/ServicesSection';
-import UniversityPartnersSection from '../landing/UniversityPartnersSection';
-import WhyChooseUsSection from '../landing/WhyChooseUsSection';
+import Header from '@/features/layouts/Header/Header';
+import Footer from '@/features/layouts/Footer/Footer';
+import HeroSection from '@/features/landing/HeroSection';
+import ServicesSection from '@/features/landing/ServicesSection';
+import UniversityPartnersSection from '@/features/landing/UniversityPartnersSection';
+import WhyChooseUsSection from '@/features/landing/WhyChooseUsSection';
 import StatisticsSection from './StatisticsSection';
-import SelfAssessmentSection from '../landing/SelfAssessmentSection';
-import TestimonialSection from '../landing/TestimonialSection';
-import BlogSection from './BlogSection';
+import SelfAssessmentSection from '@/features/landing/SelfAssessmentSection';
+import TestimonialSection from '@/features/landing/TestimonialSection';
+import BlogSection from '@/features/landing/BlogSection';
 
 // Section data for better organization and maintainability
 const sections = [

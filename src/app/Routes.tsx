@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import page components
-import HomePage from '../features/landing';
+import HomePage from '@/features/landing';
 
 const AppRoutes = () => {
   return (
