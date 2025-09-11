@@ -1,113 +1,183 @@
-import React, { useState } from 'react';
+// src/components/sections/HeroSection.tsx
+import React, { useState, useCallback } from 'react';
 import Button from '@/features/shared/ui/Button';
+import BannerImage from '@/assets/images/banner-img.svg';
+
+const SLIDES = [
+  {
+    id: 0,
+    title: "We Connect Brilliant Minds with World Class Education",
+    description: "Empowering Students to Study in New Zealand",
+  },
+  {
+    id: 1,
+    title: "We Connect Brilliant Minds with World Class Education",
+    description: "Empowering Students to Study in New Zealand",
+  },
+];
+
+// Sub-components unchanged (already responsive)
+const SlideDot: React.FC<{
+  index: number;
+  isActive: boolean;
+  onClick: () => void;
+  onKeyDown: (e: React.KeyboardEvent) => void;
+}> = ({ index, isActive, onClick, onKeyDown }) => (
+  <button
+    key={index}
+    onClick={onClick}
+    onKeyDown={onKeyDown}
+    className={`h-2.5 w-2.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-global-2 ${isActive ? 'bg-global-2' : 'bg-global-3/60'
+      }`}
+    aria-label={`Go to slide ${index + 1}`}
+    aria-selected={isActive}
+    role="tab"
+    tabIndex={isActive ? 0 : -1}
+  />
+);
+
+const NavigationButton: React.FC<{
+  direction: 'prev' | 'next';
+  onClick: () => void;
+  ariaLabel: string;
+}> = ({ direction, onClick, ariaLabel }) => (
+  <button
+    onClick={onClick}
+    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-global-2 transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-global-2"
+    aria-label={ariaLabel}
+  >
+    <svg
+      className="h-5 w-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d={direction === 'prev' ? 'M15 19l-7-7 7-7' : 'M9 5l7 7-7 7'}
+      />
+    </svg>
+  </button>
+);
 
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 3;
+  const totalSlides = SLIDES.length;
 
-  // Uncomment and use if you have dynamic slide content
-  // const slides = [
-  //   { title: "...", desc: "...", img: "..." },
-  //   ...
-  // ];
-
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-  };
+  }, [totalSlides]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  };
+  }, [totalSlides]);
 
-  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      setCurrentSlide(index);
-    }
-  };
+  const goToSlide = useCallback((index: number) => {
+    setCurrentSlide(index);
+  }, []);
+
+  const handleKeyDown = useCallback(
+    (index: number) => (e: React.KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        goToSlide(index);
+      }
+    },
+    [goToSlide]
+  );
+
+  const currentSlideData = SLIDES[currentSlide];
 
   return (
-    <section className="w-full bg-global-5" aria-label="Hero section">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-8 sm:gap-10 lg:gap-[66px]">
-          <div className="bg-global-5 rounded-2xl overflow-hidden relative">
-            {/* Slider Container */}
-            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[546px]">
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(/images/img_fb_cover_01_1.png)` }}
-                aria-hidden="true"
-              ></div>
+    <section
+      className="w-full bg-global-5"
+      aria-label="Hero section"
+      role="region"
+    >
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
+        <div className="flex flex-col gap-8 sm:gap-10 lg:gap-16">
+          <div className="overflow-hidden rounded-2xl bg-global-5">
+            <div className="relative w-full pb-[56.25%] sm:pb-[50%] lg:pb-[40%]">
 
-              {/* Content */}
-              <div className="flex items-center justify-center w-full h-full px-4 sm:px-6 lg:px-[56px]">
-                <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 w-full max-w-[1328px]">
-                  {/* Text */}
-                  <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[30px] w-full lg:w-[56%] text-center lg:text-left">
-                    <div className="flex flex-col gap-3 sm:gap-4 lg:gap-[18px]">
-                      <h1 className="text-[32px] sm:text-[48px] lg:text-[64px] font-semibold leading-tight text-global-3">
-                        We Connect Brillient Minds with World Class Education
+              {/* Background Image */}
+              <img
+                src="/images/img_fb_cover_01_1.png"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full -z-10 object-cover"
+                loading="eager"
+                decoding="async"
+              />
+
+              {/* Content — absolutely positioned inside padding-box */}
+              <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-14">
+                <div className="flex w-full max-w-screen-xl flex-col items-center gap-8 lg:flex-row lg:gap-12">
+                  {/* Text Section — width controlled by flex grow/shrink or % */}
+                  <div className="flex w-full flex-col items-center gap-6 text-center lg:w-3/5 lg:items-start lg:text-left">
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-3xl font-semibold leading-tight text-global-3 sm:text-4xl md:text-5xl lg:text-6xl">
+                        {currentSlideData.title}
                       </h1>
-                      <p className="text-sm sm:text-base font-normal leading-5 text-global-4">
-                        Empowering  Students to Study in New Zealand
+                      <p className="text-sm font-normal leading-5 text-global-4 sm:text-base md:text-lg">
+                        {currentSlideData.description}
                       </p>
                     </div>
+
                     <Button
                       variant="primary"
                       size="medium"
-                      className="bg-global-2 text-global-7 rounded px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-medium w-full sm:w-auto"
+                      className="w-full rounded bg-global-2 px-6 py-3 text-sm font-medium text-global-7 transition-colors hover:bg-opacity-90 sm:w-auto sm:px-8 sm:py-3.5 sm:text-base"
                       aria-label="Book a free consultation"
                     >
                       Book a Free Consultation
                     </Button>
                   </div>
 
-                  {/* Image */}
-                  <div className="w-full lg:w-[28%] flex justify-center">
-                    <img
-                      src="/images/img_headshot.png"
-                      alt="Educational illustration"
-                      className="w-[280px] sm:w-[320px] lg:w-[390px] h-[290px] sm:h-[330px] lg:h-[406px] object-contain"
-                    />
+                  <div className="flex w-full justify-center lg:w-2/5">
+                    <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-[1/1.1]">
+                      <img
+                        src={BannerImage}
+                        alt="Educational illustration of students and globe"
+                        className="h-full w-full object-contain"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Slider Controls — ABSOLUTE */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-10">
-                <button
+              {/* Slider Controls — positioned relative to container */}
+              <div
+                className="absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-3"
+                role="tablist"
+                aria-label="Slider navigation"
+              >
+                <NavigationButton
+                  direction="prev"
                   onClick={prevSlide}
-                  className="p-2 rounded-full hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-global-2"
-                  aria-label="Previous slide"
-                >
-                  <svg className="w-5 h-5 text-global-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
+                  ariaLabel="Previous slide"
+                />
 
-                <div className="flex gap-2" role="tablist" aria-label="Slider navigation">
-                  {Array.from({ length: totalSlides }).map((_, index) => (
-                    <button
+                <div className="flex gap-2">
+                  {SLIDES.map((_, index) => (
+                    <SlideDot
                       key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      onKeyDown={(e) => handleKeyDown(e, index)}
-                      className={`w-2.5 h-2.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-global-2 ${index === currentSlide ? 'bg-global-2' : 'bg-global-3/60'}`}
-                      aria-label={`Go to slide ${index + 1}`}
-                      aria-selected={index === currentSlide}
-                      role="tab"
+                      index={index}
+                      isActive={index === currentSlide}
+                      onClick={() => goToSlide(index)}
+                      onKeyDown={handleKeyDown(index)}
                     />
                   ))}
                 </div>
 
-                <button
+                <NavigationButton
+                  direction="next"
                   onClick={nextSlide}
-                  className="p-2 rounded-full hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-global-2"
-                  aria-label="Next slide"
-                >
-                  <svg className="w-5 h-5 text-global-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
+                  ariaLabel="Next slide"
+                />
               </div>
             </div>
           </div>
