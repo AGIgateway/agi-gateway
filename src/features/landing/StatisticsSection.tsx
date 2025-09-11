@@ -17,7 +17,7 @@ const StatisticsSection: React.FC = () => {
     },
     {
       id: '2',
-      icon: '/images/img_icon_teal_900_02_48x48.svg',
+      icon: '/images/img_hand_icon.jpg',
       value: '46,328',
       label: 'Universities'
     },

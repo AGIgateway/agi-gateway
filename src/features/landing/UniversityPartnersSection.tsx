@@ -25,12 +25,12 @@ const UniversityLogo: React.FC<UniversityLogoProps> = ({ university }) => {
 
 const UniversityPartnersSection: React.FC = () => {
   const universities: University[] = [
-    { id: '1', logo: '/images/img_mask_group.svg', name: 'AGI Gateway Partner University' },
-    { id: '2', logo: '/images/img_lincoln_univers.png', name: 'Lincoln University' },
-    { id: '3', logo: '/images/img_university_of_a.png', name: 'University of Auckland' },
-    { id: '4', logo: '/images/img_images_1_1.png', name: 'Massey University' },
-    { id: '5', logo: '/images/img_shield_1.png', name: 'Victoria University of Wellington' },
-    { id: '6', logo: '/images/img_untitled_3_1.png', name: 'University of Otago' },
+    { id: '1', logo: '/images/img_ara.svg', name: 'Ara Institute' },
+    { id: '2', logo: '/images/img_mask_group.svg', name: 'University of Canterbury' },
+    { id: '3', logo: '/images/img_lincoln_univers.png', name: 'Lincoln University' },
+    { id: '4', logo: '/images/img_university_of_a.png', name: 'University of Auckland' },
+    { id: '5', logo: '/images/img_images_1_1.png', name: 'Massey University' },
+    { id: '6', logo: '/images/img_shield_1.png', name: 'Victoria University of Wellington' },
   ];
 
   return (
@@ -47,7 +47,7 @@ const UniversityPartnersSection: React.FC = () => {
             University Partners
           </h2>
           <p className="text-sm sm:text-base font-normal leading-relaxed text-global-4 max-w-3xl mx-auto">
-            We have been working with New Zealand’s top universities to help students achieve their academic dreams.
+            We are working with New Zealand’s top universities
           </p>
         </div>
 
