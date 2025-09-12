@@ -27,7 +27,7 @@ const UniversityPartnersSection: React.FC = () => {
   const universities: University[] = [
     { id: '1', logo: '/images/img_ara.svg', name: 'Ara Institute' },
     { id: '2', logo: '/images/img_mask_group.svg', name: 'University of Canterbury' },
-    { id: '3', logo: '/images/img_lincoln_univers.png', name: 'Lincoln University' },
+    { id: '3', logo: '/images/img_lincoln_logo.svg', name: 'Lincoln University' },
     { id: '4', logo: '/images/img_university_of_a.png', name: 'University of Auckland' },
     { id: '5', logo: '/images/img_images_1_1.png', name: 'Massey University' },
     { id: '6', logo: '/images/img_shield_1.png', name: 'Victoria University of Wellington' },
