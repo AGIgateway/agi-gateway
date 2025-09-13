@@ -11,59 +11,64 @@ const TestimonialSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-global-5">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0 py-6 sm:py-8 lg:py-[32px]">
+    <section className="w-full bg-global-5 py-8 sm:py-10 lg:py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Testimonial Image */}
-          <div className="w-full lg:w-auto flex justify-center lg:justify-start ml-0 lg:ml-[24px]">
-            <img 
-              src="/images/img_image_9.png" 
-              alt="Testimonial person" 
-              className="w-[280px] sm:w-[300px] lg:w-[326px] h-[280px] sm:h-[300px] lg:h-[326px] object-cover rounded-lg"
+          <div className="flex justify-center lg:justify-start w-full lg:w-auto">
+            <img
+              src="/images/img_image_9.png"
+              alt="Testimonial person"
+              className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[326px] h-auto rounded-lg object-cover shadow-md"
+              loading="lazy"
+              decoding="async"
             />
           </div>
-          
+
           {/* Testimonial Content */}
-          <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[30px] w-full lg:w-[66%] text-center lg:text-left mr-0 lg:mr-[24px]">
-            <div className="flex flex-col gap-3 sm:gap-4 lg:gap-[16px]">
-              <p className="text-sm sm:text-base font-medium leading-6 text-global-4">
+          <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-2/3 text-center lg:text-left">
+            <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+              <p className="text-sm sm:text-base font-medium leading-relaxed text-global-4">
                 Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
               </p>
-              <div className="flex flex-col gap-2 sm:gap-3 lg:gap-[10px]">
+
+              <div className="flex flex-col gap-2 sm:gap-3 lg:gap-3">
                 <h3 className="text-lg sm:text-xl font-semibold leading-tight text-global-1">
                   Tim Smith
                 </h3>
-                <p className="text-sm sm:text-base font-normal leading-5 text-global-5">
+                <p className="text-sm sm:text-base font-normal leading-relaxed text-global-5">
                   British Dragon Boat Racing Association
                 </p>
               </div>
             </div>
-            
+
             {/* Testimonial Navigation */}
-            <div className="flex justify-center lg:justify-between items-center gap-4 lg:gap-0">
-              <div className="flex justify-center lg:justify-between items-center gap-2 sm:gap-3 lg:gap-0 flex-wrap lg:flex-nowrap">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-0">
+              {/* Logo Grid */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4">
                 {testimonialLogos.map((logo) => (
-                  <div 
+                  <div
                     key={logo.id}
-                    className={`${logo.bgColor} rounded-lg p-2 lg:p-0 w-10 h-10 sm:w-12 sm:h-12 lg:w-[48px] lg:h-[48px] flex items-center justify-center`}
+                    className={`${logo.bgColor} rounded-lg p-2 lg:p-3 w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 flex items-center justify-center`}
                   >
-                    <img 
-                      src={logo.src} 
+                    <img
+                      src={logo.src}
                       alt="Company logo"
-                      className="w-6 h-6 sm:w-8 sm:h-8 lg:w-auto lg:h-auto object-contain"
+                      className="w-6 h-6 sm:w-8 sm:h-8 lg:w-6 lg:h-6 object-contain"
                     />
                   </div>
                 ))}
               </div>
-              
-              <div className="flex items-center gap-2 py-2 lg:py-[8px]">
-                <span className="text-lg sm:text-xl font-semibold leading-tight text-global-1">
+
+              {/* CTA Link */}
+              <div className="flex items-center gap-2 text-sm sm:text-base font-medium">
+                <span className="text-lg sm:text-xl font-semibold text-global-1">
                   Students Testimonials
                 </span>
-                <img 
-                  src="/images/img_24_arrows_directions_right.svg" 
-                  alt="Arrow right" 
-                  className="w-5 h-5 sm:w-6 sm:h-6 lg:w-[24px] lg:h-[24px] ml-2"
+                <img
+                  src="/images/img_24_arrows_directions_right.svg"
+                  alt="Arrow right"
+                  className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5"
                 />
               </div>
             </div>

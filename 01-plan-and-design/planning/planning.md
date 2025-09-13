@@ -5,8 +5,8 @@
 3. BD - [aeccglobal](https://aeccglobal.com.bd/)
 4. IN - [shiksha](https://www.shiksha.com/)
 5. NP - [ausstudies](https://ausstudies.com/)
-6. [Crimson](https://www.crimsoneducation.org/nz/)
-7. [nzgateway](https://nzgateway.co.in/)
+6. NZ - [Crimson](https://www.crimsoneducation.org/nz/)
+7. IN - [nzgateway](https://nzgateway.co.in/)
 
 
 ## Landing Page Common Setup

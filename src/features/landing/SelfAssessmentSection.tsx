@@ -7,7 +7,7 @@ interface SelfAssessmentSectionProps { }
 const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
   return (
     <section
-      className="w-full py-10 sm:py-16 lg:py-20"
+      className="w-full"
       aria-labelledby="self-assessment-heading"
       role="region"
     >
@@ -44,7 +44,7 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
               <Button
                 variant="primary"
                 size="medium"
-                className="w-full min-w-[180px] rounded bg-global-2 px-6 py-3 text-sm font-medium text-global-7 sm:w-auto sm:px-8 sm:py-3.5 sm:text-base"
+                className="w-full min-w-44 rounded bg-global-2 px-5 py-2.5 text-sm font-medium text-global-7 sm:w-auto sm:px-6 sm:py-3 sm:text-base"
               >
                 Free Assessment
               </Button>
