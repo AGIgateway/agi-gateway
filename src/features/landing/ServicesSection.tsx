@@ -1,4 +1,3 @@
-// src/components/sections/ServicesSection.tsx
 import React from 'react';
 
 interface Service {

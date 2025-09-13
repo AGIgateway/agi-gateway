@@ -1,4 +1,3 @@
-// src/components/sections/SelfAssessmentSection.tsx
 import React from 'react';
 import Button from '@/features/shared/ui/Button';
 
