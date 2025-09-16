@@ -11,7 +11,7 @@
 
 ## Landing Page Common Setup
 
-1. Header
+- [x] Header
    - Home
    - Services
    - Universities
@@ -20,9 +20,9 @@
 
 
 
-2. Banner
+- [x] Banner
     - 3 banners -> Hasib
-3. Services Banner 
+- [x] Services Banner 
     - Visa
     - Offer Letters
     - Test prep
@@ -30,17 +30,16 @@
     - Airport Pick up
     - Translation
 
-4. Study Location Banner
-5. Test Prep Banner
-6. Universties/ Contries Banner
+- [x] Study Location Banner
+- [x] Test Prep Banner
+- [x] Universties/ Contries Banner
     - Ara Logo
-    - 
-7. Teams Banner  / Advisory Banner
-8. Testomonial Banner
-9.  Book a Free Consultation Banner
-10.  FAQ Banner
-11.  Contacts 
-12.  Footer
+
+- [x] Testomonial Banner
+- [x] Footer
+- [ ] Book a Free Consultation Banner
+- [ ] Contacts Us
+- [ ] Blog section
 
 
 ## Ideas
@@ -75,3 +74,13 @@
 ## Figma Collabration
 
 [FIGMA ILLUSTRATION](https://www.figma.com/design/M1N862oqiXp35swboSDEOX/AGI-GATEWAY-UI?node-id=0-1&t=0BZsbZhVFLwKCRsQ-1)
+
+
+## Self Assessment
+- To see what meets your needs
+
+## Our Journey
+- story of coming to new zealand
+
+## university
+- Blog example [link](https://nzgateway.co.in/university/victoria-university-of-wellington)

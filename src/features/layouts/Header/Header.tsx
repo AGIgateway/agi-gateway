@@ -1,50 +1,37 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Button from '@/features/shared/ui/Button';
-import LogoLight from '@/assets/global/logo_light.svg';
-import LogoText from '@/assets/global/logo_text_light.svg';
+"use client"
+
+import type React from "react"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu"
+import { Menu } from "lucide-react"
+import LogoLight from "@/assets/global/logo_light.svg"
+import LogoText from "@/assets/global/logo_text_light.svg"
 
 interface NavItem {
-  name: string;
-  active: boolean;
+  name: string
+  active: boolean
+  href?: string
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { name: 'Home', active: true },
-  { name: 'Services', active: false },
-  { name: 'Universities', active: false },
-  { name: 'Study in New Zealand', active: false },
-];
+  { name: "Home", active: true, href: "#" },
+  { name: "Services", active: false, href: "#services" },
+  { name: "Universities", active: false, href: "#universities" },
+  { name: "Study in New Zealand", active: false, href: "#study" },
+]
 
 const Header: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const navRef = useRef<HTMLDivElement>(null);
-
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
-  const closeMenu = () => setMenuOpen(false);
-
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setMenuOpen(false);
-      }
-    };
-
-    if (menuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [menuOpen]);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header
-      className="w-full border border-black bg-global-5"
-      role="banner"
-      aria-label="Site header"
-    >
+    <header className="w-full bg-[#f5f4df] sticky top-0 z-50" role="banner" aria-label="Site header">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4 sm:py-5 lg:py-5">
           {/* Logo Section */}
@@ -52,7 +39,7 @@ const Header: React.FC = () => {
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src={LogoLight}
+                  src={LogoLight || "/placeholder.svg"}
                   alt="AGI Gateway Logo"
                   className="h-full w-full object-contain"
                   loading="eager"
@@ -61,7 +48,7 @@ const Header: React.FC = () => {
                 />
               </div>
               <img
-                src={LogoText}
+                src={LogoText || "/placeholder.svg"}
                 alt="AGI Gateway"
                 className="h-5 w-32 sm:w-40 lg:w-44"
                 loading="eager"
@@ -71,76 +58,76 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <button
-            type="button"
-            className="block rounded p-2 lg:hidden focus:outline-none focus:ring-2 focus:ring-global-2"
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={menuOpen}
-            aria-controls="main-nav"
-            onClick={toggleMenu}
-          >
-            <div className="flex h-6 w-6 flex-col items-center justify-center">
-              <span
-                className={`block h-0.5 w-5 bg-global-2 transition-transform ${menuOpen
-                  ? 'rotate-45 translate-y-1.5'
-                  : 'mb-1'
-                  }`}
-              />
-              <span
-                className={`block h-0.5 w-5 bg-global-2 transition-opacity ${menuOpen ? 'opacity-0' : 'my-1'}`}
-              />
-              <span
-                className={`block h-0.5 w-5 bg-global-2 transition-transform ${menuOpen
-                  ? '-rotate-45 -translate-y-1.5'
-                  : ''
-                  }`}
-              />
-            </div>
-          </button>
+          {/* Desktop Navigation Menu - Using ShadCN NavigationMenu */}
+          <div className="hidden lg:flex lg:items-center lg:gap-8">
+            <NavigationMenu>
+              <NavigationMenuList>
+                {NAV_ITEMS.map((item) => (
+                  <NavigationMenuItem key={item.name}>
+                    <NavigationMenuLink
+                      href={item.href}
+                      className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${item.active ? "text-global-2 font-semibold" : "text-global-2/80"
+                        }`}
+                    >
+                      {item.name}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
 
-          {/* Navigation Menu */}
-          <nav
-            id="main-nav"
-            ref={navRef}
-            className={`${menuOpen ? 'block animate-fadeIn' : 'hidden'} 
-              absolute left-0 top-full z-50 w-full bg-global-5 
-              lg:relative lg:top-auto lg:left-auto lg:block lg:w-auto lg:bg-transparent lg:z-0
-              transition-all duration-300 ease-in-out`}
-            aria-label="Main navigation"
-            role="navigation"
-          >
-            <ul className="flex flex-col items-center gap-4 p-4 lg:flex-row lg:gap-5 lg:p-0">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.name} className="w-full lg:w-auto">
-                  <button
-                    type="button"
-                    role="menuitem"
-                    aria-current={item.active ? 'page' : undefined}
-                    className={`w-full rounded px-4 py-2 text-center text-sm font-${item.active ? 'medium' : 'normal'} text-global-2 transition-colors hover:text-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-global-2 sm:text-base lg:w-auto lg:px-0 lg:py-0 lg:text-left`}
-                    onClick={closeMenu}
-                  >
-                    {item.name}
-                  </button>
-                </li>
-              ))}
+            <Button variant="default" size="default" className="bg-global-2 text-global-7 hover:bg-global-2/90">
+              Get Started
+            </Button>
+          </div>
 
-              <li className="mt-2 w-full lg:mt-0 lg:w-auto">
+          {/* Mobile Menu - Using ShadCN Sheet component */}
+          <div className="lg:hidden">
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
                 <Button
-                  variant="primary"
-                  size="small"
-                  className="w-full rounded-md bg-global-2 px-4 py-2 text-sm font-medium text-global-7 sm:px-5 sm:py-2.5 lg:w-auto"
-                  onClick={closeMenu}
+                  variant="ghost"
+                  size="icon"
+                  className="text-global-2 hover:bg-global-2/10"
+                  aria-label="Open menu"
                 >
-                  Get Started
+                  <Menu className="h-6 w-6" />
                 </Button>
-              </li>
-            </ul>
-          </nav>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] bg-global-5 border-l border-global-2/20">
+                <SheetHeader>
+                  <SheetTitle className="text-global-2 text-left">Navigation</SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-4 mt-8">
+                  {NAV_ITEMS.map((item) => (
+                    <Button
+                      key={item.name}
+                      variant="ghost"
+                      className={`justify-start text-left h-12 ${item.active
+                          ? "text-global-2 font-semibold bg-global-2/10"
+                          : "text-global-2/80 hover:text-global-2 hover:bg-global-2/5"
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Button>
+                  ))}
+                  <div className="mt-4 pt-4 border-t border-global-2/20">
+                    <Button
+                      className="w-full bg-global-2 text-global-7 hover:bg-global-2/90"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Get Started
+                    </Button>
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

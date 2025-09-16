@@ -4,12 +4,11 @@
 
 @layer base {
   :root {
-    /* Global Colors */
     --global-bg-1: #00000019;
-    --global-bg-2: #034e44;
+    --global-bg-2: #1B4D43;
     --global-bg-3: #034e4475;
     --global-bg-4: #e8f5e9;
-    --global-bg-5: #ede9d0;
+    --global-bg-5: #f5f4df;
     --global-bg-6: #f5f7f9;
     --global-bg-7: #ffffff;
     --global-bg-8: #ffffff33;

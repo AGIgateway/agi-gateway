@@ -40,7 +40,7 @@
 
 - **Post-study work visa guidance**
 
-## 🏡 Pre-Departure & Settlement Services
+## 🏡 Post-Departure & Settlement Services
 
 - **Airport pickup & welcome** (On Request)
 
