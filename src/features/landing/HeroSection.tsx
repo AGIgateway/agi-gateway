@@ -1,5 +1,5 @@
-import type React from "react"
-import { Badge } from "@/components/ui/badge"
+import type React from 'react';
+import { Badge } from '@/components/ui/badge';
 
 const HeroSection: React.FC = () => {
   return (
@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

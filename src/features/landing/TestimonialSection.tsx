@@ -7,7 +7,7 @@ const TestimonialSection: React.FC = () => {
     { id: '3', src: '/images/img_logo_gray_100.svg', bgColor: 'bg-gray-100' },
     { id: '4', src: '/images/img_logo_gray_100_48x48.svg', bgColor: 'bg-gray-100' },
     { id: '5', src: '/images/img_logo_48x48.svg', bgColor: 'bg-gray-100' },
-    { id: '6', src: '/images/img_logo_1.svg', bgColor: 'bg-gray-100' }
+    { id: '6', src: '/images/img_logo_1.svg', bgColor: 'bg-gray-100' },
   ];
 
   return (
@@ -29,7 +29,14 @@ const TestimonialSection: React.FC = () => {
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-2/3 text-center lg:text-left">
             <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
               <p className="text-sm sm:text-base font-medium leading-relaxed text-global-4">
-                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel
+                rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare,
+                tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi
+                laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus
+                sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis
+                vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae
+                placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero
+                condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
               </p>
 
               <div className="flex flex-col gap-2 sm:gap-3 lg:gap-3">

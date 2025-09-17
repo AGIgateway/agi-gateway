@@ -1,37 +1,41 @@
-"use client"
+'use client';
 
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import type React from 'react';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu"
-import { Menu } from "lucide-react"
-import LogoLight from "@/assets/global/logo_light.svg"
-import LogoText from "@/assets/global/logo_text_light.svg"
+} from '@/components/ui/navigation-menu';
+import { Menu } from 'lucide-react';
+import LogoLight from '@/assets/global/logo_light.svg';
+import LogoText from '@/assets/global/logo_text_light.svg';
 
 interface NavItem {
-  name: string
-  active: boolean
-  href?: string
+  name: string;
+  active: boolean;
+  href?: string;
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { name: "Home", active: true, href: "#" },
-  { name: "Services", active: false, href: "#services" },
-  { name: "Universities", active: false, href: "#universities" },
-  { name: "Study in New Zealand", active: false, href: "#study" },
-]
+  { name: 'Home', active: true, href: '#' },
+  { name: 'Services', active: false, href: '#services' },
+  { name: 'Universities', active: false, href: '#universities' },
+  { name: 'Study in New Zealand', active: false, href: '#study' },
+];
 
 const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-[#f5f4df] sticky top-0 z-50" role="banner" aria-label="Site header">
+    <header
+      className="w-full bg-[#f5f4df] sticky top-0 z-50"
+      role="banner"
+      aria-label="Site header"
+    >
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4 sm:py-5 lg:py-5">
           {/* Logo Section */}
@@ -39,7 +43,7 @@ const Header: React.FC = () => {
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src={LogoLight || "/placeholder.svg"}
+                  src={LogoLight || '/placeholder.svg'}
                   alt="AGI Gateway Logo"
                   className="h-full w-full object-contain"
                   loading="eager"
@@ -48,7 +52,7 @@ const Header: React.FC = () => {
                 />
               </div>
               <img
-                src={LogoText || "/placeholder.svg"}
+                src={LogoText || '/placeholder.svg'}
                 alt="AGI Gateway"
                 className="h-5 w-32 sm:w-40 lg:w-44"
                 loading="eager"
@@ -66,8 +70,9 @@ const Header: React.FC = () => {
                   <NavigationMenuItem key={item.name}>
                     <NavigationMenuLink
                       href={item.href}
-                      className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${item.active ? "text-global-2 font-semibold" : "text-global-2/80"
-                        }`}
+                      className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
+                        item.active ? 'text-global-2 font-semibold' : 'text-global-2/80'
+                      }`}
                     >
                       {item.name}
                     </NavigationMenuLink>
@@ -76,7 +81,11 @@ const Header: React.FC = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button variant="default" size="default" className="bg-global-2 text-global-7 hover:bg-global-2/90">
+            <Button
+              variant="default"
+              size="default"
+              className="bg-global-2 text-global-7 hover:bg-global-2/90"
+            >
               Get Started
             </Button>
           </div>
@@ -94,7 +103,10 @@ const Header: React.FC = () => {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] bg-global-5 border-l border-global-2/20">
+              <SheetContent
+                side="right"
+                className="w-[300px] bg-global-5 border-l border-global-2/20"
+              >
                 <SheetHeader>
                   <SheetTitle className="text-global-2 text-left">Navigation</SheetTitle>
                 </SheetHeader>
@@ -103,10 +115,11 @@ const Header: React.FC = () => {
                     <Button
                       key={item.name}
                       variant="ghost"
-                      className={`justify-start text-left h-12 ${item.active
-                          ? "text-global-2 font-semibold bg-global-2/10"
-                          : "text-global-2/80 hover:text-global-2 hover:bg-global-2/5"
-                        }`}
+                      className={`justify-start text-left h-12 ${
+                        item.active
+                          ? 'text-global-2 font-semibold bg-global-2/10'
+                          : 'text-global-2/80 hover:text-global-2 hover:bg-global-2/5'
+                      }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -127,7 +140,7 @@ const Header: React.FC = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

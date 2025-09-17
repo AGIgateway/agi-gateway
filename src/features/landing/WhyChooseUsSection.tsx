@@ -1,8 +1,8 @@
-import type React from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import type React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
-type WhyChooseUsSectionProps = {}
+type WhyChooseUsSectionProps = {};
 
 const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
   return (
@@ -42,10 +42,11 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                     Why Choose Us?
                   </h2>
                   <p className="mx-auto max-w-prose text-base leading-relaxed text-global-4 sm:text-lg lg:mx-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam
-                    vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
-                    tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam
-                    quam vitae, tempus sem. Donec elementum pulvinar odio.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
+                    ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat
+                    vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit
+                    amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus
+                    sem. Donec elementum pulvinar odio.
                   </p>
                 </div>
                 <div className="flex justify-center lg:justify-start">
@@ -63,7 +64,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
         </Card>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WhyChooseUsSection
+export default WhyChooseUsSection;

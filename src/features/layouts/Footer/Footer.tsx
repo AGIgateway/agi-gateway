@@ -59,19 +59,25 @@ const Footer: React.FC = () => {
     }
   }, [email]);
 
-  const handleKeyPress = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      e.preventDefault(); // Prevent form submission if in a form context
-      handleSubscribe();
-    }
-  }, [handleSubscribe]);
+  const handleKeyPress = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === 'Enter') {
+        e.preventDefault(); // Prevent form submission if in a form context
+        handleSubscribe();
+      }
+    },
+    [handleSubscribe]
+  );
 
-  const handleIconKeyDown = useCallback((e: React.KeyboardEvent<HTMLImageElement>) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleSubscribe();
-    }
-  }, [handleSubscribe]);
+  const handleIconKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLImageElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleSubscribe();
+      }
+    },
+    [handleSubscribe]
+  );
 
   return (
     <footer className="w-full mt-14 sm:mt-20 lg:mt-27">
@@ -105,7 +111,6 @@ const Footer: React.FC = () => {
       <section className="w-full bg-footer-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0 py-12 sm:py-16 lg:py-16">
-
             {/* Logo and Social Section */}
             <LogoAndSocialSection socialMedia={socialMedia} />
 

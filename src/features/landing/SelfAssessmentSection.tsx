@@ -1,8 +1,8 @@
-import type React from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import type React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
-type SelfAssessmentSectionProps = {}
+type SelfAssessmentSectionProps = {};
 
 const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
   return (
@@ -29,10 +29,10 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
                   Self Assessment
                 </h2>
                 <p className="mx-auto max-w-3xl text-base leading-relaxed text-global-4 sm:text-lg lg:mx-0">
-                  Take the first step toward your global education journey with our quick, intuitive self-assessment. In
-                  just a few minutes, discover which courses, countries, and pathways best match your goals, budget, and
-                  academic background — personalized just for you. No pressure, no obligations — just clarity to start
-                  smart.
+                  Take the first step toward your global education journey with our quick, intuitive
+                  self-assessment. In just a few minutes, discover which courses, countries, and
+                  pathways best match your goals, budget, and academic background — personalized
+                  just for you. No pressure, no obligations — just clarity to start smart.
                 </p>
               </div>
               <div className="flex justify-center lg:justify-start">
@@ -45,7 +45,7 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SelfAssessmentSection
+export default SelfAssessmentSection;

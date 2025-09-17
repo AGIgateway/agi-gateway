@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --global-bg-1: #00000019;
-    --global-bg-2: #1B4D43;
+    --global-bg-2: #1b4d43;
     --global-bg-3: #034e4475;
     --global-bg-4: #e8f5e9;
     --global-bg-5: #f5f4df;
@@ -32,7 +32,6 @@
 }
 
 @layer utilities {
-
   /* Global */
   .bg-global-1 {
     background-color: var(--global-bg-1);
