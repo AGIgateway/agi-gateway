@@ -10,13 +10,13 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src',
-      '@app': '/src/app',
-      '@assets': '/src/assets',
-      '@features': '/src/features',
-      '@styles': '/src/styles',
-      '@constants': '/src/constants',
-      '@shared': '/src/features/shared',
-      '@layouts': '/src/features/layouts',
+      '@/app': '/src/app',
+      '@/assets': '/src/assets',
+      '@/features': '/src/features',
+      '@/styles': '/src/styles',
+      '@/constants': '/src/constants',
+      '@/shared': '/src/features/shared',
+      '@/layouts': '/src/features/layouts',
     },
   },
   server: {
