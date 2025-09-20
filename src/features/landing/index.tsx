@@ -10,6 +10,7 @@ import StatisticsSection from './StatisticsSection';
 import SelfAssessmentSection from '@/features/landing/SelfAssessmentSection';
 import TestimonialSection from '@/features/landing/TestimonialSection';
 import BlogSection from '@/features/landing/BlogSection';
+import ConsultationCtaSection from '@/features/landing/ConsultationCtaSection'
 
 // Section data for better organization and maintainability
 const sections = [
@@ -25,6 +26,7 @@ const sections = [
   { id: 'self-assessment', Component: SelfAssessmentSection, label: 'Self assessment section' },
   { id: 'testimonials', Component: TestimonialSection, label: 'Testimonials section' },
   { id: 'blog', Component: BlogSection, label: 'Blog section' },
+  { id: 'consult', Component: ConsultationCtaSection, label: 'ConsultationCta section' },
 ];
 
 const HomePage: React.FC = () => {

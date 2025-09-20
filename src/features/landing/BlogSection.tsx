@@ -37,7 +37,7 @@ const BlogSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 text-center px-4 sm:px-8 lg:px-0">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-global-3">
-            Caring Is Moto
+            Caring Is Our Moto
           </h2>
           <p className="text-sm sm:text-base font-normal leading-6 text-global-4 w-full lg:w-3/5 mx-auto">
             AGI Gateway blog is the best place to read about the latest university and study

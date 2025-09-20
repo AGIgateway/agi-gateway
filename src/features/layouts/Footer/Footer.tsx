@@ -1,5 +1,6 @@
+// @/components/footer/Footer.tsx
 import React, { useState, useCallback, useMemo } from 'react';
-import Button from '../../shared/ui/Button';
+import ConsultationCtaSection from '@/features/landing/ConsultationCtaSection';
 import LogoDark from '@/assets/global/logo_dark.svg';
 
 interface Link {
@@ -15,7 +16,7 @@ interface SocialMediaItem {
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
 
-  // Memoize static data to prevent re-creation on every render
+  // Memoize static data
   const companyLinks: Link[] = useMemo(
     () => [
       { name: 'About us', href: '#' },
@@ -47,7 +48,7 @@ const Footer: React.FC = () => {
     []
   );
 
-  // Memoized event handlers to avoid recreating on every render
+  // Handlers
   const handleEmailChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   }, []);
@@ -62,7 +63,7 @@ const Footer: React.FC = () => {
   const handleKeyPress = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key === 'Enter') {
-        e.preventDefault(); // Prevent form submission if in a form context
+        e.preventDefault();
         handleSubscribe();
       }
     },
@@ -81,31 +82,6 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="w-full mt-14 sm:mt-20 lg:mt-27">
-      {/* Consultation CTA Section */}
-      <section className="w-full bg-global-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 lg:gap-7 py-12 sm:py-16 lg:py-8">
-            <h2 className="text-2xl sm:text-4xl lg:text-6xl font-semibold leading-tight text-center text-footer-1 max-w-4xl">
-              Book a Free Consultation
-            </h2>
-            <Button
-              variant="primary"
-              size="medium"
-              className="bg-global-2 text-global-7 rounded-lg px-6 sm:px-8 lg:px-12 py-3 sm:py-3.5 lg:py-4 text-sm sm:text-base font-medium flex items-center gap-2"
-              rightIcon={
-                <img
-                  src="/images/img_16_arrows_directions_right.svg"
-                  alt="Arrow right"
-                  className="w-4 h-4"
-                />
-              }
-              onClick={handleSubscribe}
-            >
-              Book a Free Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Main Footer Section */}
       <section className="w-full bg-footer-1">
@@ -160,7 +136,7 @@ const LogoAndSocialSection: React.FC<LogoAndSocialSectionProps> = ({ socialMedia
       <div className="flex items-center gap-4 mt-4">
         {socialMedia.map((social) => (
           <img
-            key={social.name} // ✅ Use meaningful key (name), not index
+            key={social.name}
             src={social.src}
             alt={social.name}
             className="w-8 h-6 cursor-pointer hover:opacity-80 transition-opacity"
