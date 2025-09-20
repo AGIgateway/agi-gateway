@@ -1,16 +1,32 @@
+// src/app/Routes.tsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Import page components
-import HomePage from '@/features/landing';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from '@/features/landing'; // or wherever your HomePage is
+import MainLayout from './layout/MainLayout';
 
 const AppRoutes = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <HomePage />
+            </MainLayout>
+          }
+        />
+        {/* Add other routes similarly */}
+        <Route
+          path="/about"
+          element={
+            <MainLayout>
+              <div>About Page</div>
+            </MainLayout>
+          }
+        />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

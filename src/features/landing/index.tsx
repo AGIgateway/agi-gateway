@@ -1,7 +1,5 @@
 import type React from 'react';
 import { Suspense } from 'react';
-import Header from '@/features/layouts/Header/Header';
-import Footer from '@/features/layouts/Footer/Footer';
 import HeroSection from '@/features/landing/HeroSection';
 import ServicesSection from '@/features/landing/ServicesSection';
 import UniversityPartnersSection from '@/features/landing/UniversityPartnersSection';
@@ -32,7 +30,6 @@ const sections = [
 const HomePage: React.FC = () => {
   return (
     <div className="w-full bg-global-7 min-h-screen flex flex-col">
-      <Header />
 
       <main className="flex flex-col gap-0 flex-1" aria-label="Main content">
         <Suspense
@@ -51,7 +48,6 @@ const HomePage: React.FC = () => {
         </Suspense>
       </main>
 
-      <Footer />
     </div>
   );
 };

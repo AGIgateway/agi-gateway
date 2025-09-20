@@ -61,9 +61,7 @@ export function ConsultationForm() {
 
     return (
         <div className="w-full max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md">
-            <h2 className="text-2xl font-bold text-center mb-6">
-                Book your FREE consultation with Certified Counsellors
-            </h2>
+
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
