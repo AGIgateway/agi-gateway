@@ -24,7 +24,7 @@ const NAV_ITEMS: NavItem[] = [
   { name: 'Home', active: true, href: '#' },
   { name: 'Services', active: false, href: '#services' },
   { name: 'Universities', active: false, href: '#universities' },
-  { name: 'Study in New Zealand', active: false, href: '#study' },
+  { name: 'Study in New Zealand', active: false, href: '#testimonial' },
 ];
 
 const Header: React.FC = () => {
@@ -70,9 +70,8 @@ const Header: React.FC = () => {
                   <NavigationMenuItem key={item.name}>
                     <NavigationMenuLink
                       href={item.href}
-                      className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${
-                        item.active ? 'text-global-2 font-semibold' : 'text-global-2/80'
-                      }`}
+                      className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${item.active ? 'text-global-2 font-semibold' : 'text-global-2/80'
+                        }`}
                     >
                       {item.name}
                     </NavigationMenuLink>
@@ -115,11 +114,10 @@ const Header: React.FC = () => {
                     <Button
                       key={item.name}
                       variant="ghost"
-                      className={`justify-start text-left h-12 ${
-                        item.active
-                          ? 'text-global-2 font-semibold bg-global-2/10'
-                          : 'text-global-2/80 hover:text-global-2 hover:bg-global-2/5'
-                      }`}
+                      className={`justify-start text-left h-12 ${item.active
+                        ? 'text-global-2 font-semibold bg-global-2/10'
+                        : 'text-global-2/80 hover:text-global-2 hover:bg-global-2/5'
+                        }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

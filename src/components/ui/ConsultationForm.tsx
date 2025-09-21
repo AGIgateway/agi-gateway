@@ -220,7 +220,7 @@ export function ConsultationForm() {
                     />
 
                     {/* Submit Button */}
-                    <Button type="submit" className="w-full" size="lg">
+                    <Button type="submit" className="w-full bg-global-2 text-global-7 hover:bg-global-2/90" size="lg" >
                         Get Started for Free
                     </Button>
                 </form>

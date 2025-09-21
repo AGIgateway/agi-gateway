@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from '@/features/landing'; // or wherever your HomePage is
+import AboutPage from '@/features/about/AboutPage';
 import MainLayout from './layout/MainLayout';
 
 const AppRoutes = () => {
@@ -21,7 +22,7 @@ const AppRoutes = () => {
           path="/about"
           element={
             <MainLayout>
-              <div>About Page</div>
+              <AboutPage />
             </MainLayout>
           }
         />
