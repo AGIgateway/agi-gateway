@@ -24,11 +24,11 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
               <div className="flex flex-col gap-4">
                 <h2
                   id="self-assessment-heading"
-                  className="text-3xl font-semibold leading-tight text-global-3 sm:text-4xl lg:text-5xl"
+                  className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl"
                 >
                   Self Assessment
                 </h2>
-                <p className="mx-auto max-w-3xl text-base leading-relaxed text-global-4 sm:text-lg lg:mx-0">
+                <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
                   Take the first step toward your global education journey with our quick, intuitive
                   self-assessment. In just a few minutes, discover which courses, countries, and
                   pathways best match your goals, budget, and academic background — personalized
@@ -36,7 +36,7 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
                 </p>
               </div>
               <div className="flex justify-center lg:justify-start">
-                <Button className="w-full min-w-44 rounded bg-global-2 px-5 py-2.5 text-sm font-medium text-global-7 hover:bg-global-2/90 sm:w-auto sm:px-6 sm:py-3 sm:text-base">
+                <Button className="w-full min-w-44 rounded bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 sm:w-auto sm:px-6 sm:py-3 sm:text-base">
                   Free Assessment
                 </Button>
               </div>

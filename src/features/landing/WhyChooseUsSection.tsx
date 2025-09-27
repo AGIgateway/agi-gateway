@@ -7,7 +7,7 @@ type WhyChooseUsSectionProps = {};
 const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
   return (
     <section
-      className="w-full bg-global-5 py-10 sm:py-16 lg:py-20"
+      className="w-full bg-secondary py-10 sm:py-16 lg:py-20"
       aria-labelledby="why-choose-us-heading"
       role="region"
     >
@@ -37,11 +37,11 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                 <div className="flex flex-col gap-4 text-center lg:text-left">
                   <h2
                     id="why-choose-us-heading"
-                    className="text-3xl font-semibold leading-tight text-global-3 sm:text-4xl lg:text-5xl"
+                    className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl"
                   >
                     Why Choose Us?
                   </h2>
-                  <p className="mx-auto max-w-prose text-base leading-relaxed text-global-4 sm:text-lg lg:mx-0">
+                  <p className="mx-auto max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo
                     ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat
                     vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit
@@ -52,7 +52,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                 <div className="flex justify-center lg:justify-start">
                   <Button
                     size="lg"
-                    className="min-w-45 rounded bg-global-2 px-6 py-3 text-sm font-medium text-global-7 hover:bg-global-2/90 sm:px-8 sm:py-3.5 sm:text-base"
+                    className="min-w-45 rounded bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 sm:px-8 sm:py-3.5 sm:text-base"
                     aria-label="Learn more about our services"
                   >
                     Learn More

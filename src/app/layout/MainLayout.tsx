@@ -2,8 +2,8 @@
 'use client'; // 👈 Add this if not already present — because WhatsAppButton uses onClick + window
 
 import React from 'react';
-import Header from '@/features/layouts/Header/Header';
-import Footer from '@/features/layouts/Footer/Footer';
+import Header from '@/features/layouts/Header';
+import Footer from '@/features/layouts/Footer';
 import WhatsAppButton from '@/components/ui/WhatsAppButton'; // ✅ Import here
 
 interface MainLayoutProps {

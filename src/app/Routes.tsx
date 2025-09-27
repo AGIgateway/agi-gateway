@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from '@/features/landing'; // or wherever your HomePage is
 import AboutPage from '@/features/about/AboutPage';
 import MainLayout from './layout/MainLayout';
+import SimplePage from '@/features/page';
 
 const AppRoutes = () => {
   return (
@@ -19,10 +20,10 @@ const AppRoutes = () => {
         />
         {/* Add other routes similarly */}
         <Route
-          path="/about"
+          path="/page"
           element={
             <MainLayout>
-              <AboutPage />
+              <SimplePage />
             </MainLayout>
           }
         />

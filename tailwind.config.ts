@@ -1,35 +1,64 @@
+// tailwind.config.js
 module.exports = {
-	content: ["./src/**/*.{js,ts,jsx,tsx,html,mdx}"],
+	content: ["./src/**/*.{js,ts,jsx,tsx}"],
 	darkMode: "class",
 	theme: {
 		extend: {
 			colors: {
-				global: {
-					background1: "var(--global-bg-1)",
-					background2: "var(--global-bg-2)",
-					background3: "var(--global-bg-3)",
-					background4: "var(--global-bg-4)",
-					background5: "var(--global-bg-5)",
-					background6: "var(--global-bg-6)",
-					background7: "var(--global-bg-7)",
-					background8: "var(--global-bg-8)",
-					text1: "var(--global-text-1)",
-					text2: "var(--global-text-2)",
-					text3: "var(--global-text-3)",
-					text4: "var(--global-text-4)",
-					text5: "var(--global-text-5)",
-					text6: "var(--global-text-6)",
-					text7: "var(--global-text-7)"
-				},
-				header: {
-					text1: "var(--header-text-1)"
-				},
-				footer: {
-					background1: "var(--footer-bg-1)",
-					text1: "var(--footer-text-1)",
-					text2: "var(--footer-text-2)",
-					text3: "var(--footer-text-3)"
-				}
+				background: 'var(--background)',
+				foreground: 'var(--foreground)',
+				card: 'var(--card)',
+				'card-foreground': 'var(--card-foreground)',
+				popover: 'var(--popover)',
+				'popover-foreground': 'var(--popover-foreground)',
+				primary: 'var(--primary)',
+				'primary-foreground': 'var(--primary-foreground)',
+				secondary: 'var(--secondary)',
+				'secondary-foreground': 'var(--secondary-foreground)',
+				muted: 'var(--muted)',
+				'muted-foreground': 'var(--muted-foreground)',
+				accent: 'var(--accent)',
+				'accent-foreground': 'var(--accent-foreground)',
+				destructive: 'var(--destructive)',
+				'destructive-foreground': 'var(--destructive-foreground)',
+				border: 'var(--border)',
+				input: 'var(--input)',
+				ring: 'var(--ring)',
+				// Optional: charts & sidebar if used
+				'chart-1': 'var(--chart-1)',
+				'chart-2': 'var(--chart-2)',
+				'chart-3': 'var(--chart-3)',
+				'chart-4': 'var(--chart-4)',
+				'chart-5': 'var(--chart-5)',
+				sidebar: 'var(--sidebar)',
+				'sidebar-foreground': 'var(--sidebar-foreground)',
+				'sidebar-primary': 'var(--sidebar-primary)',
+				'sidebar-primary-foreground': 'var(--sidebar-primary-foreground)',
+				'sidebar-accent': 'var(--sidebar-accent)',
+				'sidebar-accent-foreground': 'var(--sidebar-accent-foreground)',
+				'sidebar-border': 'var(--sidebar-border)',
+				'sidebar-ring': 'var(--sidebar-ring)',
+			},
+			borderRadius: {
+				sm: 'var(--radius-sm, var(--radius))',
+				md: 'var(--radius-md, var(--radius))',
+				lg: 'var(--radius-lg, var(--radius))', // ← critical
+				xl: 'var(--radius-xl, var(--radius))',
+			},
+			boxShadow: {
+				'2xs': 'var(--shadow-2xs)',
+				xs: 'var(--shadow-xs)',
+				sm: 'var(--shadow-sm)',
+				DEFAULT: 'var(--shadow)',
+				md: 'var(--shadow-md, var(--shadow))',
+				lg: 'var(--shadow-lg)',
+				xl: 'var(--shadow-xl)',
+				'2xl': 'var(--shadow-2xl)',
+			},
+			fontFamily: {
+				sans: 'var(--font-sans)',
+				serif: 'var(--font-serif)',
+				mono: 'var(--font-mono)',
 			}
 		}
 	},

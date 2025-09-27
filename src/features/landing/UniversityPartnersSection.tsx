@@ -8,12 +8,11 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel';
 
-// ✅ Step 1: Add `website` to University interface
 interface University {
   id: string;
   logo: string;
   name: string;
-  website: string; // ✅ New field
+  website: string;
 }
 
 interface UniversityLogoProps {
@@ -49,7 +48,6 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
     return () => clearInterval(interval);
   }, [api, isHovering]);
 
-  // ✅ Step 2: Add real website URLs
   const universities: University[] = [
     {
       id: '1',
@@ -91,18 +89,18 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
 
   return (
     <section
-      className="w-full bg-global-7 py-8 sm:py-12 lg:py-16"
+      className="w-full bg-card py-8 sm:py-12 lg:py-16"
       aria-labelledby="university-partners-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
           <h2
             id="university-partners-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-global-3 mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-foreground mb-4"
           >
             University Partners
           </h2>
-          <p className="text-sm sm:text-base font-normal leading-relaxed text-global-4 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base font-normal leading-relaxed text-muted-foreground max-w-3xl mx-auto">
             We are working with New Zealand's top universities
           </p>
         </div>
@@ -125,7 +123,6 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
                   key={university.id}
                   className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
                 >
-                  {/* ✅ Step 3: Wrap in <a> tag */}
                   <a
                     href={university.website}
                     target="_blank"

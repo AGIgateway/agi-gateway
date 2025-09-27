@@ -2,16 +2,16 @@ import React from 'react';
 
 const TestimonialSection: React.FC = () => {
   const testimonialLogos = [
-    { id: '1', src: '/images/img_logo.svg', bgColor: 'bg-global-4' },
-    { id: '2', src: '/images/img_logo_blue_gray_800_01.svg', bgColor: 'bg-global-6' },
-    { id: '3', src: '/images/img_logo_gray_100.svg', bgColor: 'bg-gray-100' },
-    { id: '4', src: '/images/img_logo_gray_100_48x48.svg', bgColor: 'bg-gray-100' },
-    { id: '5', src: '/images/img_logo_48x48.svg', bgColor: 'bg-gray-100' },
-    { id: '6', src: '/images/img_logo_1.svg', bgColor: 'bg-gray-100' },
+    { id: '1', src: '/images/img_logo.svg', bgColor: 'bg-accent' },
+    { id: '2', src: '/images/img_logo_blue_gray_800_01.svg', bgColor: 'bg-background' },
+    { id: '3', src: '/images/img_logo_gray_100.svg', bgColor: 'bg-muted' },
+    { id: '4', src: '/images/img_logo_gray_100_48x48.svg', bgColor: 'bg-muted' },
+    { id: '5', src: '/images/img_logo_48x48.svg', bgColor: 'bg-muted' },
+    { id: '6', src: '/images/img_logo_1.svg', bgColor: 'bg-muted' },
   ];
 
   return (
-    <section className="w-full bg-global-5 py-8 sm:py-10 lg:py-12">
+    <section className="w-full bg-secondary py-8 sm:py-10 lg:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Testimonial Image */}
@@ -28,7 +28,7 @@ const TestimonialSection: React.FC = () => {
           {/* Testimonial Content */}
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-2/3 text-center lg:text-left">
             <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
-              <p className="text-sm sm:text-base font-medium leading-relaxed text-global-4">
+              <p className="text-sm sm:text-base font-medium leading-relaxed text-muted-foreground">
                 Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel
                 rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare,
                 tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi
@@ -40,10 +40,10 @@ const TestimonialSection: React.FC = () => {
               </p>
 
               <div className="flex flex-col gap-2 sm:gap-3 lg:gap-3">
-                <h3 className="text-lg sm:text-xl font-semibold leading-tight text-global-1">
+                <h3 className="text-lg sm:text-xl font-semibold leading-tight text-primary">
                   Tim Smith
                 </h3>
-                <p className="text-sm sm:text-base font-normal leading-relaxed text-global-5">
+                <p className="text-sm sm:text-base font-normal leading-relaxed text-secondary-foreground">
                   British Dragon Boat Racing Association
                 </p>
               </div>
@@ -69,7 +69,7 @@ const TestimonialSection: React.FC = () => {
 
               {/* CTA Link */}
               <div className="flex items-center gap-2 text-sm sm:text-base font-medium">
-                <span className="text-lg sm:text-xl font-semibold text-global-1">
+                <span className="text-lg sm:text-xl font-semibold text-primary">
                   Students Testimonials
                 </span>
                 <img

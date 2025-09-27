@@ -55,12 +55,12 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full">
+    <section className="w-full py-16">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-14">
         <div className="flex flex-col gap-3 sm:gap-4 lg:gap-4">
           {/* Section Header */}
           <div className="flex justify-center">
-            <h2 className="text-3xl font-semibold leading-tight text-center text-global-3 sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-semibold leading-tight text-center text-foreground sm:text-4xl lg:text-5xl">
               Our Services
             </h2>
           </div>
@@ -70,7 +70,7 @@ const ServicesSection: React.FC = () => {
             {services.map((service) => (
               <Card
                 key={service.id}
-                className="flex flex-col items-center text-center bg-global-7 border-none shadow-[0_2px_4px_rgba(171,190,209,0.2)] hover:shadow-[0_4px_8px_rgba(171,190,209,0.3)] transition-shadow duration-200"
+                className="flex flex-col items-center text-center bg-card border border-border shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 <CardHeader className="flex flex-col items-center gap-3 sm:gap-4 lg:gap-4 px-8 sm:px-12 lg:px-14 pb-2">
                   <img
@@ -80,12 +80,12 @@ const ServicesSection: React.FC = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                  <CardTitle className="text-xl font-bold leading-tight text-center text-global-3 sm:text-2xl lg:text-3xl">
+                  <CardTitle className="text-xl font-bold leading-tight text-center text-foreground sm:text-2xl lg:text-3xl">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-sm font-normal leading-5 text-center text-global-4">
+                  <p className="text-sm font-normal leading-5 text-center text-muted-foreground">
                     {service.description}
                   </p>
                 </CardContent>
