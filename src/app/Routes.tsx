@@ -5,6 +5,9 @@ import HomePage from '@/features/landing'; // or wherever your HomePage is
 import AboutPage from '@/features/about/AboutPage';
 import MainLayout from './layout/MainLayout';
 import SimplePage from '@/features/page';
+import PrivacyPolicyPage from '@/features/policy/PrivacyPolicyPage';
+import TermsOfUsePage from '@/features/policy/TermsOfUsePage';
+
 
 
 const AppRoutes = () => {
@@ -28,8 +31,24 @@ const AppRoutes = () => {
             </MainLayout>
           }
         />
+        <Route
+          path='/privacy-policy'
+          element={
+            <MainLayout>
+              <PrivacyPolicyPage />
+            </MainLayout>
+          }
+        />
+        <Route
+          path='/terms-of-use'
+          element={
+            <MainLayout>
+              <TermsOfUsePage />
+            </MainLayout>
+          }
+        />
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 };
 

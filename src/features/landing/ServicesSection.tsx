@@ -5,7 +5,7 @@ interface Service {
   id: string;
   icon: string;
   title: string;
-  description: string;
+  subtitle: string;
 }
 
 const ServicesSection: React.FC = () => {
@@ -15,48 +15,36 @@ const ServicesSection: React.FC = () => {
       icon: '/images/img_icon.svg',
       title: 'Course Guidance',
       subtitle: 'Finding Your Perfect Path',
-      description:
-        'Personalized advice on choosing the right academic path — from school to PhD, including specialized and pathway programs tailored to your goals.',
     },
     {
       id: '2',
       icon: '/images/img_icon_green_50.svg',
       title: 'Admission Support',
       subtitle: 'Turning Your Application into a Story',
-      description:
-        'End-to-end assistance with applications, scholarships, and document prep — we help you submit strong, standout applications with confidence.',
     },
     {
       id: '3',
       icon: '/images/img_icon_green_50_56x64.svg',
       title: 'Test Preparation',
       subtitle: 'Master English, Master Your Future',
-      description:
-        'Master IELTS, PTE, and academic English with targeted coaching, mock tests, and expert feedback to hit your target scores.',
     },
     {
       id: '4',
       icon: '/images/img_icon_green_50_56x64.svg',
       title: 'Visa Support',
       subtitle: 'Simplifying the Toughest Steps',
-      description:
-        'Navigate student and dependent visas, insurance, and post-study work rights with step-by-step guidance from certified advisors.',
     },
     {
       id: '5',
       icon: '/images/img_icon.svg',
       title: 'Predeparture Services',
       subtitle: 'More Than Just a Visa',
-      description:
-        'Smooth transition abroad — we assist with airport pickup, housing, banking, and local systems so you settle in stress-free.',
     },
     {
       id: '6',
       icon: '/images/img_icon_green_50.svg',
       title: 'Future Pathways',
       subtitle: 'Building a Life, Not Just a degree',
-      description:
-        'Build a NZ-ready CV, join career events, and unlock local job opportunities with our post-study career development support.',
     },
   ];
 
@@ -91,8 +79,8 @@ const ServicesSection: React.FC = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-sm font-normal leading-5 text-center text-muted-foreground">
-                    {service.description}
+                  <p className="text-sm font-bold leading-5 text-center text-muted-foreground">
+                    {service.subtitle}
                   </p>
                 </CardContent>
               </Card>

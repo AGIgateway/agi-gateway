@@ -37,10 +37,10 @@ const Footer: React.FC = () => {
 
   const supportLinks: Link[] = useMemo(
     () => [
-      { name: 'Help center', href: '#' },
-      { name: 'Terms of service', href: '#' },
-      { name: 'Legal', href: '#' },
-      { name: 'Privacy policy', href: '#' },
+      { name: 'Help center', href: '/help' }, // or '#' if not built yet
+      { name: 'Terms of service', href: '/terms-of-use' },
+      { name: 'Legal', href: '/terms-of-use' }, // or a dedicated /legal page if needed
+      { name: 'Privacy policy', href: '/privacy-policy' },
     ],
     []
   );
