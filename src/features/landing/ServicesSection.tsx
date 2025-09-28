@@ -14,6 +14,7 @@ const ServicesSection: React.FC = () => {
       id: '1',
       icon: '/images/img_icon.svg',
       title: 'Course Guidance',
+      subtitle: 'Finding Your Perfect Path',
       description:
         'Personalized advice on choosing the right academic path — from school to PhD, including specialized and pathway programs tailored to your goals.',
     },
@@ -21,6 +22,7 @@ const ServicesSection: React.FC = () => {
       id: '2',
       icon: '/images/img_icon_green_50.svg',
       title: 'Admission Support',
+      subtitle: 'Turning Your Application into a Story',
       description:
         'End-to-end assistance with applications, scholarships, and document prep — we help you submit strong, standout applications with confidence.',
     },
@@ -28,6 +30,7 @@ const ServicesSection: React.FC = () => {
       id: '3',
       icon: '/images/img_icon_green_50_56x64.svg',
       title: 'Test Preparation',
+      subtitle: 'Master English, Master Your Future',
       description:
         'Master IELTS, PTE, and academic English with targeted coaching, mock tests, and expert feedback to hit your target scores.',
     },
@@ -35,6 +38,7 @@ const ServicesSection: React.FC = () => {
       id: '4',
       icon: '/images/img_icon_green_50_56x64.svg',
       title: 'Visa Support',
+      subtitle: 'Simplifying the Toughest Steps',
       description:
         'Navigate student and dependent visas, insurance, and post-study work rights with step-by-step guidance from certified advisors.',
     },
@@ -42,13 +46,15 @@ const ServicesSection: React.FC = () => {
       id: '5',
       icon: '/images/img_icon.svg',
       title: 'Predeparture Services',
+      subtitle: 'More Than Just a Visa',
       description:
         'Smooth transition abroad — we assist with airport pickup, housing, banking, and local systems so you settle in stress-free.',
     },
     {
       id: '6',
       icon: '/images/img_icon_green_50.svg',
-      title: 'Career Pathways',
+      title: 'Future Pathways',
+      subtitle: 'Building a Life, Not Just a degree',
       description:
         'Build a NZ-ready CV, join career events, and unlock local job opportunities with our post-study career development support.',
     },

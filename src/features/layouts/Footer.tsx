@@ -1,6 +1,14 @@
 // @/components/layout/Footer.tsx
+'use client';
+
 import React, { useState, useCallback, useMemo } from 'react';
 import LogoDark from '@/assets/global/logo_dark.svg';
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin
+} from 'lucide-react';
 
 interface Link {
   name: string;
@@ -9,8 +17,8 @@ interface Link {
 
 interface SocialMediaItem {
   name: string;
-  src: string;
-  href?: string;
+  icon: React.ReactNode;
+  href: string;
 }
 
 const Footer: React.FC = () => {
@@ -39,10 +47,26 @@ const Footer: React.FC = () => {
 
   const socialMedia: SocialMediaItem[] = useMemo(
     () => [
-      { name: 'Facebook', src: '/images/img_social_icons.png', href: 'https://www.facebook.com' },
-      { name: 'Twitter', src: '/images/img_social_icons_white_a700.png' },
-      { name: 'Instagram', src: '/images/img_social_icons_white_a700_24x32.png' },
-      { name: 'LinkedIn', src: '/images/img_social_icons_24x32.png' },
+      {
+        name: 'Facebook',
+        icon: <Facebook className="w-5 h-5" />,
+        href: 'https://www.facebook.com/profile.php?id=61578970088384'
+      },
+      {
+        name: 'Twitter',
+        icon: <Twitter className="w-5 h-5" />,
+        href: 'https://twitter.com/agigateway'
+      },
+      {
+        name: 'Instagram',
+        icon: <Instagram className="w-5 h-5" />,
+        href: 'http://instagram.com/agigateway'
+      },
+      {
+        name: 'LinkedIn',
+        icon: <Linkedin className="w-5 h-5" />,
+        href: 'https://www.linkedin.com/company/agigateway'
+      },
     ],
     []
   );
@@ -131,14 +155,10 @@ const LogoAndSocialSection: React.FC<LogoAndSocialSectionProps> = ({ socialMedia
             href={social.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer hover:opacity-80 transition-opacity"
+            className="text-primary-foreground hover:text-primary-foreground/80 transition-colors"
             aria-label={social.name}
           >
-            <img
-              src={social.src}
-              alt={social.name}
-              className="w-8 h-6"
-            />
+            {social.icon}
           </a>
         ))}
       </div>
@@ -160,7 +180,7 @@ const LinkSection: React.FC<LinkSectionProps> = ({ title, links }) => {
           <li key={link.name}>
             <a
               href={link.href}
-              className="text-sm text-primary-foreground font-normal hover:text-primary-foreground transition-colors focus:outline-none focus:underline"
+              className="text-sm text-primary-foreground font-normal hover:text-primary-foreground/80 transition-colors focus:outline-none focus:underline"
               aria-label={`Visit ${link.name}`}
             >
               {link.name}
@@ -196,7 +216,7 @@ const SupportAndNewsletterSection: React.FC<SupportAndNewsletterSectionProps> = 
 
         <div className="flex flex-col gap-4 sm:gap-6 lg:gap-6 w-full lg:w-3/4">
           <h3 className="text-lg sm:text-xl font-semibold text-primary-foreground">Stay up to date</h3>
-          <div className="flex justify-between items-center bg-background rounded-lg px-3 py-2 lg:px-4 lg:py-3">
+          <div className="flex justify-between items-center bg-background/50 rounded-lg px-3 py-2 lg:px-4 lg:py-3">
             <input
               type="email"
               value={email}
@@ -206,15 +226,18 @@ const SupportAndNewsletterSection: React.FC<SupportAndNewsletterSectionProps> = 
               className="bg-transparent text-sm text-primary-foreground placeholder-primary-foreground/70 border-none outline-none flex-1 focus:outline-none"
               aria-label="Email subscription"
             />
-            <img
-              src="/images/img_essential_icons.svg"
-              alt="Send email"
+            <button
               onClick={onSubscribe}
-              onKeyDown={onIconKeyDown}
+              // onKeyDown={onIconKeyDown}
               tabIndex={0}
-              role="button"
-              className="w-5 h-5 cursor-pointer hover:opacity-80 transition-opacity"
-            />
+              className="text-primary-foreground hover:text-primary-foreground/80 transition-colors"
+              aria-label="Send email"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 2L11 13" />
+                <path d="m22 2-7 20-4-9-9-4Z" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

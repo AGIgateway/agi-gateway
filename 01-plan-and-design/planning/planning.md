@@ -12,23 +12,9 @@
 ## Landing Page Common Setup
 
 - [x] Header
-   - Home
-   - Services
-   - Universities
-   - Study in New Zealand
-     - 
-
-
-
 - [x] Banner
     - 3 banners -> Hasib
 - [x] Services Banner 
-    - Visa
-    - Offer Letters
-    - Test prep
-    - Self Assessment 
-    - Airport Pick up
-    - Translation
 
 - [x] Study Location Banner
 - [x] Test Prep Banner
@@ -40,6 +26,17 @@
 - [ ] Book a Free Consultation Banner
 - [ ] Contacts Us
 - [ ] Blog section
+- [ ] Add serrvices content
+    - [ ] Visa
+    - [ ] Offer Letters
+    - [ ] Test prep
+    - [ ] Self Assessment 
+    - [ ] Airport Pick up
+    - [ ] Translation
+- [ ] Add terms of use privacy
+- [ ] Add About us
+- [ ] Add study in new zealand 
+- [ ] self assessment
 
 
 ## Ideas
