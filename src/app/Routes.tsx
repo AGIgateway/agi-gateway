@@ -1,55 +1,32 @@
-// @/app/Routes.tsx
+// src/app/Routes.tsx
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from '@/features/landing'; // or wherever your HomePage is
-import AboutPage from '@/features/about/AboutPage';
-import MainLayout from './layout/MainLayout';
+import HomePage from '@/features/landing';
 import SimplePage from '@/features/page';
 import PrivacyPolicyPage from '@/features/policy/PrivacyPolicyPage';
 import TermsOfUsePage from '@/features/policy/TermsOfUsePage';
+import MainLayout from './layout/MainLayout';
 
+// Route config
+const routes = [
+  { path: '/', element: <HomePage /> },
+  { path: '/page', element: <SimplePage /> },
+  { path: '/privacy-policy', element: <PrivacyPolicyPage /> },
+  { path: '/terms-of-use', element: <TermsOfUsePage /> },
+];
 
-
-const AppRoutes = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
+const AppRoutes = () => (
+  <BrowserRouter>
+    <Routes>
+      {routes.map(({ path, element }) => (
         <Route
-          path="/"
-          element={
-            <MainLayout>
-              <HomePage />
-            </MainLayout>
-          }
+          key={path}
+          path={path}
+          element={<MainLayout>{element}</MainLayout>}
         />
-        {/* Add other routes similarly */}
-        <Route
-          path="/page"
-          element={
-            <MainLayout>
-              <SimplePage />
-            </MainLayout>
-          }
-        />
-        <Route
-          path='/privacy-policy'
-          element={
-            <MainLayout>
-              <PrivacyPolicyPage />
-            </MainLayout>
-          }
-        />
-        <Route
-          path='/terms-of-use'
-          element={
-            <MainLayout>
-              <TermsOfUsePage />
-            </MainLayout>
-          }
-        />
-      </Routes>
-    </BrowserRouter >
-  );
-};
+      ))}
+    </Routes>
+  </BrowserRouter>
+);
 
 export default AppRoutes;

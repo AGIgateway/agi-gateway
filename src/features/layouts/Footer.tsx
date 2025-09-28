@@ -242,7 +242,6 @@ const SupportAndNewsletterSection: React.FC<SupportAndNewsletterSectionProps> = 
         </div>
       </div>
 
-      <p className="text-sm text-primary-foreground font-normal mt-4 lg:mt-0">Status</p>
     </div>
   );
 };

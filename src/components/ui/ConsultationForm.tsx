@@ -205,11 +205,11 @@ export function ConsultationForm() {
                                 <div className="space-y-1 leading-none">
                                     <FormLabel>
                                         By clicking you agree to our{' '}
-                                        <a href="/privacy" className="text-primary underline">
+                                        <a href="/privacy-policy" className="text-primary underline">
                                             Privacy Policy
                                         </a>{' '}
                                         and{' '}
-                                        <a href="/terms" className="text-primary underline">
+                                        <a href="/terms-of-use" className="text-primary underline">
                                             Terms & Conditions
                                         </a>
                                         *

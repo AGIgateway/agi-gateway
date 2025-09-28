@@ -51,9 +51,8 @@
 
 #### **Footer**
 - [x] Quick links  
-- [ ] Legal: Privacy Policy, Terms of Use  
-- [x] Social media  
-- [ ] Accreditation info
+- [x] Legal: Privacy Policy, Terms of Use  
+- [x] Social media
 
 ---
 
@@ -68,7 +67,7 @@
   - [ ] Self Assessment  
   - [ ] Airport Pick Up  
   - [ ] Translation  
-- [ ] Terms of Use & Privacy Policy  
+- [x] Terms of Use & Privacy Policy  
 - [ ] About Us  
 - [ ] Study in New Zealand Page  
 - [ ] Self Assessment Tool  

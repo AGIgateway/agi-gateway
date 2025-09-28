@@ -21,8 +21,8 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { name: 'Home', active: true, href: '#' },
-  { name: 'Services', active: false, href: '#services' },
+  { name: 'Home', active: true, href: '/' },
+  { name: 'Services', active: false, href: '/#services' },
   { name: 'Universities', active: false, href: '#university-partners' },
   { name: 'Study in New Zealand', active: false, href: '#testimonials' },
 ];

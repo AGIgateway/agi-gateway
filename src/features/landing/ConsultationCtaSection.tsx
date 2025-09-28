@@ -17,8 +17,6 @@ const ConsultationCtaSection: React.FC<ConsultationCtaSectionProps> = ({
                     <h2 className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-center text-footer-1 max-w-4xl">
                         {title}
                     </h2>
-
-                    {/* ✅ Replaced Button with ConsultationForm */}
                     <div className="w-full max-w-3xl">
                         <ConsultationForm />
                     </div>

@@ -1,9 +1,8 @@
-// @/app/App.tsx
+// src/app/App.tsx
+
 import React from 'react';
 import Routes from '@/app/Routes';
 
-const App: React.FC = () => {
-  return <Routes />;
-};
+const App = () => <Routes />;
 
 export default App;
