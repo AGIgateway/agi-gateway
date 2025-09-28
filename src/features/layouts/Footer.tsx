@@ -1,4 +1,4 @@
-// @/components/footer/Footer.tsx
+// @/components/layout/Footer.tsx
 import React, { useState, useCallback, useMemo } from 'react';
 import LogoDark from '@/assets/global/logo_dark.svg';
 
@@ -10,6 +10,7 @@ interface Link {
 interface SocialMediaItem {
   name: string;
   src: string;
+  href?: string;
 }
 
 const Footer: React.FC = () => {
@@ -38,7 +39,7 @@ const Footer: React.FC = () => {
 
   const socialMedia: SocialMediaItem[] = useMemo(
     () => [
-      { name: 'Facebook', src: '/images/img_social_icons.png' },
+      { name: 'Facebook', src: '/images/img_social_icons.png', href: 'https://www.facebook.com' },
       { name: 'Twitter', src: '/images/img_social_icons_white_a700.png' },
       { name: 'Instagram', src: '/images/img_social_icons_white_a700_24x32.png' },
       { name: 'LinkedIn', src: '/images/img_social_icons_24x32.png' },
@@ -79,7 +80,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="w-full mt-14 sm:mt-20 lg:mt-27">
-      <section className="w-full bg-footer-1">
+      <section className="w-full bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0 py-12 sm:py-16 lg:py-16">
             <LogoAndSocialSection socialMedia={socialMedia} />
@@ -119,18 +120,26 @@ const LogoAndSocialSection: React.FC<LogoAndSocialSectionProps> = ({ socialMedia
       </div>
 
       <div className="flex flex-col gap-1">
-        <p className="text-sm text-footer-2 font-normal">Copyright © 2025 AGI Gateway ltd.</p>
-        <p className="text-sm text-footer-2 font-normal">All rights reserved</p>
+        <p className="text-sm text-primary-foreground font-normal">Copyright © {new Date().getFullYear()} AGI Gateway ltd.</p>
+        <p className="text-sm text-primary-foreground font-normal">All rights reserved</p>
       </div>
 
       <div className="flex items-center gap-4 mt-4">
         {socialMedia.map((social) => (
-          <img
+          <a
             key={social.name}
-            src={social.src}
-            alt={social.name}
-            className="w-8 h-6 cursor-pointer hover:opacity-80 transition-opacity"
-          />
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer hover:opacity-80 transition-opacity"
+            aria-label={social.name}
+          >
+            <img
+              src={social.src}
+              alt={social.name}
+              className="w-8 h-6"
+            />
+          </a>
         ))}
       </div>
     </div>
@@ -145,13 +154,13 @@ interface LinkSectionProps {
 const LinkSection: React.FC<LinkSectionProps> = ({ title, links }) => {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 lg:gap-6 w-full lg:max-w-[100px]">
-      <h3 className="text-lg sm:text-xl font-semibold text-footer-3">{title}</h3>
+      <h3 className="text-lg sm:text-xl font-semibold text-primary-foreground">{title}</h3>
       <ul className="flex flex-col gap-3 lg:gap-3">
         {links.map((link) => (
           <li key={link.name}>
             <a
               href={link.href}
-              className="text-sm text-footer-2 font-normal hover:text-footer-3 transition-colors focus:outline-none focus:underline"
+              className="text-sm text-primary-foreground font-normal hover:text-primary-foreground transition-colors focus:outline-none focus:underline"
               aria-label={`Visit ${link.name}`}
             >
               {link.name}
@@ -186,15 +195,15 @@ const SupportAndNewsletterSection: React.FC<SupportAndNewsletterSectionProps> = 
         <LinkSection title="Support" links={supportLinks} />
 
         <div className="flex flex-col gap-4 sm:gap-6 lg:gap-6 w-full lg:w-3/4">
-          <h3 className="text-lg sm:text-xl font-semibold text-footer-3">Stay up to date</h3>
-          <div className="flex justify-between items-center bg-footer-1/50 rounded-lg px-3 py-2 lg:px-4 lg:py-3 w-full">
+          <h3 className="text-lg sm:text-xl font-semibold text-primary-foreground">Stay up to date</h3>
+          <div className="flex justify-between items-center bg-background rounded-lg px-3 py-2 lg:px-4 lg:py-3">
             <input
               type="email"
               value={email}
               onChange={onEmailChange}
               onKeyPress={onKeyPress}
               placeholder="Your email address"
-              className="bg-transparent text-sm text-footer-2 placeholder-footer-2 border-none outline-none flex-1 focus:outline-none"
+              className="bg-transparent text-sm text-primary-foreground placeholder-primary-foreground/70 border-none outline-none flex-1 focus:outline-none"
               aria-label="Email subscription"
             />
             <img
@@ -210,7 +219,7 @@ const SupportAndNewsletterSection: React.FC<SupportAndNewsletterSectionProps> = 
         </div>
       </div>
 
-      <p className="text-sm text-footer-2 font-normal mt-4 lg:mt-0">Status</p>
+      <p className="text-sm text-primary-foreground font-normal mt-4 lg:mt-0">Status</p>
     </div>
   );
 };

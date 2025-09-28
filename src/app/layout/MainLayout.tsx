@@ -1,4 +1,4 @@
-// src/app/layout/MainLayout.tsx
+// @/app/layout/MainLayout.tsx
 'use client'; // 👈 Add this if not already present — because WhatsAppButton uses onClick + window
 
 import React from 'react';

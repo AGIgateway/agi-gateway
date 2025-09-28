@@ -23,8 +23,8 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { name: 'Home', active: true, href: '#' },
   { name: 'Services', active: false, href: '#services' },
-  { name: 'Universities', active: false, href: '#universities' },
-  { name: 'Study in New Zealand', active: false, href: '#testimonial' },
+  { name: 'Universities', active: false, href: '#university-partners' },
+  { name: 'Study in New Zealand', active: false, href: '#testimonials' },
 ];
 
 const Header: React.FC = () => {
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="w-full bg-secondary sticky top-0 z-50 shadow-sm" // ✅ Added shadow-sm
+      className="w-full bg-secondary sticky top-0 z-50"
       role="banner"
       aria-label="Site header"
     >
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
             <Button
               variant="default"
               size="default"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md" // ✅ Explicit rounded-md (optional, Button may already have it)
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md"
             >
               Get Started
             </Button>
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-foreground hover:bg-secondary/50 rounded-md" // ✅ Rounded icon button
+                  className="text-foreground hover:bg-secondary/50 rounded-md"
                   aria-label="Open menu"
                 >
                   <Menu className="h-6 w-6" />
@@ -106,20 +106,19 @@ const Header: React.FC = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[300px] bg-secondary border-l border-primary/20 rounded-l-lg shadow-lg" // ✅ Rounded left edge + shadow
+                className="w-[300px] bg-secondary border-l border-primary/20 rounded-l-lg shadow-lg"
               >
                 <SheetHeader>
                   <SheetTitle className="text-primary text-left">Navigation</SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col gap-4 mt-8">
+                <nav className="flex flex-col gap-4 mt-4">
                   {NAV_ITEMS.map((item) => (
                     <Button
                       key={item.name}
                       variant="ghost"
-                      className={`justify-start text-left h-12 rounded-md ${ // ✅ Rounded buttons
-                        item.active
-                          ? 'text-primary font-semibold bg-primary/10'
-                          : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
+                      className={`justify-start text-left h-12 rounded-md ${item.active
+                        ? 'text-primary font-semibold bg-primary/10'
+                        : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
                         }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >

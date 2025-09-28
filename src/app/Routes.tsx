@@ -1,10 +1,11 @@
-// src/app/Routes.tsx
+// @/app/Routes.tsx
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from '@/features/landing'; // or wherever your HomePage is
 import AboutPage from '@/features/about/AboutPage';
 import MainLayout from './layout/MainLayout';
 import SimplePage from '@/features/page';
+
 
 const AppRoutes = () => {
   return (
