@@ -1,3 +1,4 @@
+// @/landing/index.tsx
 import type React from 'react';
 import { Suspense } from 'react';
 import HeroSection from '@/features/landing/HeroSection';

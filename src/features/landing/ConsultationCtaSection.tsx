@@ -1,4 +1,4 @@
-// @/components/sections/ConsultationCtaSection.tsx
+// @/landing/ConsultationCtaSection.tsx
 import React from 'react';
 import { ConsultationForm } from '@/components/ui/ConsultationForm'; // ✅ Adjust path if needed
 

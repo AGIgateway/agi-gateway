@@ -1,3 +1,4 @@
+// @/landing/HeroSection.tsx
 import type React from 'react';
 import { Badge } from '@/components/ui/badge';
 
