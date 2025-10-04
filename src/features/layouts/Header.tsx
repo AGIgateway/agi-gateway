@@ -1,4 +1,4 @@
-'use client';
+// @/features/layouts/Header.tsx
 
 import type React from 'react';
 import { useState } from 'react';
@@ -13,6 +13,15 @@ import {
 import { Menu } from 'lucide-react';
 import LogoLight from '@/assets/global/logo_light.svg';
 import LogoText from '@/assets/global/logo_text_light.svg';
+import { FaWhatsapp } from 'react-icons/fa';
+
+// ✅ Define WhatsApp click handler
+const handleWhatsAppClick = () => {
+  const phoneNumber = '+642885183100';
+  const message = encodeURIComponent('Hello! I would like to book a free consultation.');
+  const url = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
 
 interface NavItem {
   name: string;
@@ -41,7 +50,7 @@ const Header: React.FC = () => {
           {/* Logo Section */}
           <div className="flex items-center">
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg"> {/* ✅ Added rounded-lg */}
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg">
                 <img
                   src={LogoLight || '/placeholder.svg'}
                   alt="AGI Gateway Logo"
@@ -82,11 +91,14 @@ const Header: React.FC = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
+            {/* ✅ WhatsApp-styled Desktop Button */}
             <Button
-              variant="default"
-              size="default"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md"
+              onClick={handleWhatsAppClick}
+              className="bg-[#25D366] text-white hover:bg-[#128C7E] rounded-md 
+                         shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200
+                         flex items-center gap-2 px-4 py-2"
             >
+              <FaWhatsapp className="!size-4" />
               Get Started
             </Button>
           </div>
@@ -126,10 +138,17 @@ const Header: React.FC = () => {
                     </Button>
                   ))}
                   <div className="mt-4 pt-4 border-t border-primary/20">
+                    {/* ✅ WhatsApp-styled Mobile Button */}
                     <Button
-                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-md"
-                      onClick={() => setMobileMenuOpen(false)}
+                      onClick={() => {
+                        handleWhatsAppClick();
+                        setMobileMenuOpen(false);
+                      }}
+                      className="w-full bg-[#25D366] text-white hover:bg-[#128C7E] rounded-md 
+                                 shadow hover:shadow-md transition-all duration-200
+                                 flex items-center gap-2 px-4 py-2"
                     >
+                      <FaWhatsapp className="!size-4" />
                       Get Started
                     </Button>
                   </div>

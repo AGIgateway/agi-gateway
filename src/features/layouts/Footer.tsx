@@ -1,4 +1,5 @@
 // @/components/layout/Footer.tsx
+
 'use client';
 
 import React, { useState, useCallback, useMemo } from 'react';
