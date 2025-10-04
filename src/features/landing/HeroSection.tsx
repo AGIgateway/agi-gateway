@@ -4,55 +4,73 @@ import { Badge } from '@/components/ui/badge';
 
 const HeroSection: React.FC = () => {
   return (
-    <section
-      className="w-full bg-secondary h-[calc(85vh-80px)] min-h-[320px] sm:min-h-[400px] max-h-[800px] flex items-center overflow-hidden"
-      aria-label="Hero section"
-      role="region"
-    >
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 w-full">
-        <div className="flex flex-col lg:flex-row h-full items-center lg:items-stretch justify-center lg:justify-between p-4 lg:p-0">
-          {/* Left Content */}
-          <div className="flex-1 flex flex-col justify-center lg:pr-8 px-4 py-8 lg:px-0 lg:py-0">
-            <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
-              <Badge
-                variant="secondary"
-                className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
-              >
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
-                ACHIEVE
-              </Badge>
-              <Badge
-                variant="secondary"
-                className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
-              >
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
-                GROW
-              </Badge>
-              <Badge
-                variant="secondary"
-                className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
-              >
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
-                INSPIRE
-              </Badge>
-            </div>
+    <section className="pt-12 pb-0 sm:pb-0lg:pt-8 bg-secondary">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-16">
+          <div>
+            <div className="text-center lg:text-left">
+              {/* ✅ Added Badges */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-6 sm:mb-8">
+                <Badge
+                  variant="secondary"
+                  className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
+                >
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
+                  ACHIEVE
+                </Badge>
+                <Badge
+                  variant="secondary"
+                  className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
+                >
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
+                  GROW
+                </Badge>
+                <Badge
+                  variant="secondary"
+                  className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
+                >
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
+                  INSPIRE
+                </Badge>
+              </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-primary mb-8 sm:mb-12 lg:mb-16">
-              WE CONNECT BRILLIANT MINDS TO WORLD-CLASS EDUCATION
-            </h1>
+              {/* ✅ Updated Headline */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-primary mb-8 sm:mb-12 lg:mb-16">
+                WE CONNECT BRILLIANT MINDS TO WORLD-CLASS EDUCATION
+              </h1>
+
+              {/* Stats section remains unchanged */}
+              <div className="flex items-center justify-center mt-10 space-x-6 lg:justify-start sm:space-x-8">
+                <div className="flex items-center">
+                  <p className="text-3xl font-medium text-gray-900 sm:text-4xl font-pj">900</p>
+                  <p className="ml-3 text-sm text-gray-900 font-pj">Visa<br />Delivered</p>
+                </div>
+
+                <div className="hidden sm:block">
+                  <svg className="text-gray-400" width="16" height="39" viewBox="0 0 16 39" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.72265" y1="10.584" x2="15.7226" y2="0.583975"></line>
+                    <line x1="0.72265" y1="17.584" x2="15.7226" y2="7.58398"></line>
+                    <line x1="0.72265" y1="24.584" x2="15.7226" y2="14.584"></line>
+                    <line x1="0.72265" y1="31.584" x2="15.7226" y2="21.584"></line>
+                    <line x1="0.72265" y1="38.584" x2="15.7226" y2="28.584"></line>
+                  </svg>
+                </div>
+
+                <div className="flex items-center">
+                  <p className="text-3xl font-medium text-gray-900 sm:text-4xl font-pj">1000+</p>
+                  <p className="ml-3 text-sm text-gray-900 font-pj">Offer Letters<br />Completed</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Right Image */}
-          <div className="flex-1 lg:flex-[0_0_50%] xl:flex-[0_0_45%] flex items-center justify-center p-4 lg:p-0 mt-8 sm:mt-12 md:mt-16 lg:mt-32">
-            <div className="w-full h-full max-h-full flex items-center justify-center overflow-hidden h-[40vh] sm:h-[50vh] md:h-auto">
-              <img
-                src="/images/img_graduation_student.svg"
-                alt="Smiling graduate in cap and gown holding diploma"
-                className="w-full h-full object-cover object-center"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
+          {/* Right Image — unchanged */}
+          <div>
+            <img
+              className="w-full"
+              src="/images/img_graduation_student.svg"
+              alt="Smiling graduate in cap and gown holding diploma"
+            />
           </div>
         </div>
       </div>

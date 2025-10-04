@@ -1,0 +1,65 @@
+// @/landing/HeroSection.tsx
+import type React from 'react';
+import { Badge } from '@/components/ui/badge';
+
+const HeroSection: React.FC = () => {
+    return (
+        <section
+            className="w-full bg-secondary h-[calc(85vh-80px)] min-h-[320px] sm:min-h-[400px] max-h-[800px] flex items-center overflow-hidden"
+            aria-label="Hero section"
+            role="region"
+        >
+            <div className="mx-auto max-w-screen-xl px-4 sm:px-6 w-full">
+                <div className="flex flex-col lg:flex-row h-full items-center lg:items-stretch justify-center lg:justify-between p-4 lg:p-0">
+                    {/* Left Content */}
+                    <div className="flex-1 flex flex-col justify-center lg:pr-8 px-4 py-8 lg:px-0 lg:py-0">
+                        <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
+                            <Badge
+                                variant="secondary"
+                                className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
+                            >
+                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
+                                ACHIEVE
+                            </Badge>
+                            <Badge
+                                variant="secondary"
+                                className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
+                            >
+                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
+                                GROW
+                            </Badge>
+                            <Badge
+                                variant="secondary"
+                                className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
+                            >
+                                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
+                                INSPIRE
+                            </Badge>
+                        </div>
+
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-primary mb-8 sm:mb-12 lg:mb-16">
+                            WE CONNECT BRILLIANT MINDS TO WORLD-CLASS EDUCATION
+                        </h1>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className="flex-1 lg:flex-[0_0_50%] xl:flex-[0_0_45%] flex items-center justify-center p-4 lg:p-0 mt-8 sm:mt-12 md:mt-16 lg:mt-32">
+                        <div className="w-full h-full max-h-full flex items-center justify-center overflow-hidden h-[40vh] sm:h-[50vh] md:h-auto">
+                            <img
+                                src="/images/img_graduation_student.svg"
+                                alt="Smiling graduate in cap and gown holding diploma"
+                                className="w-full h-full object-cover object-center"
+                                loading="eager"
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    );
+};
+
+export default HeroSection;
