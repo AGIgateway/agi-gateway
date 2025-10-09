@@ -1,7 +1,5 @@
 // @/components/layout/Footer.tsx
 
-'use client';
-
 import React, { useState, useCallback, useMemo } from 'react';
 import LogoDark from '@/assets/global/logo_dark.svg';
 import {
@@ -30,8 +28,7 @@ const Footer: React.FC = () => {
       { name: 'About us', href: '#' },
       { name: 'Blog', href: '#' },
       { name: 'Contact us', href: '#' },
-      { name: 'Pricing', href: '#' },
-      { name: 'Testimonials', href: '#' },
+      { name: 'Testimonials', href: '#testimonials' },
     ],
     []
   );
@@ -174,7 +171,7 @@ interface LinkSectionProps {
 
 const LinkSection: React.FC<LinkSectionProps> = ({ title, links }) => {
   return (
-    <div className="flex flex-col gap-4 sm:gap-6 lg:gap-6 w-full lg:max-w-[100px]">
+    <div className="flex flex-col gap-4 sm:gap-6 lg:gap-6 w-full lg:max-w-32">
       <h3 className="text-lg sm:text-xl font-semibold text-primary-foreground">{title}</h3>
       <ul className="flex flex-col gap-3 lg:gap-3">
         {links.map((link) => (
@@ -215,9 +212,9 @@ const SupportAndNewsletterSection: React.FC<SupportAndNewsletterSectionProps> = 
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0 w-full">
         <LinkSection title="Support" links={supportLinks} />
 
-        <div className="flex flex-col gap-4 sm:gap-6 lg:gap-6 w-full lg:w-3/4">
+        <div className="flex flex-col gap-4 sm:gap-6 lg:gap-6 w-full lg:w-1/2">
           <h3 className="text-lg sm:text-xl font-semibold text-primary-foreground">Stay up to date</h3>
-          <div className="flex justify-between items-center bg-background/50 rounded-lg px-3 py-2 lg:px-4 lg:py-3">
+          <div className="flex justify-between items-center bg-muted rounded-lg px-3 py-2 lg:px-4 lg:py-3">
             <input
               type="email"
               value={email}
@@ -231,7 +228,7 @@ const SupportAndNewsletterSection: React.FC<SupportAndNewsletterSectionProps> = 
               onClick={onSubscribe}
               // onKeyDown={onIconKeyDown}
               tabIndex={0}
-              className="text-primary-foreground hover:text-primary-foreground/80 transition-colors"
+              className="text-secondary-foreground hover:text-primary-foreground/80 transition-colors"
               aria-label="Send email"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

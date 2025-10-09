@@ -58,7 +58,7 @@ export default function ServicePageTemplate({
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroBackgroundImage})`,
                 }}
             >
-                <div className="text-center text-white z-10">
+                <div className="text-center text-primary-foreground z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">{heroTitle}</h1>
                     <nav className="flex items-center justify-center gap-2 text-sm md:text-base">
                         {breadcrumbPath.map((item, index) => (
@@ -241,10 +241,15 @@ export default function ServicePageTemplate({
                                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${helpCtaImage})`,
                             }}
                         >
-                            <CardContent className="text-center text-white p-8">
+                            <CardContent className="text-center text-primary-foreground p-8">
                                 <p className="text-sm uppercase tracking-wide mb-2">{helpCtaSubtitle}</p>
                                 <h3 className="text-3xl font-bold mb-6">{helpCtaTitle}</h3>
-                                <Button asChild variant="outline" size="lg" className="bg-white text-foreground hover:bg-white/90">
+                                <Button
+                                    asChild
+                                    variant="outline"
+                                    size="lg"
+                                    className="bg-background text-foreground hover:bg-background/90"
+                                >
                                     <Link to={helpCtaButtonHref}>
                                         {helpCtaButtonText}
                                         <ArrowRight className="ml-2 w-4 h-4" />

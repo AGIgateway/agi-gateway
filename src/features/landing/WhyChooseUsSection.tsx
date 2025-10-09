@@ -16,7 +16,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
           <CardContent className="p-0">
             <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-16 lg:items-center">
               {/* Image Section */}
-              <div className="w-full lg:w-1/3">
+              <div className="w-full lg:w-1/3 ">
                 <div
                   className="relative mx-auto w-full max-w-md sm:max-w-lg lg:max-w-xl aspect-[4/5]"
                   role="img"

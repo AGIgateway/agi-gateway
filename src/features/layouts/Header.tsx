@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom'; // 👈 for Home route
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -152,8 +152,8 @@ const Header: React.FC = () => {
                         <Button
                           variant="ghost"
                           className={`w-full justify-start text-left h-12 rounded-md px-3 ${item.active
-                              ? 'text-primary font-semibold bg-primary/10'
-                              : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
+                            ? 'text-primary font-semibold bg-primary/10'
+                            : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
                             }`}
                           onClick={() => {
                             scrollToSection(item.href!.substring(1));
@@ -168,8 +168,8 @@ const Header: React.FC = () => {
                           <Button
                             variant="ghost"
                             className={`w-full justify-start text-left h-12 rounded-md px-3 ${item.active
-                                ? 'text-primary font-semibold bg-primary/10'
-                                : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
+                              ? 'text-primary font-semibold bg-primary/10'
+                              : 'text-muted-foreground hover:text-primary hover:bg-primary/5'
                               }`}
                           >
                             {item.name}

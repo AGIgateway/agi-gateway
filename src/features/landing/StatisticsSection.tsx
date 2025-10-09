@@ -1,3 +1,5 @@
+// @/components/StatisticsSection.tsx
+
 import type React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -37,42 +39,39 @@ const StatisticsSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#F5F7FA]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[56px]">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-0 py-12 sm:py-16 lg:py-[64px]">
+    <section className="w-full bg-muted"> {/* or use bg-[#F5F7FA] if not in theme */}
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 py-12 sm:py-16 lg:py-20">
           {/* Text Content */}
-          <div className="flex flex-col gap-2 items-start w-full lg:w-[50%] text-center lg:text-left">
-            <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-semibold leading-tight text-foreground w-full lg:w-[66%]">
+          <div className="flex flex-col items-start w-full lg:w-1/2 text-center lg:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-foreground max-w-[66%]">
               <span className="text-foreground">Helping Students </span>
-              <span className="text-primary">Across The World </span>
+              <span className="text-primary">Across The World</span>
             </h2>
-            <p className="text-sm sm:text-base font-normal leading-5 text-primary mt-4 lg:mt-[52px]">
+            <p className="text-sm sm:text-base font-normal text-muted-foreground mt-4">
               We reached here with our hard work and dedication
             </p>
           </div>
 
           {/* Statistics Grid */}
-          <div className="w-full lg:w-[46%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-[16px]">
-              {statistics.map((stat, index) => (
+          <div className="w-full lg:w-2/5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              {statistics.map((stat) => (
                 <Card
                   key={stat.id}
                   className="bg-transparent border-none shadow-none hover:bg-background/50 transition-colors duration-200"
                 >
-                  <CardContent
-                    className={`p-0 flex gap-3 sm:gap-4 lg:gap-[16px] items-center ${index % 2 === 0 ? 'justify-start' : 'justify-start sm:justify-end'
-                      }`}
-                  >
+                  <CardContent className="p-0 flex gap-3 sm:gap-4 items-center">
                     <img
                       src={stat.icon || '/placeholder.svg'}
                       alt={stat.label}
-                      className="w-10 sm:w-12 lg:w-[48px] h-10 sm:h-12 lg:h-[48px] object-contain flex-shrink-0"
+                      className="w-10 sm:w-12 h-10 sm:h-12 object-contain flex-shrink-0"
                     />
-                    <div className="flex flex-col gap-1 lg:gap-[2px]">
-                      <h3 className="text-[20px] sm:text-[24px] lg:text-[28px] font-bold leading-tight text-foreground">
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                         {stat.value}
                       </h3>
-                      <p className="text-sm sm:text-base font-normal leading-5 text-muted-foreground">
+                      <p className="text-sm sm:text-base text-muted-foreground">
                         {stat.label}
                       </p>
                     </div>

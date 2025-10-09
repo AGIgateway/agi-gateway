@@ -37,10 +37,10 @@ const BlogSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 text-center mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-global-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-foreground">
             Caring Is Our Moto
           </h2>
-          <p className="text-sm sm:text-base font-normal leading-6 text-global-4 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base font-normal leading-6 text-muted-foreground max-w-2xl mx-auto">
             AGI Gateway blog is the best place to read about the latest university and study insights, trends and more.
           </p>
         </div>
@@ -58,14 +58,14 @@ const BlogSection: React.FC = () => {
                 />
               </div>
 
-              <Card className="flex flex-col gap-4 lg:gap-6 items-center bg-background border-none shadow-lg p-5 lg:p-6 -mt-16 mx-6 w-[calc(100%-3rem)] relative z-10">
+              <Card className="flex flex-col gap-4 lg:gap-6 items-center bg-card border-none shadow-lg p-5 lg:p-6 -mt-16 mx-6 w-[calc(100%-3rem)] relative z-10">
                 <CardContent className="p-0 flex flex-col gap-4 lg:gap-6 items-center w-full">
-                  <CardTitle className="text-lg sm:text-xl font-semibold leading-7 text-center text-global-4">
+                  <CardTitle className="text-lg sm:text-xl font-semibold leading-7 text-center text-muted-foreground">
                     {post.title}
                   </CardTitle>
                   {/* Readmore Button */}
                   <Button variant="ghost" className="flex gap-2 items-center py-2 h-auto p-0 hover:bg-transparent">
-                    <span className="text-lg sm:text-xl font-semibold leading-tight text-global-1">Readmore</span>
+                    <span className="text-lg sm:text-xl font-semibold leading-tight text-primary">Readmore</span>
                     <img
                       src="/images/img_24_arrows_directions_right.svg"
                       alt="Arrow right"

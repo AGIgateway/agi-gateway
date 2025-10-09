@@ -57,16 +57,16 @@
 ---
 
 ### **Pending Sections (From Checklist)**
-- [ ] Book a Free Consultation Banner  
+- [x] Book a Free Consultation Form  
 - [ ] Contact Us  
 - [ ] Blog Section  
-- [ ] Services Content (detailed)  
-  - [ ] Visa  
-  - [ ] Offer Letters  
-  - [ ] Test Prep  
-  - [ ] Self Assessment  
-  - [ ] Airport Pick Up  
-  - [ ] Translation  
+- [x] Services Content (detailed)  
+  - [x] Visa  
+  - [x] Offer Letters  
+  - [x] Test Prep  
+  - [x] Self Assessment  
+  - [x] Airport Pick Up  
+  - [x] Translation  
 - [x] Terms of Use & Privacy Policy  
 - [ ] About Us  
 - [ ] Study in New Zealand Page  
