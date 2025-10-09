@@ -70,7 +70,8 @@
 - [x] Terms of Use & Privacy Policy  
 - [ ] About Us  
 - [ ] Study in New Zealand Page  
-- [ ] Self Assessment Tool  
+- [ ] Self Assessment Form
+- [ ] subtitle under Self Assesment Form  "Ready to Study in New Zealand? Tell Us Your Story".
 
 ---
 

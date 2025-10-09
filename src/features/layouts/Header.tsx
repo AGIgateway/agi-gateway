@@ -94,9 +94,9 @@ const Header: React.FC = () => {
             {/* ✅ WhatsApp-styled Desktop Button */}
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-[#25D366] text-white hover:bg-[#128C7E] rounded-md 
+              className="bg-[#25D366] text-black hover:bg-[#128C7E] rounded-md 
                          shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200
-                         flex items-center gap-2 px-4 py-2"
+                         flex items-center gap-2 px-4 py-2 "
             >
               <FaWhatsapp className="!size-4" />
               Get Started

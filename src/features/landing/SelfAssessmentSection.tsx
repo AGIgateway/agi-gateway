@@ -31,10 +31,11 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
                   Self Assessment
                 </h2>
                 <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
-                  Take the first step toward your global education journey with our quick, intuitive
-                  self-assessment. In just a few minutes, discover which courses, countries, and
-                  pathways best match your goals, budget, and academic background — personalized
-                  just for you. No pressure, no obligations — just clarity to start smart.
+                  Every great journey begins with understanding where you stand today. Our self-assessment form helps us learn more about your goals, academic background, and study preferences — so we can guide you towards the best pathway for your future.
+
+                  Take a few minutes to complete the form, and our team will personally review your details and get in touch with tailored advice to help you take the next step towards studying in New Zealand.
+
+                  Your dream deserves the right direction — let’s start your journey together.
                 </p>
               </div>
               <div className="flex justify-center lg:justify-start">

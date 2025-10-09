@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
               </h1>
 
               {/* Stats section remains unchanged */}
-              <div className="flex items-center justify-center mt-10 space-x-6 lg:justify-start sm:space-x-8">
+              {/* <div className="flex items-center justify-center mt-10 space-x-6 lg:justify-start sm:space-x-8">
                 <div className="flex items-center">
                   <p className="text-3xl font-medium text-gray-900 sm:text-4xl font-pj">900</p>
                   <p className="ml-3 text-sm text-gray-900 font-pj">Visa<br />Delivered</p>
@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
                   <p className="text-3xl font-medium text-gray-900 sm:text-4xl font-pj">1000+</p>
                   <p className="ml-3 text-sm text-gray-900 font-pj">Offer Letters<br />Completed</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -37,7 +37,7 @@ const StatisticsSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-muted-background">
+    <section className="w-full bg-[#F5F7FA]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[56px]">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-0 py-12 sm:py-16 lg:py-[64px]">
           {/* Text Content */}

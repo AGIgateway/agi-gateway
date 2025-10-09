@@ -28,25 +28,25 @@ const TestimonialSection: React.FC = () => {
           {/* Testimonial Content */}
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-2/3 text-center lg:text-left">
             <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
+              <h2 >
+                Their Journey. Their Words. Their Success.
+              </h2>
               <p className="text-sm sm:text-base font-medium leading-relaxed text-muted-foreground">
-                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel
-                rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare,
-                tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi
-                laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus
-                sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis
-                vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae
-                placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero
-                condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+
+                Every student has a story — a dream that began with a single question: “Can I really study abroad?”
+                At AGI Gateway, we’ve guided countless students who turned that question into confidence. From their first consultation to the moment they arrive in New Zealand, our students become part of our story.
+
+                Each testimonial is more than a success story — it’s a reflection of trust, growth, and the belief that great futures begin with the right guidance.
               </p>
 
-              <div className="flex flex-col gap-2 sm:gap-3 lg:gap-3">
+              {/* <div className="flex flex-col gap-2 sm:gap-3 lg:gap-3">
                 <h3 className="text-lg sm:text-xl font-semibold leading-tight text-primary">
                   Tim Smith
                 </h3>
                 <p className="text-sm sm:text-base font-normal leading-relaxed text-secondary-foreground">
                   British Dragon Boat Racing Association
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Testimonial Navigation */}
