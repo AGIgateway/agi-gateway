@@ -10,7 +10,6 @@ export const admissionSupportData: ServicePageData = {
     serviceTitle: "Turning Your Application into a Story",
     serviceDescription: [
         "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success.",
-        // "With years of experience and a proven track record of successful placements, our expert counselors provide personalized guidance tailored to your academic goals and career aspirations. We handle everything from document preparation to application submission, making your journey to higher education smooth and stress-free.",
     ],
     formServiceOptions: ["Admission Support", "Document Review", "Application Assistance", "Essay Writing Help"],
     formDefaultService: "Admission Support",
@@ -30,16 +29,16 @@ export const admissionSupportData: ServicePageData = {
 }
 
 export const visaConsultationData: ServicePageData = {
-    heroTitle: "VISA CONSULTATION",
+    heroTitle: "VISA SUPPORT",
     heroBackgroundImage: "/passport-and-visa-documents.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Visa Consultation", href: "/services/visa-consultation" },
     ],
-    serviceTitle: "Expert Visa Guidance",
+    serviceTitle: "Simplifying the Toughest Steps",
     serviceDescription: [
-        "Navigate the complex visa application process with confidence. Our experienced visa consultants provide comprehensive support for student visas, work permits, and immigration documentation across multiple countries.",
-        "We stay updated with the latest immigration policies and requirements, ensuring your application meets all criteria. From initial consultation to visa approval, we are with you every step of the way, maximizing your chances of success.",
+        "Visa processes can be overwhelming, but with AGI Gateway, you’re never alone. Our certified advisors guide you through student visas, dependent visas, insurance, and post-study work rights. Being locally based, we’re always updated on immigration changes, giving you clarity and confidence every step of the way.",
+
     ],
     formServiceOptions: ["Visa Consultation", "Document Preparation", "Interview Preparation", "Visa Application Review"],
     formDefaultService: "Visa Consultation",
@@ -65,10 +64,9 @@ export const testPreparationData: ServicePageData = {
         { label: "Home", href: "/" },
         { label: "Test Preparations", href: "/services/test-preparations" },
     ],
-    serviceTitle: "JLPT",
+    serviceTitle: "Master English, Master Your Future",
     serviceDescription: [
-        "The Japanese-Language Proficiency Test or JLPT, is a standardized criterion-referenced test to evaluate and certify Japanese language proficiency for non-native speakers, covering language knowledge, reading ability, and listening ability. The test is held twice a year in Japan and selected countries (on the first Sunday of July and December), and once a year in other regions (either on the first Sunday of December or July depending on region). The JLPT is conducted by the Japan Foundation for tests overseas (with cooperation of local host institutions), and Japan Educational Exchanges and Services for tests in Japan.",
-        "The JLPT consists of five independent levels of certification, with 5 the lowest and 1 the highest. Until 2009, the test had four levels of certification. JLPT certificates do not expire or become invalid over time.",
+        "English proficiency tests like IELTS and PTE are not roadblocks; they are gateways to global opportunities. At AGI Gateway, we connect you with expert trainers who provide targeted coaching, realistic mock tests, and personalized feedback. Our approach goes beyond achieving a high score. With us, you don’t just prepare for an exam, but you build the confidence to succeed in classrooms, workplaces, and everyday life anywhere in the world."
     ],
     formServiceOptions: ["JLPT", "IELTS", "TOEFL", "GRE", "GMAT"],
     formDefaultService: "JLPT",
@@ -88,16 +86,15 @@ export const testPreparationData: ServicePageData = {
 }
 
 export const languageTrainingData: ServicePageData = {
-    heroTitle: "LANGUAGE TRAINING",
+    heroTitle: "COURSE GUIDENCE",
     heroBackgroundImage: "/language-classroom-learning.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Language Training", href: "/services/language-training" },
     ],
-    serviceTitle: "Professional Language Courses",
+    serviceTitle: "Finding Your Perfect Path",
     serviceDescription: [
-        "Master a new language with our comprehensive training programs. We offer courses in Japanese, Korean, English, and more, designed for students planning to study abroad or professionals seeking to enhance their language skills.",
-        "Our experienced instructors use proven teaching methodologies and interactive learning techniques to ensure rapid progress. Whether you are a beginner or looking to achieve advanced proficiency, our flexible course schedules and personalized attention help you reach your language goals efficiently.",
+        "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success."
     ],
     formServiceOptions: ["Language Training", "Japanese Course", "Korean Course", "English Course", "Private Tutoring"],
     formDefaultService: "Language Training",
@@ -123,10 +120,9 @@ export const futurePathwaysData: ServicePageData = {
         { label: "Home", href: "/" },
         { label: "Future Pathways", href: "/services/future-pathways" },
     ],
-    serviceTitle: "Career Planning & Guidance",
+    serviceTitle: "Building a Life, Not Just a degree",
     serviceDescription: [
-        "Plan your future with confidence through our comprehensive career guidance services. We help you identify the right educational pathways that align with your career aspirations and personal strengths.",
-        "Our expert counselors provide insights into global job markets, emerging industries, and educational opportunities that will set you up for long-term success. From choosing the right major to planning your career trajectory, we are here to guide you every step of the way.",
+        "Your journey doesn’t end with graduation. At AGI Gateway, we prepare you for life beyond the classroom by helping you craft a professional CV, connect with employers, and explore post-study visa or residency options. With our local networks and insights, you don’t just study abroad you build a fulfilling future in New Zealand."
     ],
     formServiceOptions: ["Future Pathways", "Career Counseling", "Course Selection", "Industry Insights"],
     formDefaultService: "Future Pathways",
@@ -152,10 +148,9 @@ export const predepartureServicesData: ServicePageData = {
         { label: "Home", href: "/" },
         { label: "Pre-Departure Services", href: "/services/pre-departure" },
     ],
-    serviceTitle: "Complete Pre-Departure Support",
+    serviceTitle: "More Than Just a Visa",
     serviceDescription: [
-        "Prepare for your journey abroad with our comprehensive pre-departure services. We provide essential guidance on accommodation, travel arrangements, cultural orientation, and everything you need to know before leaving.",
-        "Our pre-departure briefings cover practical aspects like banking, health insurance, local customs, and safety tips. We ensure you are fully prepared and confident as you embark on your international education journey.",
+        "For many agencies, support ends once a visa is approved. For us, that’s only the beginning. We provide comprehensive pre-departure and settlement support, including airport pickup, accommodation solutions, bank account setup, SIM cards, and cultural orientation. Parents and families can rest assured knowing their children are guided and supported from the moment they land."
     ],
     formServiceOptions: ["Pre-Departure Services", "Accommodation Assistance", "Travel Planning", "Cultural Orientation"],
     formDefaultService: "Pre-Departure Services",
