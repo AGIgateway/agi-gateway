@@ -1,8 +1,8 @@
-import type React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import type React from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
-type WhyChooseUsSectionProps = {};
+type WhyChooseUsSectionProps = {}
 
 const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
   return (
@@ -25,7 +25,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                   <img
                     src="/images/img_attentive_listening.png"
                     alt="Attentive listening — our team listens to your needs"
-                    className="h-full w-full object-contain drop-shadow-md"
+                    className="h-full w-full object-contain drop-shadow-md rounded-lg"
                     loading="lazy"
                     decoding="async"
                   />
@@ -42,9 +42,12 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                     Why Choose Us?
                   </h2>
                   <p className="mx-auto max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
-                    AGI Gateway isn’t just another education consultancy. It’s a bridge built by people who’ve walked the same path.
-                    We’re proudly New Zealand owned and operated, shaped by real experiences — arriving in a new country, facing uncertainty, learning to adapt, and finally, calling this place home.
-                    With AGI Gateway, you’re not just choosing a consultancy. You’re choosing mentors who have lived your dream, faced the same challenges, and built a trusted path for your success — academically, personally, and professionally.
+                    AGI Gateway isn’t just another education consultancy. It’s a bridge built by people who’ve walked
+                    the same path. We’re proudly New Zealand owned and operated, shaped by real experiences — arriving
+                    in a new country, facing uncertainty, learning to adapt, and finally, calling this place home. With
+                    AGI Gateway, you’re not just choosing a consultancy. You’re choosing mentors who have lived your
+                    dream, faced the same challenges, and built a trusted path for your success — academically,
+                    personally, and professionally.
                   </p>
                 </div>
                 <div className="flex justify-center lg:justify-start">
@@ -62,7 +65,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
         </Card>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default WhyChooseUsSection;
+export default WhyChooseUsSection

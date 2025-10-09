@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
               key={id}
               id={id}
               aria-label={label}
-              className={index > 0 ? 'mt-12 sm:mt-16 lg:mt-[66px]' : ''}
+              className={index > 0 ? 'mt-12 sm:mt-16 lg:mt-16' : ''}
             >
               <Component />
             </section>
