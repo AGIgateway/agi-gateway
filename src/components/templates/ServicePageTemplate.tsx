@@ -53,17 +53,17 @@ export default function ServicePageTemplate({
         <div className="min-h-screen">
             {/* Hero Section */}
             <section
-                className="relative h-[300px] md:h-[400px] flex items-center justify-center bg-cover bg-center"
+                className="relative h-[400px] flex items-center justify-center bg-cover bg-center"
                 style={{
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroBackgroundImage})`,
                 }}
             >
-                <div className="text-center text-primary-foreground z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">{heroTitle}</h1>
+                <div className="text-center text-white z-10 px-4">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-wide">{heroTitle}</h1>
                     <nav className="flex items-center justify-center gap-2 text-sm md:text-base">
                         {breadcrumbPath.map((item, index) => (
                             <React.Fragment key={item.href}>
-                                <Link to={item.href} className="hover:underline transition-all">
+                                <Link to={item.href} className="hover:underline transition-colors">
                                     {item.label}
                                 </Link>
                                 {index < breadcrumbPath.length - 1 && <ChevronRight className="w-4 h-4" />}
@@ -74,13 +74,13 @@ export default function ServicePageTemplate({
             </section>
 
             {/* Main Content */}
-            <section className="container mx-auto px-4 py-12 md:py-16">
+            <section className="container mx-auto px-4 py-12 lg:px-16 md:py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Left Column - 2/3 width */}
                     <div className="lg:col-span-2 space-y-8">
                         {/* Service Description */}
                         <div>
-                            <h2 className="text-3xl font-bold mb-6">{serviceTitle}</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">{serviceTitle}</h2>
                             <div className="space-y-4 text-muted-foreground leading-relaxed">
                                 {serviceDescription.map((paragraph, index) => (
                                     <p key={index}>{paragraph}</p>
@@ -91,7 +91,7 @@ export default function ServicePageTemplate({
                         {/* Application Form */}
                         <Card>
                             <CardHeader>
-                                <CardTitle className="text-2xl">APPLY NOW</CardTitle>
+                                <CardTitle className="text-xl md:text-2xl">APPLY NOW</CardTitle>
                             </CardHeader>
                             <CardContent>
                                 <Form {...form}>
@@ -182,7 +182,7 @@ export default function ServicePageTemplate({
                                         />
 
                                         {/* Submit Button */}
-                                        <Button type="submit" variant="primary" size="lg" className="w-full md:w-auto">
+                                        <Button type="submit" className="w-full md:w-auto">
                                             APPLY NOW
                                             <ArrowRight className="ml-2 w-4 h-4" />
                                         </Button>
@@ -224,7 +224,7 @@ export default function ServicePageTemplate({
                                     <CardTitle>DOWNLOAD BROCHURE</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <Button asChild variant="primary" size="lg" className="w-full">
+                                    <Button asChild className="w-full">
                                         <a href={brochureUrl} download>
                                             <Download className="mr-2 w-4 h-4" />
                                             DOWNLOAD PDF
@@ -236,20 +236,15 @@ export default function ServicePageTemplate({
 
                         {/* Help CTA Card */}
                         <Card
-                            className="relative overflow-hidden bg-cover bg-center min-h-[300px] flex items-center justify-center"
+                            className="relative overflow-hidden bg-cover bg-center min-h-75 flex items-center justify-center"
                             style={{
                                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${helpCtaImage})`,
                             }}
                         >
-                            <CardContent className="text-center text-primary-foreground p-8">
+                            <CardContent className="text-center text-white p-6 sm:p-8">
                                 <p className="text-sm uppercase tracking-wide mb-2">{helpCtaSubtitle}</p>
-                                <h3 className="text-3xl font-bold mb-6">{helpCtaTitle}</h3>
-                                <Button
-                                    asChild
-                                    variant="outline"
-                                    size="lg"
-                                    className="bg-background text-foreground hover:bg-background/90"
-                                >
+                                <h3 className="text-2xl sm:text-3xl font-bold mb-6">{helpCtaTitle}</h3>
+                                <Button asChild variant="outline" className="bg-white text-foreground hover:bg-white/90">
                                     <Link to={helpCtaButtonHref}>
                                         {helpCtaButtonText}
                                         <ArrowRight className="ml-2 w-4 h-4" />

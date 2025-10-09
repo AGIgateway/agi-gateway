@@ -17,7 +17,7 @@ const TestimonialSection: React.FC = () => {
           {/* Testimonial Image */}
           <div className="flex justify-center lg:justify-start w-full lg:w-auto">
             <img
-              src="/images/img_image_9.png"
+              src="/images/img-graduation.jpeg"
               alt="Testimonial person"
               className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[326px] h-auto rounded-lg object-cover shadow-md"
               loading="lazy"
@@ -28,15 +28,19 @@ const TestimonialSection: React.FC = () => {
           {/* Testimonial Content */}
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 w-full lg:w-2/3 text-center lg:text-left">
             <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
-              <h2 >
+              <h2
+                id="testimonial-heading"
+                className="text-xl font-semibold leading-tight text-foreground sm:text-2xl lg:text-3xl"
+              >
                 Their Journey. Their Words. Their Success.
               </h2>
               <p className="text-sm sm:text-base font-medium leading-relaxed text-muted-foreground">
 
-                Every student has a story — a dream that began with a single question: “Can I really study abroad?”
-                At AGI Gateway, we’ve guided countless students who turned that question into confidence. From their first consultation to the moment they arrive in New Zealand, our students become part of our story.
+                Every student has a story, a dream that began with a single question: “Can I really study abroad?”
+                <p>At AGI Gateway, we’ve guided countless students who turned that question into confidence. From their first consultation to the moment they arrive in New Zealand, our students become part of our story.
+                </p>
 
-                Each testimonial is more than a success story — it’s a reflection of trust, growth, and the belief that great futures begin with the right guidance.
+                <p>Each testimonial is more than a success story and it’s a reflection of trust, growth, and the belief that great futures begin with the right guidance.</p>
               </p>
 
               {/* <div className="flex flex-col gap-2 sm:gap-3 lg:gap-3">
@@ -52,7 +56,7 @@ const TestimonialSection: React.FC = () => {
             {/* Testimonial Navigation */}
             <div className="flex flex-col sm:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-0">
               {/* Logo Grid */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4">
+              {/* <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4">
                 {testimonialLogos.map((logo) => (
                   <div
                     key={logo.id}
@@ -65,7 +69,7 @@ const TestimonialSection: React.FC = () => {
                     />
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               {/* CTA Link */}
               <div className="flex items-center gap-2 text-sm sm:text-base font-medium">
