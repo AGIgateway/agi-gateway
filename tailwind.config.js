@@ -59,7 +59,11 @@ module.exports = {
 				sans: 'var(--font-sans)',
 				serif: 'var(--font-serif)',
 				mono: 'var(--font-mono)',
-			}
+			},
+			whatsapp: {
+				DEFAULT: 'oklch(var(--whatsapp))',
+				foreground: 'oklch(var(--whatsapp-foreground))',
+			},
 		}
 	},
 	plugins: [
