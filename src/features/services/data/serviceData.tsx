@@ -1,0 +1,170 @@
+import type { ServicePageData } from "@/types/service.types"
+
+export const admissionSupportData: ServicePageData = {
+    heroTitle: "ADMISSION SUPPORT",
+    heroBackgroundImage: "/university-campus-aerial.png",
+    breadcrumbPath: [
+        { label: "Home", href: "/" },
+        { label: "Admission Support", href: "/services/admission-support" },
+    ],
+    serviceTitle: "Turning Your Application into a Story",
+    serviceDescription: [
+        "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success.",
+    ],
+    formServiceOptions: ["Admission Support", "Document Review", "Application Assistance", "Essay Writing Help"],
+    formDefaultService: "Admission Support",
+    abroadStudyLinks: [
+        { country: "Korea", href: "/study-abroad/korea" },
+        { country: "Canada", href: "/study-abroad/canada" },
+        { country: "Australia", href: "/study-abroad/australia" },
+        { country: "Japan", href: "/study-abroad/japan" },
+        { country: "UK", href: "/study-abroad/uk" },
+    ],
+    brochureUrl: "/brochures/admission-support.pdf",
+    helpCtaImage: "/student-consultation.png",
+    helpCtaTitle: "YOU NEED HELP?",
+    helpCtaSubtitle: "CONTACT US NOW",
+    helpCtaButtonText: "GET IN TOUCH",
+    helpCtaButtonHref: "/contact",
+}
+
+export const visaConsultationData: ServicePageData = {
+    heroTitle: "VISA SUPPORT",
+    heroBackgroundImage: "/passport-and-visa-documents.jpg",
+    breadcrumbPath: [
+        { label: "Home", href: "/" },
+        { label: "Visa Consultation", href: "/services/visa-consultation" },
+    ],
+    serviceTitle: "Simplifying the Toughest Steps",
+    serviceDescription: [
+        "Visa processes can be overwhelming, but with AGI Gateway, you’re never alone. Our certified advisors guide you through student visas, dependent visas, insurance, and post-study work rights. Being locally based, we’re always updated on immigration changes, giving you clarity and confidence every step of the way.",
+
+    ],
+    formServiceOptions: ["Visa Consultation", "Document Preparation", "Interview Preparation", "Visa Application Review"],
+    formDefaultService: "Visa Consultation",
+    abroadStudyLinks: [
+        { country: "Korea", href: "/study-abroad/korea" },
+        { country: "Canada", href: "/study-abroad/canada" },
+        { country: "Australia", href: "/study-abroad/australia" },
+        { country: "Japan", href: "/study-abroad/japan" },
+        { country: "UK", href: "/study-abroad/uk" },
+    ],
+    brochureUrl: "/brochures/visa-consultation.pdf",
+    helpCtaImage: "/visa-consultation-office.jpg",
+    helpCtaTitle: "YOU NEED HELP?",
+    helpCtaSubtitle: "CONTACT US NOW",
+    helpCtaButtonText: "GET IN TOUCH",
+    helpCtaButtonHref: "/contact",
+}
+
+export const testPreparationData: ServicePageData = {
+    heroTitle: "TEST PREPARATIONS",
+    heroBackgroundImage: "/modern-city-night.png",
+    breadcrumbPath: [
+        { label: "Home", href: "/" },
+        { label: "Test Preparations", href: "/services/test-preparations" },
+    ],
+    serviceTitle: "Master English, Master Your Future",
+    serviceDescription: [
+        "English proficiency tests like IELTS and PTE are not roadblocks; they are gateways to global opportunities. At AGI Gateway, we connect you with expert trainers who provide targeted coaching, realistic mock tests, and personalized feedback. Our approach goes beyond achieving a high score. With us, you don’t just prepare for an exam, but you build the confidence to succeed in classrooms, workplaces, and everyday life anywhere in the world."
+    ],
+    formServiceOptions: ["JLPT", "IELTS", "TOEFL", "GRE", "GMAT"],
+    formDefaultService: "JLPT",
+    abroadStudyLinks: [
+        { country: "Korea", href: "/study-abroad/korea" },
+        { country: "Canada", href: "/study-abroad/canada" },
+        { country: "Australia", href: "/study-abroad/australia" },
+        { country: "Japan", href: "/study-abroad/japan" },
+        { country: "UK", href: "/study-abroad/uk" },
+    ],
+    brochureUrl: "/brochures/test-preparation.pdf",
+    helpCtaImage: "/students-studying.png",
+    helpCtaTitle: "YOU NEED HELP?",
+    helpCtaSubtitle: "CONTACT US NOW",
+    helpCtaButtonText: "GET IN TOUCH",
+    helpCtaButtonHref: "/contact",
+}
+
+export const languageTrainingData: ServicePageData = {
+    heroTitle: "COURSE GUIDENCE",
+    heroBackgroundImage: "/language-classroom-learning.jpg",
+    breadcrumbPath: [
+        { label: "Home", href: "/" },
+        { label: "Language Training", href: "/services/language-training" },
+    ],
+    serviceTitle: "Finding Your Perfect Path",
+    serviceDescription: [
+        "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success."
+    ],
+    formServiceOptions: ["Language Training", "Japanese Course", "Korean Course", "English Course", "Private Tutoring"],
+    formDefaultService: "Language Training",
+    abroadStudyLinks: [
+        { country: "Korea", href: "/study-abroad/korea" },
+        { country: "Canada", href: "/study-abroad/canada" },
+        { country: "Australia", href: "/study-abroad/australia" },
+        { country: "Japan", href: "/study-abroad/japan" },
+        { country: "UK", href: "/study-abroad/uk" },
+    ],
+    brochureUrl: "/brochures/language-training.pdf",
+    helpCtaImage: "/language-learning-classroom.png",
+    helpCtaTitle: "YOU NEED HELP?",
+    helpCtaSubtitle: "CONTACT US NOW",
+    helpCtaButtonText: "GET IN TOUCH",
+    helpCtaButtonHref: "/contact",
+}
+
+export const futurePathwaysData: ServicePageData = {
+    heroTitle: "FUTURE PATHWAYS",
+    heroBackgroundImage: "/university-campus-aerial.png",
+    breadcrumbPath: [
+        { label: "Home", href: "/" },
+        { label: "Future Pathways", href: "/services/future-pathways" },
+    ],
+    serviceTitle: "Building a Life, Not Just a degree",
+    serviceDescription: [
+        "Your journey doesn’t end with graduation. At AGI Gateway, we prepare you for life beyond the classroom by helping you craft a professional CV, connect with employers, and explore post-study visa or residency options. With our local networks and insights, you don’t just study abroad you build a fulfilling future in New Zealand."
+    ],
+    formServiceOptions: ["Future Pathways", "Career Counseling", "Course Selection", "Industry Insights"],
+    formDefaultService: "Future Pathways",
+    abroadStudyLinks: [
+        { country: "Korea", href: "/study-abroad/korea" },
+        { country: "Canada", href: "/study-abroad/canada" },
+        { country: "Australia", href: "/study-abroad/australia" },
+        { country: "Japan", href: "/study-abroad/japan" },
+        { country: "UK", href: "/study-abroad/uk" },
+    ],
+    brochureUrl: "/brochures/future-pathways.pdf",
+    helpCtaImage: "/student-consultation.png",
+    helpCtaTitle: "YOU NEED HELP?",
+    helpCtaSubtitle: "CONTACT US NOW",
+    helpCtaButtonText: "GET IN TOUCH",
+    helpCtaButtonHref: "/contact",
+}
+
+export const predepartureServicesData: ServicePageData = {
+    heroTitle: "PRE-DEPARTURE SERVICES",
+    heroBackgroundImage: "/passport-and-visa-documents.jpg",
+    breadcrumbPath: [
+        { label: "Home", href: "/" },
+        { label: "Pre-Departure Services", href: "/services/pre-departure" },
+    ],
+    serviceTitle: "More Than Just a Visa",
+    serviceDescription: [
+        "For many agencies, support ends once a visa is approved. For us, that’s only the beginning. We provide comprehensive pre-departure and settlement support, including airport pickup, accommodation solutions, bank account setup, SIM cards, and cultural orientation. Parents and families can rest assured knowing their children are guided and supported from the moment they land."
+    ],
+    formServiceOptions: ["Pre-Departure Services", "Accommodation Assistance", "Travel Planning", "Cultural Orientation"],
+    formDefaultService: "Pre-Departure Services",
+    abroadStudyLinks: [
+        { country: "Korea", href: "/study-abroad/korea" },
+        { country: "Canada", href: "/study-abroad/canada" },
+        { country: "Australia", href: "/study-abroad/australia" },
+        { country: "Japan", href: "/study-abroad/japan" },
+        { country: "UK", href: "/study-abroad/uk" },
+    ],
+    brochureUrl: "/brochures/pre-departure.pdf",
+    helpCtaImage: "/visa-consultation-office.jpg",
+    helpCtaTitle: "YOU NEED HELP?",
+    helpCtaSubtitle: "CONTACT US NOW",
+    helpCtaButtonText: "GET IN TOUCH",
+    helpCtaButtonHref: "/contact",
+}
