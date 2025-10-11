@@ -25,7 +25,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                   <img
                     src="/images/img_attentive_listening.png"
                     alt="Attentive listening — our team listens to your needs"
-                    className="h-full w-full object-contain drop-shadow-md rounded-lg"
+                    className="w-full max-w-70 sm:max-w-75 lg:max-w-81 h-auto rounded-2xl object-cover shadow-md"
                     loading="lazy"
                     decoding="async"
                   />
