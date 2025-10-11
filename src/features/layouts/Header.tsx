@@ -64,7 +64,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center gap-3 sm:gap-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg">
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg">
                 <img
                   src={LogoLight || '/placeholder.svg'}
                   alt="AGI Gateway Logo"
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               <img
                 src={LogoText || '/placeholder.svg'}
                 alt="AGI Gateway"
-                className="h-5 w-auto sm:w-40"
+                className="h-6 w-auto sm:w-40"
                 loading="eager"
               />
             </div>
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
 
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-[#25D366] text-black hover:bg-[#128C7E] rounded-md shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200 flex items-center gap-2 px-4 py-2"
+              className="bg-[#25D366] text-black hover:bg-[#128C7E] hover:text-white rounded-md shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200 flex items-center gap-2 px-4 py-2"
             >
               <FaWhatsapp className="size-4" />
               Get Started
