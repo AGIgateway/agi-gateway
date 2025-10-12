@@ -45,7 +45,8 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md,json}\"",
     "preview": "vite preview",
     "serve": "vite preview",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "predeploy": "npm run bu"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
