@@ -24,7 +24,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 // ✅ Fixed WhatsApp handler (removed extra space)
 const handleWhatsAppClick = () => {
-  const phoneNumber = '+642885183100';
+  const phoneNumber = '+64223134766';
   const message = encodeURIComponent('Hello! I would like to book a free consultation.');
   const url = `https://wa.me/${phoneNumber}?text=${message}`; // ✅ No space after wa.me/
   window.open(url, '_blank', 'noopener,noreferrer');
