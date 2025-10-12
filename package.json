@@ -1,6 +1,7 @@
 {
   "name": "agi-gateway",
   "private": true,
+  "homepage": "https://mhmunem.github.io/agi-gateway",
   "version": "0.0.1",
   "type": "module",
   "rocketCritical": {
@@ -35,7 +36,9 @@
       "format",
       "preview",
       "serve",
-      "type-check"
+      "type-check",
+      "predeploy",
+      "deploy"
     ],
     "warning": "🚨 CRITICAL: DO NOT REMOVE OR MODIFY ABOVE DEPENDENCIES - Required for TypeScript React app functionality"
   },
@@ -46,7 +49,8 @@
     "preview": "vite preview",
     "serve": "vite preview",
     "type-check": "tsc --noEmit",
-    "predeploy": "npm run bu"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
