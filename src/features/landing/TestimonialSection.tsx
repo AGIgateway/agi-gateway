@@ -19,7 +19,6 @@ const TestimonialSection: React.FC = () => {
             <img
               src="/images/img-graduation.jpeg"
               alt="Testimonial person"
-              className="w-full max-w-70 sm:max-w-75 lg:max-w-81 h-auto rounded-lg object-cover shadow-md"
               loading="lazy"
               decoding="async"
             />
