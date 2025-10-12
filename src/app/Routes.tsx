@@ -10,6 +10,7 @@ import TestPreparation from "@/features/services/TestPreparation"
 import CourseGuidance from "@/features/services/CourseGuidance"
 import FuturePathways from "@/features/services/FuturePathways"
 import PredepartureServices from "@/features/services/PredepartureServices"
+import StudentAssessmentPage from "@/features/assessment/StudentAssessmentPage"
 
 // Route config
 const routes = [
@@ -18,11 +19,12 @@ const routes = [
   { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
   { path: "/terms-of-use", element: <TermsOfUsePage /> },
   { path: "/services/admission-support", element: <AdmissionSupport /> },
-  { path: "/services/visa-support", element: <VisaSupport /> },
+  { path: "/services/visa-consultation", element: <VisaSupport /> },
   { path: "/services/test-preparations", element: <TestPreparation /> },
-  { path: "/services/course-guidance", element: <CourseGuidance /> },
+  { path: "/services/language-training", element: <CourseGuidance /> },
   { path: "/services/future-pathways", element: <FuturePathways /> },
   { path: "/services/pre-departure", element: <PredepartureServices /> },
+  { path: "/assessment", element: <StudentAssessmentPage /> },
 ]
 
 const AppRoutes = () => (

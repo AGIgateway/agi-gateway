@@ -3,10 +3,17 @@
 import type React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 type SelfAssessmentSectionProps = {};
 
 const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
+  const navigate = useNavigate();
+
+  const handleAssessmentClick = () => {
+    navigate('/assessment');
+  };
+
   return (
     <section className="w-full" aria-labelledby="self-assessment-heading" role="region">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -38,11 +45,13 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
                   Your dream deserves the right direction. Let’s start your journey together.
                 </p>
               </div>
-              <div className="flex justify-center lg:justify-start">
-                <Button className="w-full min-w-44 rounded bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 sm:w-auto sm:px-6 sm:py-3 sm:text-base">
-                  Free Assessment
-                </Button>
-              </div>
+
+              <Button
+                onClick={handleAssessmentClick}
+                className="w-full min-w-44 sm:w-auto"
+              >
+                Free Assessment
+              </Button>
             </CardContent>
           </Card>
         </div>
