@@ -26,7 +26,7 @@ const routes = [
 ]
 
 const AppRoutes = () => (
-  <BrowserRouter basename="/agi-gateway">
+  <BrowserRouter>
     <Routes>
       {routes.map(({ path, element }) => (
         <Route key={path} path={path} element={<MainLayout>{element}</MainLayout>} />
