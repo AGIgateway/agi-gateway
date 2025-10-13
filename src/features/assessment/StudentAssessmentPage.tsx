@@ -169,13 +169,13 @@ export default function StudentAssessmentPage() {
                         const isCompleted = currentStep > step.id
 
                         return (
-                            <div key={step.id} className="flex flex-col items-center min-w-[80px] flex-1">
+                            <div key={step.id} className="flex flex-col items-center min-w-20 mt-4 flex-1">
                                 <div
                                     className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all ${isCompleted
-                                            ? "bg-primary text-primary-foreground"
-                                            : isActive
-                                                ? "bg-primary text-primary-foreground ring-4 ring-primary/20"
-                                                : "bg-muted text-muted-foreground"
+                                        ? "bg-primary text-primary-foreground"
+                                        : isActive
+                                            ? "bg-primary text-primary-foreground ring-4 ring-primary/20"
+                                            : "bg-muted text-muted-foreground"
                                         }`}
                                 >
                                     <StepIcon className="w-5 h-5" />

@@ -19,9 +19,9 @@ const sections = [
   { id: "university-partners", Component: UniversityPartnersSection, label: "University partners section" },
   // { id: "statistics", Component: StatisticsSection, label: "Statistics section" },
   { id: "self-assessment", Component: SelfAssessmentSection, label: "Self assessment section" },
+  { id: "consult", Component: ConsultationCtaSection, label: "ConsultationCta section" },
   { id: "testimonials", Component: TestimonialSection, label: "Testimonials section" },
   // { id: "blog", Component: BlogSection, label: "Blog section" },
-  { id: "consult", Component: ConsultationCtaSection, label: "ConsultationCta section" },
 ]
 
 const HomePage: React.FC = () => {
