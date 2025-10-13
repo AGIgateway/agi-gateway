@@ -23,21 +23,25 @@
 
 - [x] Testomonial Banner
 - [x] Footer
-- [ ] Book a Free Consultation Banner
+- [x] Book a Free Consultation Banner
 - [ ] Contacts Us
 - [ ] Blog section
-- [ ] Add serrvices content
+- [x] Add serrvices content
     - [ ] Visa
     - [ ] Offer Letters
     - [ ] Test prep
     - [ ] Self Assessment 
     - [ ] Airport Pick up
     - [ ] Translation
-- [ ] Add terms of use privacy
+- [x] Add terms of use privacy
 - [ ] Add About us
 - [ ] Add study in new zealand 
-- [ ] self assessment
+- [x] self assessment
 
+- [x] Header color should be like home.
+- [ ] Hero section shorter 
+- [ ] testimonial pic change
+- [ ] banner x3
 
 ## Ideas
 

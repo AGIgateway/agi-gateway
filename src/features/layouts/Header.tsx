@@ -38,9 +38,9 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { name: 'Home', active: true, href: '/' },
-  { name: 'Services', active: false, href: '#services' }, // ✅ Same-page anchor
-  { name: 'Universities', active: false, href: '#university-partners' },
-  { name: 'Study in New Zealand', active: false, href: '#testimonials' },
+  { name: 'Services', active: true, href: '#services' }, // ✅ Same-page anchor
+  { name: 'Universities', active: true, href: '#university-partners' },
+  { name: 'Study in New Zealand', active: true, href: '#testimonials' },
 ];
 
 const scrollToSection = (id: string) => {

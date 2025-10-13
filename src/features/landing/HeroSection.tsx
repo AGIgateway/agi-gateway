@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="pt-12 pb-0 sm:pb-0lg:pt-8 bg-secondary">
+    <section className="pt-8 pb-4 sm:pt-10 sm:pb-6 lg:pt-6 lg:pb-4 bg-secondary">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-16">
           <div>
