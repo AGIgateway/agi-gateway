@@ -83,18 +83,18 @@ export const testPreparationData: ServicePageData = {
 }
 
 export const languageTrainingData: ServicePageData = {
-    heroTitle: "COURSE GUIDENCE",
+    heroTitle: "COURSE GUIDANCE",
     heroBackgroundImage: "/language-classroom-learning.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
-        { label: "Course Guidence", href: "/services/course-guidence" },
+        { label: "Course Guidance", href: "/services/course-guidance" },
     ],
     serviceTitle: "Finding Your Perfect Path",
     serviceDescription: [
         "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success."
     ],
-    formServiceOptions: ["Course Guidence", "Japanese Course", "Korean Course", "English Course", "Private Tutoring"],
-    formDefaultService: " Course Guidence",
+    formServiceOptions: ["Course Guidance", "Japanese Course", "Korean Course", "English Course", "Private Tutoring"],
+    formDefaultService: " Course Guidance",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
         { country: "Australia", href: "/study-abroad/australia" },

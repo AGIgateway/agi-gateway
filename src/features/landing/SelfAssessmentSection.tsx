@@ -15,7 +15,7 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
   };
 
   return (
-    <section className="w-full" aria-labelledby="self-assessment-heading" role="region">
+    <section className="w-full bg-muted" aria-labelledby="self-assessment-heading" role="region">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-10 sm:gap-12 lg:flex-row lg:gap-32 lg:items-center">
           <div className="w-full max-w-md lg:w-1/3">

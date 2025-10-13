@@ -43,10 +43,9 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                   </h2>
                   <p className="mx-auto max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
                     AGI Gateway isn’t just another education consultancy. It’s a bridge built by people who’ve walked
-                    the same path. We’re proudly New Zealand owned and operated, shaped by real experiences — arriving
-                    in a new country, facing uncertainty, learning to adapt, and finally, calling this place home. With
-                    AGI Gateway, you’re not just choosing a consultancy. You’re choosing mentors who have lived your
-                    dream, faced the same challenges, and built a trusted path for your success — academically,
+                    the same path. We’re proudly New Zealand owned and operated, shaped by real experiences. We are dedicated to helping people who arrive in a new country, face uncertainty, learn to adapt and ultimately call this place home.
+                    With AGI Gateway, you’re not just choosing a consultancy. You’re choosing mentors who have lived your
+                    dream, faced the same challenges, and built a trusted path for your success weather it is academically,
                     personally, and professionally.
                   </p>
                 </div>

@@ -27,20 +27,20 @@
 - [ ] Contacts Us
 - [ ] Blog section
 - [x] Add serrvices content
-    - [ ] Visa
-    - [ ] Offer Letters
-    - [ ] Test prep
-    - [ ] Self Assessment 
-    - [ ] Airport Pick up
-    - [ ] Translation
+    - [x] Visa
+    - [x] Offer Letters
+    - [x] Test prep
+    - [x] Self Assessment 
+    - [x] Airport Pick up
+    - [x] Translation
 - [x] Add terms of use privacy
 - [ ] Add About us
 - [ ] Add study in new zealand 
 - [x] self assessment
 
 - [x] Header color should be like home.
-- [ ] Hero section shorter 
-- [ ] testimonial pic change
+- [x] Hero section shorter 
+- [x] testimonial pic change
 - [ ] banner x3
 
 ## Ideas
@@ -51,7 +51,6 @@
 4. ChatBots on the side (if possible)
 5. We Speak Your Language
 6. (road map for school bsc msc ) [nz gateway](https://nzgateway.co.in/)
-7. 
 
 ## Figa Templates
 

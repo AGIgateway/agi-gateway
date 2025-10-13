@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="pt-8 pb-4 sm:pt-10 sm:pb-6 lg:pt-6 lg:pb-4 bg-secondary">
+    <section className="pt-8 pb-0 sm:pt-10 sm:pb-0 lg:pt-6 lg:pb-0 bg-secondary">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-16">
           <div>
@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
               <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-6 sm:mb-8">
                 <Badge
                   variant="secondary"
-                  className="bg-accent text-primary hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
+                  className="bg-accent text-primary font-semibold hover:bg-accent/80 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full flex items-center gap-1.5 sm:gap-2"
                 >
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full"></div>
                   ACHIEVE

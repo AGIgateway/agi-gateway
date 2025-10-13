@@ -13,12 +13,13 @@ const TestimonialSection: React.FC = () => {
   return (
     <section className="w-full bg-secondary py-8 sm:py-10 lg:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ">
           {/* Testimonial Image */}
-          <div className="flex justify-center lg:justify-start w-full lg:w-auto">
+          <div className="flex justify-center lg:justify-start w-full lg:w-auto ">
             <img
-              src="/images/img-graduation.jpeg"
+              src="/images/img_graduations.jpeg"
               alt="Testimonial person"
+              className='rounded-xl'
               loading="lazy"
               decoding="async"
             />
