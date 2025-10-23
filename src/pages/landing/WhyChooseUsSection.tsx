@@ -1,6 +1,10 @@
+"use client"
+
 import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
+import { slideInLeft, slideInRight } from "@/lib/animations"
 
 type WhyChooseUsSectionProps = {}
 
@@ -15,8 +19,13 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
         <Card className="border-none bg-transparent shadow-none">
           <CardContent className="p-0">
             <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-16 lg:items-center">
-              {/* Image Section */}
-              <div className="w-full lg:w-1/3 ">
+              <motion.div
+                className="w-full lg:w-1/3 "
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={slideInLeft}
+              >
                 <div
                   className="relative mx-auto w-full max-w-md sm:max-w-lg lg:max-w-xl aspect-[4/5]"
                   role="img"
@@ -30,10 +39,15 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                     decoding="async"
                   />
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Content Section */}
-              <div className="flex w-full flex-col gap-6 sm:gap-8 lg:w-1/2">
+              <motion.div
+                className="flex w-full flex-col gap-6 sm:gap-8 lg:w-1/2"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={slideInRight}
+              >
                 <div className="flex flex-col gap-4 text-center lg:text-left">
                   <h2
                     id="why-choose-us-heading"
@@ -43,10 +57,11 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                   </h2>
                   <p className="mx-auto max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
                     AGI Gateway isn’t just another education consultancy. It’s a bridge built by people who’ve walked
-                    the same path. We’re proudly New Zealand owned and operated, shaped by real experiences. We are dedicated to helping people who arrive in a new country, face uncertainty, learn to adapt and ultimately call this place home.
-                    With AGI Gateway, you’re not just choosing a consultancy. You’re choosing mentors who have lived your
-                    dream, faced the same challenges, and built a trusted path for your success weather it is academically,
-                    personally, and professionally.
+                    the same path. We’re proudly New Zealand owned and operated, shaped by real experiences. We are
+                    dedicated to helping people who arrive in a new country, face uncertainty, learn to adapt and
+                    ultimately call this place home. With AGI Gateway, you’re not just choosing a consultancy. You’re
+                    choosing mentors who have lived your dream, faced the same challenges, and built a trusted path for
+                    your success weather it is academically, personally, and professionally.
                   </p>
                 </div>
                 <div className="flex justify-center lg:justify-start">
@@ -58,7 +73,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                     Learn More
                   </Button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </CardContent>
         </Card>

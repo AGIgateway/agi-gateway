@@ -2,6 +2,8 @@
 import React from "react"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
+import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations"
 
 interface BlogPost {
   id: string
@@ -33,19 +35,34 @@ const BlogSection: React.FC = () => {
   return (
     <section className="w-full py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6 text-center mb-12 lg:mb-16">
+        <motion.div
+          className="flex flex-col gap-3 sm:gap-4 lg:gap-6 text-center mb-12 lg:mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-foreground">
             Caring Is Our Moto
           </h2>
           <p className="text-sm sm:text-base font-normal leading-6 text-muted-foreground max-w-2xl mx-auto">
             AGI Gateway blog is the best place to read about the latest university and study insights, trends and more.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={staggerContainer}
+        >
           {memoizedPosts.map((post) => (
-            <div key={post.id} className="flex flex-col items-center">
+            <motion.div key={post.id} className="flex flex-col items-center"
+              variants={staggerItem}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
               {/* Blog Image */}
               <div className="w-full relative">
                 <img
@@ -68,15 +85,16 @@ const BlogSection: React.FC = () => {
                       src="/images/img_24_arrows_directions_right.svg"
                       alt="Arrow right"
                       className="w-5 h-5 sm:w-6 sm:h-6"
+                      loading="lazy"
                     />
                   </Button>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </section >
   )
 }
 

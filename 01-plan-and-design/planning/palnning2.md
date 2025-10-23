@@ -58,7 +58,7 @@
 
 ### **Pending Sections (From Checklist)**
 - [x] Book a Free Consultation Form  
-- [ ] Contact Us  
+- [x] Contact Us  
 - [ ] Blog Section  
 - [x] Services Content (detailed)  
   - [x] Visa  

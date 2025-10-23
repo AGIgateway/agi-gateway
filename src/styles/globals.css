@@ -4,38 +4,38 @@
 
 @layer base {
     :root {
-        --background: oklch(0.9900 0 0);
+        --background: oklch(0.99 0 0);
         --foreground: oklch(0 0 0);
         --card: oklch(1 0 0);
         --card-foreground: oklch(0 0 0);
-        --popover: oklch(0.9900 0 0);
+        --popover: oklch(0.99 0 0);
         --popover-foreground: oklch(0 0 0);
         --primary: oklch(0.3832 0.0563 177.7375);
         --primary-foreground: oklch(1 0 0);
-        --secondary: oklch(0.9623 0.0276 104.6860);
+        --secondary: oklch(0.9623 0.0276 104.686);
         --secondary-foreground: oklch(0 0 0);
-        --muted: oklch(0.9700 0 0);
-        --muted-foreground: oklch(0.4400 0 0);
+        --muted: oklch(0.97 0 0);
+        --muted-foreground: oklch(0.44 0 0);
         --accent: oklch(0.8941 0.0298 125.9961);
         --accent-foreground: oklch(0 0 0);
-        --destructive: oklch(0.6300 0.1900 23.0300);
+        --destructive: oklch(0.63 0.19 23.03);
         --destructive-foreground: oklch(1 0 0);
-        --border: oklch(0.9200 0 0);
-        --input: oklch(0.9400 0 0);
+        --border: oklch(0.92 0 0);
+        --input: oklch(0.94 0 0);
         --ring: oklch(0 0 0);
-        --chart-1: oklch(0.8100 0.1700 75.3500);
-        --chart-2: oklch(0.5500 0.2200 264.5300);
-        --chart-3: oklch(0.7200 0 0);
-        --chart-4: oklch(0.9200 0 0);
-        --chart-5: oklch(0.5600 0 0);
+        --chart-1: oklch(0.81 0.17 75.35);
+        --chart-2: oklch(0.55 0.22 264.53);
+        --chart-3: oklch(0.72 0 0);
+        --chart-4: oklch(0.92 0 0);
+        --chart-5: oklch(0.56 0 0);
         --radius: 0.5rem;
-        --sidebar: oklch(0.9900 0 0);
+        --sidebar: oklch(0.99 0 0);
         --sidebar-foreground: oklch(0 0 0);
         --sidebar-primary: oklch(0 0 0);
         --sidebar-primary-foreground: oklch(1 0 0);
-        --sidebar-accent: oklch(0.9400 0 0);
+        --sidebar-accent: oklch(0.94 0 0);
         --sidebar-accent-foreground: oklch(0 0 0);
-        --sidebar-border: oklch(0.9400 0 0);
+        --sidebar-border: oklch(0.94 0 0);
         --sidebar-ring: oklch(0 0 0);
         --font-sans: Manrope, ui-sans-serif, sans-serif, system-ui;
         --font-serif: Cormorant Garamond, ui-serif, serif;
@@ -52,44 +52,42 @@
         /* mine */
         --whatsapp: oklch(0.72 0.19 140);
         --whatsapp-foreground: oklch(1 0 0);
-
-
     }
 
     .dark {
         --background: oklch(0 0 0);
         --foreground: oklch(1 0 0);
-        --card: oklch(0.1400 0 0);
+        --card: oklch(0.14 0 0);
         --card-foreground: oklch(1 0 0);
-        --popover: oklch(0.1800 0 0);
+        --popover: oklch(0.18 0 0);
         --popover-foreground: oklch(1 0 0);
-        --primary: oklch(0.9623 0.0276 104.6860);
+        --primary: oklch(0.9623 0.0276 104.686);
         --primary-foreground: oklch(0 0 0);
         --secondary: oklch(0.3832 0.0563 177.7375);
         --secondary-foreground: oklch(1 0 0);
-        --muted: oklch(0.2300 0 0);
-        --muted-foreground: oklch(0.7200 0 0);
-        --accent: oklch(0.3200 0 0);
+        --muted: oklch(0.23 0 0);
+        --muted-foreground: oklch(0.72 0 0);
+        --accent: oklch(0.32 0 0);
         --accent-foreground: oklch(0.9306 0.0333 99.5548);
-        --destructive: oklch(0.6900 0.2000 23.9100);
+        --destructive: oklch(0.69 0.2 23.91);
         --destructive-foreground: oklch(0 0 0);
-        --border: oklch(0.2600 0 0);
-        --input: oklch(0.3200 0 0);
-        --ring: oklch(0.7200 0 0);
-        --chart-1: oklch(0.8100 0.1700 75.3500);
-        --chart-2: oklch(0.5800 0.2100 260.8400);
-        --chart-3: oklch(0.5600 0 0);
-        --chart-4: oklch(0.4400 0 0);
-        --chart-5: oklch(0.9200 0 0);
+        --border: oklch(0.26 0 0);
+        --input: oklch(0.32 0 0);
+        --ring: oklch(0.72 0 0);
+        --chart-1: oklch(0.81 0.17 75.35);
+        --chart-2: oklch(0.58 0.21 260.84);
+        --chart-3: oklch(0.56 0 0);
+        --chart-4: oklch(0.44 0 0);
+        --chart-5: oklch(0.92 0 0);
         --radius: 0.5rem;
-        --sidebar: oklch(0.1800 0 0);
+        --sidebar: oklch(0.18 0 0);
         --sidebar-foreground: oklch(1 0 0);
         --sidebar-primary: oklch(1 0 0);
         --sidebar-primary-foreground: oklch(0 0 0);
-        --sidebar-accent: oklch(0.3200 0 0);
+        --sidebar-accent: oklch(0.32 0 0);
         --sidebar-accent-foreground: oklch(1 0 0);
-        --sidebar-border: oklch(0.3200 0 0);
-        --sidebar-ring: oklch(0.7200 0 0);
+        --sidebar-border: oklch(0.32 0 0);
+        --sidebar-ring: oklch(0.72 0 0);
         --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
         --font-serif: Lora, ui-serif, serif;
         --font-mono: Fira Code, ui-monospace, monospace;
@@ -103,7 +101,7 @@
         --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
         /* mine */
         --whatsapp: oklch(0.72 0.19 140);
-        --whatsapp-foreground: oklch(1 0 0)
+        --whatsapp-foreground: oklch(1 0 0);
     }
 
     * {
@@ -113,5 +111,49 @@
     body {
         @apply bg-background text-foreground;
         letter-spacing: var(--tracking-normal);
+    }
+}
+
+@layer utilities {
+
+    /* Section Spacing - matches landing page py-16 pattern */
+    .section-spacing {
+        @apply py-12 sm:py-14 lg:py-16;
+    }
+
+    /* Container Padding - matches landing page container pattern */
+    .container-padding {
+        @apply px-4 sm:px-6 lg:px-14;
+    }
+
+    /* Content Max Width - for readable text content */
+    .content-max-width {
+        @apply max-w-3xl mx-auto;
+    }
+
+    /* Prose Spacing - better vertical rhythm for policy pages */
+    .prose-spacing {
+        @apply space-y-6;
+    }
+
+    .prose-spacing h2 {
+        @apply mt-10 mb-4 text-2xl font-semibold;
+    }
+
+    .prose-spacing h3 {
+        @apply mt-8 mb-3 text-xl font-semibold;
+    }
+
+    .prose-spacing p {
+        @apply mb-4 leading-relaxed;
+    }
+
+    .prose-spacing ul,
+    .prose-spacing ol {
+        @apply mb-4 space-y-2;
+    }
+
+    .prose-spacing li {
+        @apply leading-relaxed;
     }
 }
