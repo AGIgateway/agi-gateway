@@ -11,13 +11,13 @@ export const admissionSupportData: ServicePageData = {
     serviceDescription: [
         "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success.",
     ],
-    formServiceOptions: ["Admission Support", "Document Review", "Application Assistance", "Essay Writing Help"],
+    formServiceOptions: ["University/Institute Applications", "Document review", "School Admission", "Application Assistance", "Scholarship Search"],
     formDefaultService: "Admission Support",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
-        { country: "Australia", href: "/study-abroad/australia" },
-        { country: "Canada", href: "/study-abroad/canada" },
-        { country: "UK", href: "/study-abroad/uk" },
+        // { country: "Australia", href: "/study-abroad/australia" },
+        // { country: "Canada", href: "/study-abroad/canada" },
+        // { country: "UK", href: "/study-abroad/uk" },
     ],
     brochureUrl: "/brochures/admission-support.pdf",
     helpCtaImage: "/student-consultation.png",
@@ -39,13 +39,13 @@ export const visaConsultationData: ServicePageData = {
         "Visa processes can be overwhelming, but with AGI Gateway, you’re never alone. Our certified advisors guide you through student visas, dependent visas, insurance, and post-study work rights. Being locally based, we’re always updated on immigration changes, giving you clarity and confidence every step of the way.",
 
     ],
-    formServiceOptions: ["Visa Support", "Document Preparation", "Interview Preparation", "Visa Application Review"],
+    formServiceOptions: ["Student Visa Application Guidance", "Dependent/Spouse Visa Support", "Interview Preparation", "Health & Travel Insurance Support", "Post-study work visa guidance"],
     formDefaultService: "Visa Support",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
-        { country: "Australia", href: "/study-abroad/australia" },
-        { country: "Canada", href: "/study-abroad/canada" },
-        { country: "UK", href: "/study-abroad/uk" },
+        // { country: "Australia", href: "/study-abroad/australia" },
+        // { country: "Canada", href: "/study-abroad/canada" },
+        // { country: "UK", href: "/study-abroad/uk" },
     ],
     brochureUrl: "/brochures/visa-support.pdf",
     helpCtaImage: "/visa-support-office.jpg",
@@ -66,13 +66,13 @@ export const testPreparationData: ServicePageData = {
     serviceDescription: [
         "English proficiency tests like IELTS and PTE are not roadblocks; they are gateways to global opportunities. At AGI Gateway, we connect you with expert trainers who provide targeted coaching, realistic mock tests, and personalized feedback. Our approach goes beyond achieving a high score. With us, you don’t just prepare for an exam, but you build the confidence to succeed in classrooms, workplaces, and everyday life anywhere in the world."
     ],
-    formServiceOptions: ["JLPT", "IELTS", "TOEFL", "GRE", "GMAT"],
+    formServiceOptions: ["IELTS", "PTE"],
     formDefaultService: "Test preparations",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
-        { country: "Australia", href: "/study-abroad/australia" },
-        { country: "Canada", href: "/study-abroad/canada" },
-        { country: "UK", href: "/study-abroad/uk" },
+        // { country: "Australia", href: "/study-abroad/australia" },
+        // { country: "Canada", href: "/study-abroad/canada" },
+        // { country: "UK", href: "/study-abroad/uk" },
     ],
     brochureUrl: "/brochures/test-preparation.pdf",
     helpCtaImage: "/students-studying.png",
@@ -93,13 +93,13 @@ export const languageTrainingData: ServicePageData = {
     serviceDescription: [
         "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success."
     ],
-    formServiceOptions: ["Course Guidance", "Japanese Course", "Korean Course", "English Course", "Private Tutoring"],
+    formServiceOptions: ["Course selection", "SOP Writing", "Pathway/bridging programs", "Short-term study"],
     formDefaultService: " Course Guidance",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
-        { country: "Australia", href: "/study-abroad/australia" },
-        { country: "Canada", href: "/study-abroad/canada" },
-        { country: "UK", href: "/study-abroad/uk" },
+        // { country: "Australia", href: "/study-abroad/australia" },
+        // { country: "Canada", href: "/study-abroad/canada" },
+        // { country: "UK", href: "/study-abroad/uk" },
     ],
     brochureUrl: "/brochures/language-training.pdf",
     helpCtaImage: "/language-learning-classroom.png",
@@ -120,13 +120,13 @@ export const futurePathwaysData: ServicePageData = {
     serviceDescription: [
         "Your journey doesn’t end with graduation. At AGI Gateway, we prepare you for life beyond the classroom by helping you craft a professional CV, connect with employers, and explore post-study visa or residency options. With our local networks and insights, you don’t just study abroad you build a fulfilling future in New Zealand."
     ],
-    formServiceOptions: ["Future Pathways", "Career Counseling", "Course Selection", "Industry Insights"],
+    formServiceOptions: ["Workshops", "CV Guidance for NZ standards", "Networking Events", "Course Selection", "Career Fairs"],
     formDefaultService: "Future Pathways",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
-        { country: "Australia", href: "/study-abroad/australia" },
-        { country: "Canada", href: "/study-abroad/canada" },
-        { country: "UK", href: "/study-abroad/uk" },
+        // { country: "Australia", href: "/study-abroad/australia" },
+        // { country: "Canada", href: "/study-abroad/canada" },
+        // { country: "UK", href: "/study-abroad/uk" },
     ],
     brochureUrl: "/brochures/future-pathways.pdf",
     helpCtaImage: "/student-consultation.png",
