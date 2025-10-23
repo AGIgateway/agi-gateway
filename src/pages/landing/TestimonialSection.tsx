@@ -6,12 +6,12 @@ import { slideInLeft, slideInRight } from "@/lib/animations"
 
 const TestimonialSection: React.FC = () => {
   const testimonialLogos = [
-    { id: "1", src: "/images/img_logo.svg", bgColor: "bg-accent" },
-    { id: "2", src: "/images/img_logo_blue_gray_800_01.svg", bgColor: "bg-background" },
-    { id: "3", src: "/images/img_logo_gray_100.svg", bgColor: "bg-muted" },
-    { id: "4", src: "/images/img_logo_gray_100_48x48.svg", bgColor: "bg-muted" },
-    { id: "5", src: "/images/img_logo_48x48.svg", bgColor: "bg-muted" },
-    { id: "6", src: "/images/img_logo_1.svg", bgColor: "bg-muted" },
+    { id: "1", src: "/images/img_logo.webp", bgColor: "bg-accent" },
+    { id: "2", src: "/images/img_logo_blue_gray_800_01.webp", bgColor: "bg-background" },
+    { id: "3", src: "/images/img_logo_gray_100.webp", bgColor: "bg-muted" },
+    { id: "4", src: "/images/img_logo_gray_100_48x48.webp", bgColor: "bg-muted" },
+    { id: "5", src: "/images/img_logo_48x48.webp", bgColor: "bg-muted" },
+    { id: "6", src: "/images/img_logo_1.webp", bgColor: "bg-muted" },
   ]
 
   return (
@@ -27,7 +27,7 @@ const TestimonialSection: React.FC = () => {
             variants={slideInLeft}
           >
             <img
-              src="/images/img_graduations.jpeg"
+              src="/images/img_graduations.webp"
               alt="Testimonial person"
               className="rounded-xl"
               loading="lazy"
@@ -85,7 +85,7 @@ const TestimonialSection: React.FC = () => {
               <div className="flex items-center gap-2 text-sm sm:text-base font-medium">
                 <span className="text-lg sm:text-xl font-semibold text-primary">Students Testimonials</span>
                 <img
-                  src="/images/img_24_arrows_directions_right.svg"
+                  src="/images/img_24_arrows_directions_right.webp"
                   alt="Arrow right"
                   className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5"
                   loading="lazy"

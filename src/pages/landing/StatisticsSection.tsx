@@ -44,25 +44,25 @@ const StatisticsSection: React.FC = () => {
   const statistics: Statistic[] = [
     {
       id: "1",
-      icon: "/images/img_icon_teal_900_02.svg",
+      icon: "/images/img_icon_teal_900_02.webp",
       value: "2,245,341",
       label: "Students",
     },
     {
       id: "2",
-      icon: "/images/img_hand_icon.svg",
+      icon: "/images/img_hand_icon.webp",
       value: "46,328",
       label: "Universities",
     },
     {
       id: "3",
-      icon: "/images/img_icon_48x48.svg",
+      icon: "/images/img_icon_48x48.webp",
       value: "828,867",
       label: "Consult Bookings",
     },
     {
       id: "4",
-      icon: "/images/img_icon_1.svg",
+      icon: "/images/img_icon_1.webp",
       value: "1,926,436",
       label: "Payments",
     },

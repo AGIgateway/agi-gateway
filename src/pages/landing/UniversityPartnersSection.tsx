@@ -50,37 +50,37 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
   const universities: University[] = [
     {
       id: "1",
-      logo: "/images/img_ara.svg",
+      logo: "/images/img_ara.webp",
       name: "Ara Institute",
       website: "https://www.ara.ac.nz",
     },
     {
       id: "2",
-      logo: "/images/img_mask_group.svg",
+      logo: "/images/img_mask_group.webp",
       name: "University of Canterbury",
       website: "https://www.canterbury.ac.nz",
     },
     {
       id: "3",
-      logo: "/images/img_lincoln_logo.svg",
+      logo: "/images/img_lincoln_logo.webp",
       name: "Lincoln University",
       website: "https://www.lincoln.ac.nz",
     },
     {
       id: "4",
-      logo: "/images/img_university_of_a.png",
+      logo: "/images/img_university_of_a.webp",
       name: "University of Auckland",
       website: "https://www.auckland.ac.nz",
     },
     {
       id: "5",
-      logo: "/images/img_images_1_1.png",
+      logo: "/images/img_images_1_1.webp",
       name: "Massey University",
       website: "https://www.massey.ac.nz",
     },
     {
       id: "6",
-      logo: "/images/img_shield_1.png",
+      logo: "/images/img_shield_1.webp",
       name: "Victoria University of Wellington",
       website: "https://www.wgtn.ac.nz",
     },

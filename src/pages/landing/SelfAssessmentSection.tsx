@@ -32,7 +32,7 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
 
           >
             <img
-              src="/images/assessment-lead.svg"
+              src="/images/assessment-lead.webp"
               alt="Self-assessment person"
               className="w-full h-auto object-contain mx-auto drop-shadow-md"
               loading="lazy"

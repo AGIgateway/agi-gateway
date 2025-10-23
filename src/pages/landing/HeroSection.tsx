@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
           >
             <img
               className="w-full"
-              src="/images/img_graduation_student.svg"
+              src="/images/img_graduation_student.webp"
               alt="Smiling graduate in cap and gown holding diploma"
               loading="lazy"
             />

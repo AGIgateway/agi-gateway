@@ -32,7 +32,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                   aria-label="Attentive listening — our team listens to your needs"
                 >
                   <img
-                    src="/images/img_attentive_listening.png"
+                    src="/images/img_attentive_listening.webp"
                     alt="Attentive listening — our team listens to your needs"
                     className="w-full max-w-70 sm:max-w-75 lg:max-w-81 h-auto rounded-2xl object-cover shadow-md"
                     loading="lazy"

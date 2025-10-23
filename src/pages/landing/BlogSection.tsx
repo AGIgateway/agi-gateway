@@ -15,17 +15,17 @@ const BlogSection: React.FC = () => {
   const blogPosts: BlogPost[] = [
     {
       id: "1",
-      image: "/images/img_image_18.png",
+      image: "/images/img_image_18.webp",
       title: "Creating Streamlined Safeguarding Processes with OneRen",
     },
     {
       id: "2",
-      image: "/images/img_image_19.png",
+      image: "/images/img_image_19.webp",
       title: "What are your safeguarding responsibilities and how can you manage them?",
     },
     {
       id: "3",
-      image: "/images/img_image_20.png",
+      image: "/images/img_image_20.webp",
       title: "Revamping the Membership Model with Triathlon Australia",
     },
   ]
@@ -82,7 +82,7 @@ const BlogSection: React.FC = () => {
                   <Button variant="ghost" className="flex gap-2 items-center py-2 h-auto p-0 hover:bg-transparent">
                     <span className="text-lg sm:text-xl font-semibold leading-tight text-primary">Readmore</span>
                     <img
-                      src="/images/img_24_arrows_directions_right.svg"
+                      src="/images/img_24_arrows_directions_right.webp"
                       alt="Arrow right"
                       className="w-5 h-5 sm:w-6 sm:h-6"
                       loading="lazy"
