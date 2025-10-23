@@ -1,5 +1,3 @@
-"use client"
-
 // @/landing/BlogSection.tsx
 import React from "react"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"

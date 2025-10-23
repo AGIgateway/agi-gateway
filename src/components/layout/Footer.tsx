@@ -1,5 +1,3 @@
-// @/components/layout/Footer.tsx
-
 import React, { useState, useCallback, useMemo } from 'react';
 import LogoDark from '@/assets/global/logo_dark.svg';
 import {

@@ -4,7 +4,7 @@
   "homepage": "https://agigateway.co.nz",
   "version": "0.0.1",
   "type": "module",
-  "rocketCritical": {
+  "Critical": {
     "dependencies": [
       "react",
       "react-dom",
@@ -40,10 +40,10 @@
       "predeploy",
       "deploy"
     ],
-    "warning": "🚨 CRITICAL: DO NOT REMOVE OR MODIFY ABOVE DEPENDENCIES - Required for TypeScript React app functionality"
+    "warning": "CRITICAL: DO NOT REMOVE OR MODIFY ABOVE DEPENDENCIES - Required for TypeScript React app functionality"
   },
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "tsc --noCheck && vite build",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md,json}\"",
     "preview": "vite preview",
@@ -73,13 +73,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.63.0",
-    "react-icon": "^1.0.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "6.0.2",
     "recharts": "^2.15.2",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^4.1.11"
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",

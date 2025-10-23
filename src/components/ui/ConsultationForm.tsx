@@ -1,14 +1,14 @@
-// File: @/components/ConsultationForm.tsx
-'use client';
-
-import * as React from 'react';
+// src/components/ConsultationForm.tsx
 import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { consultationFormSchema } from '@/lib/schemas';
 import {
     Form,
     FormControl,
     FormField,
     FormItem,
     FormLabel,
+    FormMessage, // 👈 don't forget this!
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -20,22 +20,14 @@ import {
     SelectValue,
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Label } from '@/components/ui/label';
+import { z } from 'zod';
 
-// No Zod schema — we’re not validating anything right now
-
-type ConsultationFormValues = {
-    name: string;
-    email: string;
-    mobile: string;
-    studyDestination: string;
-    studyYear: string;
-    studyIntake: string;
-    consent: boolean;
-};
+// Infer types from Zod schema (no need to manually define!)
+type ConsultationFormValues = z.infer<typeof consultationFormSchema>;
 
 export function ConsultationForm() {
     const form = useForm<ConsultationFormValues>({
+        resolver: zodResolver(consultationFormSchema), // 👈 attach resolver
         defaultValues: {
             name: '',
             email: '',
@@ -48,7 +40,6 @@ export function ConsultationForm() {
     });
 
     function onSubmit(data: ConsultationFormValues) {
-        // Prepend +880 to mobile number before sending
         const formattedData = {
             ...data,
             mobile: '+880' + data.mobile,
@@ -56,13 +47,11 @@ export function ConsultationForm() {
 
         console.log('Form submitted:', formattedData);
         alert('Thank you! Our counsellor will contact you soon.');
-        form.reset(); // Optional: reset form after submit
+        form.reset();
     }
 
     return (
         <div className="w-full max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md">
-
-
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     {/* Name */}
@@ -75,6 +64,7 @@ export function ConsultationForm() {
                                 <FormControl>
                                     <Input placeholder="Enter your full name" {...field} />
                                 </FormControl>
+                                <FormMessage /> {/* 👈 show error */}
                             </FormItem>
                         )}
                     />
@@ -89,6 +79,7 @@ export function ConsultationForm() {
                                 <FormControl>
                                     <Input type="email" placeholder="Enter your email address" {...field} />
                                 </FormControl>
+                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -105,12 +96,13 @@ export function ConsultationForm() {
                                     <FormControl>
                                         <Input
                                             type="tel"
-                                            placeholder="Enter your mobile number (10 digits)"
+                                            placeholder="10-digit number (e.g., 1712345678)"
                                             className="flex-1"
                                             {...field}
                                         />
                                     </FormControl>
                                 </div>
+                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -138,6 +130,7 @@ export function ConsultationForm() {
                                         <SelectItem value="other">Other</SelectItem>
                                     </SelectContent>
                                 </Select>
+                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -162,6 +155,7 @@ export function ConsultationForm() {
                                         <SelectItem value="2028">2028</SelectItem>
                                     </SelectContent>
                                 </Select>
+                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -186,6 +180,7 @@ export function ConsultationForm() {
                                         <SelectItem value="winter">Winter (December - March)</SelectItem>
                                     </SelectContent>
                                 </Select>
+                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -215,13 +210,18 @@ export function ConsultationForm() {
                                         *
                                     </FormLabel>
                                 </div>
+                                <FormMessage className="ml-8 mt-1" /> {/* adjust position if needed */}
                             </FormItem>
                         )}
                     />
 
-                    {/* Submit Button */}
-                    <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary-2/90" size="lg" >
-                        Get Started for Free
+                    <Button
+                        type="submit"
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                        size="lg"
+                        disabled={form.formState.isSubmitting}
+                    >
+                        {form.formState.isSubmitting ? 'Submitting...' : 'Get Started for Free'}
                     </Button>
                 </form>
             </Form>

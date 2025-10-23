@@ -1,5 +1,3 @@
-// @/components/layout/PageLayout.tsx
-
 import React from 'react';
 
 interface PageLayoutProps {

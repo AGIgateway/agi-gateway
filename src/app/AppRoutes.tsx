@@ -1,0 +1,119 @@
+// src/routes/index.ts
+import { lazy } from 'react';
+import { RouteConfig } from '@/types/routes';
+
+const HomePage = lazy(() => import('@/pages/landing'));
+const PrivacyPolicyPage = lazy(() => import('@/pages/policy/PrivacyPolicyPage'));
+const TermsOfUsePage = lazy(() => import('@/pages/policy/TermsOfUsePage'));
+const AdmissionSupport = lazy(() => import('@/pages/services/AdmissionSupport'));
+const VisaSupport = lazy(() => import('@/pages/services/VisaSupport'));
+const TestPreparation = lazy(() => import('@/pages/services/TestPreparation'));
+const CourseGuidance = lazy(() => import('@/pages/services/CourseGuidance'));
+const FuturePathways = lazy(() => import('@/pages/services/FuturePathways'));
+const PredepartureServices = lazy(() => import('@/pages/services/PredepartureServices'));
+const StudentAssessmentPage = lazy(() => import('@/pages/assesment/StudentAssessmentPage'));
+
+export const routes: RouteConfig[] = [
+  {
+    path: '/',
+    element: <HomePage />,
+    meta: {
+      title: 'Home - AGI Gateway',
+      description: 'Your trusted education consultancy for global study pathways.',
+    },
+  },
+  {
+    path: '/privacy-policy',
+    element: <PrivacyPolicyPage />,
+    meta: {
+      title: 'Privacy Policy - AGI Gateway',
+      description: 'Learn how we protect your personal information.',
+    },
+  },
+  {
+    path: '/terms-of-use',
+    element: <TermsOfUsePage />,
+    meta: {
+      title: 'Terms of Use - AGI Gateway',
+      description: 'Terms and conditions for using our services.',
+    },
+  },
+  {
+    path: '/services/admission-support',
+    element: <AdmissionSupport />,
+    meta: {
+      title: 'Admission Support - AGI Gateway',
+      description: 'End-to-end university admission assistance.',
+    },
+  },
+  {
+    path: '/services/visa-support',
+    element: <VisaSupport />,
+    meta: {
+      title: 'Visa Support - AGI Gateway',
+      description: 'Expert guidance for student visa applications.',
+    },
+  },
+  {
+    path: '/services/test-preparations',
+    element: <TestPreparation />,
+    meta: {
+      title: 'Test Preparation - AGI Gateway',
+      description: 'Ace IELTS, TOEFL, PTE, and more with our coaching.',
+    },
+  },
+  {
+    path: '/services/course-guidance',
+    element: <CourseGuidance />,
+    meta: {
+      title: 'Course Guidance - AGI Gateway',
+      description: 'Find the perfect course aligned with your career goals.',
+    },
+  },
+  {
+    path: '/services/future-pathways',
+    element: <FuturePathways />,
+    meta: {
+      title: 'Future Pathways - AGI Gateway',
+      description: 'Plan your academic and professional journey abroad.',
+    },
+  },
+  {
+    path: '/services/pre-departure',
+    element: <PredepartureServices />,
+    meta: {
+      title: 'Pre-Departure Services - AGI Gateway',
+      description: 'Get ready for life abroad with our pre-departure support.',
+    },
+  },
+  {
+    path: '/assessment',
+    element: <StudentAssessmentPage />,
+    meta: {
+      title: 'Student Assessment - AGI Gateway',
+      description: 'Evaluate your profile for international education opportunities.',
+    },
+  },
+];
+// AppRoutes.tsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense } from "react";
+import MainLayout from "@/components/layout/MainLayout";
+
+const AppRoutes = () => (
+  <BrowserRouter>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        {routes.map(({ path, element }) => (
+          <Route
+            key={path}
+            path={path}
+            element={<MainLayout>{element}</MainLayout>}
+          />
+        ))}
+      </Routes>
+    </Suspense>
+  </BrowserRouter>
+);
+
+export default AppRoutes;

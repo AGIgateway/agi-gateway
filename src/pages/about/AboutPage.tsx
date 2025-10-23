@@ -1,5 +1,4 @@
 // src/features/about/AboutPage.tsx
-'use client';
 
 import React from 'react';
 import { Button } from '@/components/ui/button';

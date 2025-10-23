@@ -20,7 +20,7 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
         <div className="flex flex-col items-center gap-10 sm:gap-12 lg:flex-row lg:gap-32 lg:items-center">
           <div className="w-full max-w-md lg:w-1/3">
             <img
-              src="/images/img_self_assesment.svg"
+              src="/images/assessment-lead.svg"
               alt="Self-assessment person"
               className="w-full h-auto object-contain mx-auto drop-shadow-md"
               loading="lazy"

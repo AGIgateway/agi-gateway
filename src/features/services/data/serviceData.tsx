@@ -1,4 +1,4 @@
-import type { ServicePageData } from "@/types/service.types"
+import type { ServicePageData } from "@/features/services/types/service.types"
 
 export const admissionSupportData: ServicePageData = {
     heroTitle: "ADMISSION SUPPORT",

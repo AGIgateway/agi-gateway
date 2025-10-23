@@ -1,8 +1,8 @@
 // src/app/layout/MainLayout.tsx
 
 import React from 'react';
-import Header from '@/features/layouts/Header';
-import Footer from '@/features/layouts/Footer';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 
 interface MainLayoutProps {

@@ -1,9 +1,7 @@
-"use client"
-
 import React from "react"
 import { Link } from "react-router-dom"
 import { ChevronRight, ArrowRight, Download } from "lucide-react"
-import type { ServicePageData } from "@/types/service.types"
+import type { ServicePageData } from "@/features/services/types/service.types"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"

@@ -1,15 +1,15 @@
 // @/landing/index.tsx
 import type React from "react"
 import { Suspense } from "react"
-import HeroSection from "@/features/landing/HeroSection"
-import ServicesSection from "@/features/landing/ServicesSection"
-import UniversityPartnersSection from "@/features/landing/UniversityPartnersSection"
-import WhyChooseUsSection from "@/features/landing/WhyChooseUsSection"
+import HeroSection from "@/pages/landing/HeroSection"
+import ServicesSection from "@/pages/landing/ServicesSection"
+import UniversityPartnersSection from "@/pages/landing/UniversityPartnersSection"
+import WhyChooseUsSection from "@/pages/landing/WhyChooseUsSection"
 // import StatisticsSection from "./StatisticsSection"
-import SelfAssessmentSection from "@/features/landing/SelfAssessmentSection"
-import TestimonialSection from "@/features/landing/TestimonialSection"
-import BlogSection from "@/features/landing/BlogSection"
-import ConsultationCtaSection from "@/features/landing/ConsultationCtaSection"
+import SelfAssessmentSection from "@/pages/landing/SelfAssessmentSection"
+import TestimonialSection from "@/pages/landing/TestimonialSection"
+import BlogSection from "@/pages/landing/BlogSection"
+import ConsultationCtaSection from "@/pages/landing/ConsultationCtaSection"
 
 // Section data for better organization and maintainability
 const sections = [

@@ -1,7 +1,7 @@
 // @/features/policy/PrivacyPolicyPage.tsx
 import React from 'react';
-import MainLayout from '@/app/layout/MainLayout';
-import PageLayout from '@/features/layouts/PageLayout';
+import MainLayout from '@/components/layout/MainLayout';
+import PageLayout from '@/components/layout/PageLayout';
 
 const PrivacyPolicyPage = () => {
     return (
