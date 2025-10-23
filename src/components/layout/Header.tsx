@@ -20,7 +20,7 @@ import { FaWhatsapp } from "react-icons/fa"
 const handleWhatsAppClick = () => {
   const phoneNumber = "+64223134766"
   const message = encodeURIComponent("Hello! I would like to book a free consultation.")
-  const url = `https://wa.me/${phoneNumber}?text=${message}` // ✅ No space after wa.me/
+  const url = `https://wa.me/${phoneNumber}?text=${message}`
   window.open(url, "_blank", "noopener,noreferrer")
 }
 
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
 
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-[#25D366] text-black hover:bg-[#128C7E] hover:text-white rounded-md shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200 flex items-center gap-2 px-4 py-2"
+              className="bg-[#25D366] text-md text-black hover:bg-[#128C7E] hover:text-white rounded-md shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200 flex items-center gap-2 px-4 py-2"
             >
               <FaWhatsapp className="size-4" />
               Get Started

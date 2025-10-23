@@ -144,7 +144,7 @@ export default function StudentAssessmentPage() {
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold mb-3">Student Self-Assessment</h1>
                     <p className="text-muted-foreground text-lg">
-                        Help us understand your background and goals for personalized guidance
+                        Ready to Study in New Zealand? Tell Us Your Story
                     </p>
                 </div>
 
