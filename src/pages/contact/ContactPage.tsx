@@ -21,7 +21,8 @@ const contactFormSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactFormSchema>
 
-const ContactPage: React.FC = () => {
+export default function ContactPage() {
+    // const ContactPage: React.FC = () => {
     const form = useForm<ContactFormValues>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
@@ -228,11 +229,9 @@ const ContactPage: React.FC = () => {
                                                 <div>
                                                     <h3 className="font-semibold text-foreground mb-1">AGI Gateway</h3>
                                                     <p className="text-muted-foreground leading-relaxed">
-                                                        123 Queen Street
+                                                        Central
                                                         <br />
-                                                        Christchurch CBD
-                                                        <br />
-                                                        Christchurch 8053
+                                                        Christchurch
                                                         <br />
                                                         New Zealand
                                                     </p>
@@ -347,7 +346,7 @@ const ContactPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* FAQ / Quick Links */}
+            {/* FAQ / Quick Links
             <section className="w-full py-16 bg-muted">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="max-w-4xl mx-auto text-center">
@@ -370,9 +369,9 @@ const ContactPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }
 
-export default ContactPage
+// export default ContactPage
