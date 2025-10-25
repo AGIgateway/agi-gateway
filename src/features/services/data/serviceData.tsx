@@ -136,18 +136,18 @@ export const futurePathwaysData: ServicePageData = {
     helpCtaButtonHref: "/contact",
 }
 
-export const predepartureServicesData: ServicePageData = {
+export const postdepartureServicesData: ServicePageData = {
     heroTitle: "POST-DEPARTURE SERVICES",
     heroBackgroundImage: "/passport-and-visa-documents.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
-        { label: "Post-Departure Services", href: "/services/pre-departure" },
+        { label: "Post-Departure Services", href: "/services/post-departure" },
     ],
     serviceTitle: "More Than Just a Visa",
     serviceDescription: [
         "For many agencies, support ends once a visa is approved. For us, that’s only the beginning. We provide comprehensive pre-departure and settlement support, including airport pickup, accommodation solutions, bank account setup, SIM cards, and cultural orientation. Parents and families can rest assured knowing their children are guided and supported from the moment they land."
     ],
-    formServiceOptions: ["Post-Departure Services", "Accommodation Assistance", "Travel Planning", "Cultural Orientation"],
+    formServiceOptions: ["Airport pickup", "Accommodation Assistance", "Document Preparation", "Health system guidance"],
     formDefaultService: "Post-Departure Services",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
@@ -155,7 +155,7 @@ export const predepartureServicesData: ServicePageData = {
         { country: "Canada", href: "/study-abroad/canada" },
         { country: "UK", href: "/study-abroad/uk" },
     ],
-    brochureUrl: "/brochures/pre-departure.pdf",
+    brochureUrl: "/brochures/post-departure.pdf",
     helpCtaImage: "/visa-consultation-office.jpg",
     helpCtaTitle: "YOU NEED HELP?",
     helpCtaSubtitle: "CONTACT US NOW",

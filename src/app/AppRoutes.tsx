@@ -1,9 +1,6 @@
 // src/routes/index.ts
 import { lazy } from "react"
 import type { RouteConfig } from "@/types/routes"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Suspense } from "react"
-import MainLayout from "@/components/layout/MainLayout"
 
 const HomePage = lazy(() => import("@/pages/landing"))
 const PrivacyPolicyPage = lazy(() => import("@/pages/policy/PrivacyPolicyPage"))
@@ -13,9 +10,10 @@ const VisaSupport = lazy(() => import("@/pages/services/VisaSupport"))
 const TestPreparation = lazy(() => import("@/pages/services/TestPreparation"))
 const CourseGuidance = lazy(() => import("@/pages/services/CourseGuidance"))
 const FuturePathways = lazy(() => import("@/pages/services/FuturePathways"))
-const PredepartureServices = lazy(() => import("@/pages/services/PredepartureServices"))
+const PredepartureServices = lazy(() => import("@/pages/services/PostdepartureServices"))
 const StudentAssessmentPage = lazy(() => import("@/pages/assesment/StudentAssessmentPage"))
 const ContactPage = lazy(() => import("@/pages/contact/ContactPage"))
+const StudyInNewZealandPage = lazy(() => import("@/pages/study-abroad/StudyInNewZealandPage"))
 
 export const routes: RouteConfig[] = [
   {
@@ -99,14 +97,27 @@ export const routes: RouteConfig[] = [
     },
   },
   {
-    path: "/contacts",
+    path: "/contact",
     element: <ContactPage />,
     meta: {
       title: "Contact Us - AGI Gateway",
       description: "Get in touch with our expert counselors for personalized guidance.",
     },
-  }
+  },
+  {
+    path: "/study-abroad/newzealand",
+    element: <StudyInNewZealandPage />,
+    meta: {
+      title: "Study in New Zealand - AGI Gateway",
+      description:
+        "Unlock world-class education in New Zealand with globally recognised qualifications and strong work rights.",
+    },
+  },
 ]
+// AppRoutes.tsx
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Suspense } from "react"
+import MainLayout from "@/components/layout/MainLayout"
 
 const AppRoutes = () => (
   <BrowserRouter>

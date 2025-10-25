@@ -331,7 +331,7 @@ export default function ContactPage() {
                         <Card className="border-none shadow-lg overflow-hidden">
                             <div className="w-full h-96 bg-muted flex items-center justify-center">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.0!2d174.7633!3d-36.8485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUwJzU0LjYiUyAxNzTCsDQ1JzQ3LjkiRQ!5e0!3m2!1sen!2snz!4v1234567890"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.0!2d172.6366!3d-43.5321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d33b2b3b3b3b3b3%3A0x5b3b3b3b3b3b3b3b!2sChristchurch%20Central%20City!5e0!3m2!1sen!2snz!4v1712345678901"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -373,5 +373,3 @@ export default function ContactPage() {
         </div>
     )
 }
-
-// export default ContactPage

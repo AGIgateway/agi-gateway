@@ -51,7 +51,7 @@ const ServicesSection: React.FC = () => {
       icon: "/images/img_icon.webp",
       title: "Post Departure Services",
       subtitle: "More Than Just a Visa",
-      path: "/services/pre-departure",
+      path: "/services/post-departure",
     },
     {
       id: "6",

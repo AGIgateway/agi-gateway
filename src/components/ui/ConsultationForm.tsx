@@ -1,16 +1,4 @@
 // src/components/ConsultationForm.tsx
-
-
-// Quick Enquiry Form
-// 	•	Full Name
-// 	•	Email Address
-// 	•	WhatsApp / Phone Number
-// 	•	Current Qualification
-// 	•	Preferred Course or Subject Area
-// 	•	Intended Intake (Month/Year)
-// 	•	Message / Question
-
-// [Submit & Get Free Consultation →]
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { consultationFormSchema } from '@/lib/schemas';
@@ -20,10 +8,11 @@ import {
     FormField,
     FormItem,
     FormLabel,
-    FormMessage, // 👈 don't forget this!
+    FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea'; // 👈 add this import
 import {
     Select,
     SelectContent,
@@ -34,19 +23,20 @@ import {
 import { Checkbox } from '@/components/ui/checkbox';
 import { z } from 'zod';
 
-// Infer types from Zod schema (no need to manually define!)
 type ConsultationFormValues = z.infer<typeof consultationFormSchema>;
 
 export function ConsultationForm() {
     const form = useForm<ConsultationFormValues>({
-        resolver: zodResolver(consultationFormSchema), // 👈 attach resolver
+        resolver: zodResolver(consultationFormSchema),
         defaultValues: {
             name: '',
             email: '',
             mobile: '',
-            studyDestination: '',
+            currentQualification: '',
+            preferredCourse: '',
             studyYear: '',
             studyIntake: '',
+            message: '',
             consent: false,
         },
     });
@@ -64,6 +54,7 @@ export function ConsultationForm() {
 
     return (
         <div className="w-full max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-md">
+            <h2 className="text-2xl font-bold text-center mb-6">Quick Enquiry Form</h2>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     {/* Name */}
@@ -72,11 +63,11 @@ export function ConsultationForm() {
                         name="name"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Name</FormLabel>
+                                <FormLabel>Full Name *</FormLabel>
                                 <FormControl>
                                     <Input placeholder="Enter your full name" {...field} />
                                 </FormControl>
-                                <FormMessage /> {/* 👈 show error */}
+                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -87,7 +78,7 @@ export function ConsultationForm() {
                         name="email"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Email</FormLabel>
+                                <FormLabel>Email Address *</FormLabel>
                                 <FormControl>
                                     <Input type="email" placeholder="Enter your email address" {...field} />
                                 </FormControl>
@@ -102,7 +93,7 @@ export function ConsultationForm() {
                         name="mobile"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Mobile Number</FormLabel>
+                                <FormLabel>WhatsApp / Phone Number *</FormLabel>
                                 <div className="flex items-center gap-2">
                                     <span className="text-sm font-medium text-muted-foreground">+880</span>
                                     <FormControl>
@@ -119,26 +110,25 @@ export function ConsultationForm() {
                         )}
                     />
 
-                    {/* Study Destination */}
+                    {/* Current Qualification */}
                     <FormField
                         control={form.control}
-                        name="studyDestination"
+                        name="currentQualification"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Preferred Study Destination</FormLabel>
-                                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <FormLabel>Current Qualification *</FormLabel>
+                                <Select onValueChange={field.onChange} value={field.value}>
                                     <FormControl>
                                         <SelectTrigger>
-                                            <SelectValue placeholder="Select a country" />
+                                            <SelectValue placeholder="Select your latest qualification" />
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
-                                        <SelectItem value="newzealand">New Zealand</SelectItem>
-                                        <SelectItem value="uk">United Kingdom</SelectItem>
-                                        <SelectItem value="canada">Canada</SelectItem>
-                                        <SelectItem value="australia">Australia</SelectItem>
-                                        <SelectItem value="germany">Germany</SelectItem>
-                                        <SelectItem value="japan">Japan</SelectItem>
+                                        <SelectItem value="SSC">SSC</SelectItem>
+                                        <SelectItem value="HSC">HSC</SelectItem>
+                                        <SelectItem value="Bachelor">Bachelor's</SelectItem>
+                                        <SelectItem value="Master">Master's</SelectItem>
+                                        <SelectItem value="Diploma">Diploma</SelectItem>
                                         <SelectItem value="other">Other</SelectItem>
                                     </SelectContent>
                                 </Select>
@@ -147,14 +137,32 @@ export function ConsultationForm() {
                         )}
                     />
 
-                    {/* Study Year */}
+                    {/* Preferred Course */}
+                    <FormField
+                        control={form.control}
+                        name="preferredCourse"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Preferred Course or Subject Area *</FormLabel>
+                                <FormControl>
+                                    <Input
+                                        placeholder="e.g., Computer Science, Business, Nursing"
+                                        {...field}
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    {/* Intended Intake (Year) */}
                     <FormField
                         control={form.control}
                         name="studyYear"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Preferred Study Year</FormLabel>
-                                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <FormLabel>Intended Intake (Year) *</FormLabel>
+                                <Select onValueChange={field.onChange} value={field.value}>
                                     <FormControl>
                                         <SelectTrigger>
                                             <SelectValue placeholder="Select year" />
@@ -172,14 +180,14 @@ export function ConsultationForm() {
                         )}
                     />
 
-                    {/* Study Intake */}
+                    {/* Study Intake (Season) */}
                     <FormField
                         control={form.control}
                         name="studyIntake"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Preferred Study Intake</FormLabel>
-                                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <FormLabel>Preferred Study Intake *</FormLabel>
+                                <Select onValueChange={field.onChange} value={field.value}>
                                     <FormControl>
                                         <SelectTrigger>
                                             <SelectValue placeholder="Select intake" />
@@ -197,7 +205,26 @@ export function ConsultationForm() {
                         )}
                     />
 
-                    {/* Consent Checkbox */}
+                    {/* Message / Question */}
+                    <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Message / Question *</FormLabel>
+                                <FormControl>
+                                    <Textarea
+                                        placeholder="Tell us about your goals, questions, or anything else we should know..."
+                                        className="min-h-[100px]"
+                                        {...field}
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    {/* Consent */}
                     <FormField
                         control={form.control}
                         name="consent"
@@ -222,7 +249,7 @@ export function ConsultationForm() {
                                         *
                                     </FormLabel>
                                 </div>
-                                <FormMessage className="ml-8 mt-1" /> {/* adjust position if needed */}
+                                <FormMessage className="ml-8 mt-1" />
                             </FormItem>
                         )}
                     />
@@ -233,13 +260,10 @@ export function ConsultationForm() {
                         size="lg"
                         disabled={form.formState.isSubmitting}
                     >
-                        {form.formState.isSubmitting ? 'Submitting...' : 'Get Started for Free'}
+                        {form.formState.isSubmitting ? 'Submitting...' : 'Submit & Get Free Consultation →'}
                     </Button>
                 </form>
             </Form>
-
         </div>
     );
 }
-
-

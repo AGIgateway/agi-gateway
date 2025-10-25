@@ -6,7 +6,8 @@
 - [x] Logo  
 - [x] Navigation: 
   - [x] Home, 
-  - [x] About Us, 
+  - [x] Abwidth="100%"
+                                    out Us, 
   - [x] Study in New Zealand, 
   - [x] Services, 
   - [x] Universities
@@ -34,7 +35,7 @@
 ---
 
 #### **Test Prep Banner**
-- IELTS / PTE / TOEFL support
+- [x] IELTS / PTE / TOEFL support
 
 ---
 
@@ -70,9 +71,9 @@
 - [x] Terms of Use & Privacy Policy  
 - [ ] About Us  
 - [ ] Study in New Zealand Page 
-- [ ] patch up services
-- [ ] Patch up Contacts form on landing page
-- [ ] Patch up Concats pages 
+- [x] patch up services
+- [x] Patch up Contacts form on landing page
+- [x] Patch up Concats pages 
 - [x] Self Assessment Form
 - [x] subtitle under Self Assesment Form  "Ready to Study in New Zealand? Tell Us Your Story".
 

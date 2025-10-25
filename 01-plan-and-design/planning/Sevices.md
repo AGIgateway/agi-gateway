@@ -1,6 +1,6 @@
 ## 🎓 Education & Course Guidance -- 
 
-- [ ] **Course selection (School, Diplomas, Bachelor’s, Master’s, PhD, English Programs)**
+- [x] **Course selection (School, Diplomas, Bachelor’s, Master’s, PhD, English Programs)**
 
 - **Pathway/bridging programs (Foundation, Pre-degree, Transfer options)**
 
@@ -42,10 +42,10 @@
 
 ## 🏡 Post-Departure & Settlement Services
 
-- [ ] **Airport pickup & welcome** (On Request)
-- [ ] **Accommodation arrangement (homestay, student flats, hostels)** (On Request)
-- [ ] **Bank account, SIM card, IRD (tax) number assistance** (On Request)
-- [ ] **Health system guidance (GP registration, insurance claims)** (On Request)
+- [x] **Airport pickup & welcome** (On Request)
+- [x] **Accommodation arrangement (homestay, student flats, hostels)** (On Request)
+- [x] **Bank account, SIM card, IRD (tax) number assistance** (On Request)
+- [x] **Health system guidance (GP registration, insurance claims)** (On Request)
 
 ## 💼 Career & Future Pathways
 
