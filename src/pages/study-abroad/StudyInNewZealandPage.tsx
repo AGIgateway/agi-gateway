@@ -1,4 +1,3 @@
-"use client"
 
 import type React from "react"
 import { motion } from "framer-motion"
@@ -7,8 +6,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { GraduationCap, Briefcase, Globe, Shield, Heart, ChevronRight, ExternalLink } from "lucide-react"
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations"
+import { useNavigate, Link } from "react-router-dom"
+
+
+
+
 
 const StudyInNewZealandPage: React.FC = () => {
+    const navigate = useNavigate()
+
+    const handleContactClick = () => {
+        navigate("/contacts")
+    }
+
     const benefits = [
         {
             icon: GraduationCap,
@@ -51,6 +61,7 @@ const StudyInNewZealandPage: React.FC = () => {
         },
     ]
 
+
     return (
         <div className="flex flex-col min-h-screen bg-background">
             {/* Hero Section */}
@@ -78,14 +89,16 @@ const StudyInNewZealandPage: React.FC = () => {
                         </motion.p>
 
                         <motion.p variants={fadeInUp} className="text-lg text-white/80 max-w-3xl leading-relaxed">
-                            New Zealand is one of the most trusted education destinations in the world — offering globally recognised
+                            New Zealand is one of the most trusted education destinations in the world. New Zealand offers globally recognised
                             qualifications, strong work rights, and a lifestyle that balances study and well-being. At AGI Gateway, we
                             make your dream of studying in New Zealand simple, transparent, and successful.
                         </motion.p>
 
                         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 pt-4">
                             <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 shadow-lg">
-                                Book Free Consultation
+                                <Link to="/#consult" >
+                                    Book Free Consultation
+                                </Link>
                                 <ChevronRight className="ml-2 h-5 w-5" />
                             </Button>
                             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
@@ -204,10 +217,12 @@ const StudyInNewZealandPage: React.FC = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                             <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 shadow-lg">
-                                Book Free Consultation
+                                <Link to="/#consult" >
+                                    Book Free Consultation
+                                </Link>
                                 <ChevronRight className="ml-2 h-5 w-5" />
                             </Button>
-                            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
+                            <Button onClick={handleContactClick} size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
                                 Contact Us
                             </Button>
                         </div>

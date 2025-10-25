@@ -1,52 +1,83 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
-import { Link } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import type React from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu"
-import { Menu } from "lucide-react"
-import LogoLight from "@/assets/global/logo_light.svg"
-import LogoText from "@/assets/global/logo_text_light.svg"
-import { FaWhatsapp } from "react-icons/fa"
+  NavigationMenuList
+} from "@/components/ui/navigation-menu";
+import { Menu } from "lucide-react";
+import LogoLight from "@/assets/global/logo_light.svg";
+import LogoText from "@/assets/global/logo_text_light.svg";
+import { FaWhatsapp } from "react-icons/fa";
 
-// ✅ Fixed WhatsApp handler (removed extra space)
+// ✅ Fixed WhatsApp URL (removed extra spaces!)
 const handleWhatsAppClick = () => {
-  const phoneNumber = "+64223134766"
-  const message = encodeURIComponent("Hello! I would like to book a free consultation.")
-  const url = `https://wa.me/${phoneNumber}?text=${message}`
-  window.open(url, "_blank", "noopener,noreferrer")
-}
+  const phoneNumber = "+64223134766";
+  const message = encodeURIComponent("Hello! I would like to book a free consultation.");
+  const url = `https://wa.me/${phoneNumber}?text=${message}`; // 🔥 No spaces!
+  window.open(url, "_blank", "noopener,noreferrer");
+};
 
-interface NavItem {
-  name: string
-  active: boolean
-  href?: string
-}
-
-const NAV_ITEMS: NavItem[] = [
-  { name: "Home", active: true, href: "/" },
-  { name: "Services", active: true, href: "#services" }, // ✅ Same-page anchor
-  { name: "Universities", active: true, href: "#university-partners" },
-  { name: "Study in New Zealand", active: true, href: "/study-abroad/newzealand" }, // Updated Study in New Zealand link to point to the correct route
-  { name: "Contact", active: true, href: "/contact" },
-]
+// Nav items (no hardcoded active)
+const NAV_ITEMS = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "#services" },
+  { name: "Universities", href: "#university-partners" },
+  { name: "Study in New Zealand", href: "/study-abroad/newzealand" }, // Updated Study in New Zealand link to point to the correct route
+  { name: "Let's Connect", href: "/contacts" },
+];
 
 const scrollToSection = (id: string) => {
-  const element = document.getElementById(id)
+  const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({ behavior: "smooth" })
+    element.scrollIntoView({ behavior: "smooth" });
   }
-}
+};
 
 const Header: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation(); // Get current route
+  const [activeSection, setActiveSection] = useState("");
+
+  // 🔍 Detect which section is in view (for anchor links)
+  useEffect(() => {
+    const sections = ["services", "university-partners", "testimonials"];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% of section visible
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // ✅ Determine if a nav item should be active
+  const isActive = (href: string): boolean => {
+    // For routes (e.g., "/contacts")
+    if (!href.startsWith("#")) {
+      return location.pathname === href;
+    }
+
+    // For anchor links (e.g., "#services")
+    const sectionId = href.substring(1);
+    return activeSection === sectionId;
+  };
 
   return (
     <header className="w-full bg-secondary sticky top-0 z-50" role="banner" aria-label="Site header">
@@ -57,14 +88,14 @@ const Header: React.FC = () => {
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-lg">
                 <img
-                  src={LogoLight || "/placeholder.svg"}
+                  src={LogoLight}
                   alt="AGI Gateway Logo"
                   className="h-full w-full object-contain"
                   loading="eager"
                 />
               </div>
               <img
-                src={LogoText || "/placeholder.svg"}
+                src={LogoText}
                 alt="AGI Gateway"
                 className="h-6 w-auto sm:w-40"
                 loading="eager"
@@ -78,28 +109,26 @@ const Header: React.FC = () => {
               <NavigationMenuList>
                 {NAV_ITEMS.map((item) => (
                   <NavigationMenuItem key={item.name}>
-                    {item.href?.startsWith("#") ? (
-                      // Anchor link → use <a>
+                    {item.href.startsWith("#") ? (
                       <a
                         href={item.href}
                         onClick={(e) => {
-                          e.preventDefault()
-                          scrollToSection(item.href!.substring(1))
+                          e.preventDefault();
+                          scrollToSection(item.href.substring(1));
                         }}
-                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ${item.active ? "text-primary font-semibold" : "text-muted-foreground"
+                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-md font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ${isActive(item.href) ? "text-primary font-semibold" : "text-muted-foreground"
                           }`}
                       >
                         {item.name}
                       </a>
                     ) : (
-                      // Route link → use NavigationMenuLink (or <Link>)
-                      <NavigationMenuLink
-                        href={item.href}
-                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ${item.active ? "text-primary font-semibold" : "text-muted-foreground"
+                      <Link
+                        to={item.href}
+                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-md font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ${isActive(item.href) ? "text-primary font-semibold" : "text-muted-foreground"
                           }`}
                       >
                         {item.name}
-                      </NavigationMenuLink>
+                      </Link>
                     )}
                   </NavigationMenuItem>
                 ))}
@@ -108,7 +137,7 @@ const Header: React.FC = () => {
 
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-[#25D366] text-black hover:bg-[#128C7E] hover:text-white rounded-md shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200 flex items-center gap-2 px-4 py-2"
+              className="bg-[#25D366] text-md text-black hover:bg-[#128C7E] hover:text-white rounded-md shadow hover:shadow-md hover:scale-[1.02] transition-all duration-200 flex items-center gap-2 px-4 py-2"
             >
               <FaWhatsapp className="size-4" />
               Get Started
@@ -138,29 +167,27 @@ const Header: React.FC = () => {
                 <nav className="flex flex-col gap-2">
                   {NAV_ITEMS.map((item) => (
                     <div key={item.name} className="w-full">
-                      {item.href?.startsWith("#") ? (
-                        // Anchor → smooth scroll
+                      {item.href.startsWith("#") ? (
                         <Button
                           variant="ghost"
-                          className={`w-full justify-start text-left h-12 rounded-md px-3 ${item.active
-                              ? "text-primary font-semibold bg-primary/10"
-                              : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                          className={`w-full justify-start text-left h-12 rounded-md px-3 ${isActive(item.href)
+                            ? "text-primary font-semibold bg-primary/10"
+                            : "text-muted-foreground hover:text-primary hover:bg-primary/5"
                             }`}
                           onClick={() => {
-                            scrollToSection(item.href!.substring(1))
-                            setMobileMenuOpen(false)
+                            scrollToSection(item.href.substring(1));
+                            setMobileMenuOpen(false);
                           }}
                         >
                           {item.name}
                         </Button>
                       ) : (
-                        // Home route → use Link
-                        <Link to={item.href || "/"} onClick={() => setMobileMenuOpen(false)}>
+                        <Link to={item.href} onClick={() => setMobileMenuOpen(false)}>
                           <Button
                             variant="ghost"
-                            className={`w-full justify-start text-left h-12 rounded-md px-3 ${item.active
-                                ? "text-primary font-semibold bg-primary/10"
-                                : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                            className={`w-full justify-start text-left h-12 rounded-md px-3 ${isActive(item.href)
+                              ? "text-primary font-semibold bg-primary/10"
+                              : "text-muted-foreground hover:text-primary hover:bg-primary/5"
                               }`}
                           >
                             {item.name}
@@ -173,8 +200,8 @@ const Header: React.FC = () => {
                 <div className="mt-6 pt-6 border-t border-primary/20">
                   <Button
                     onClick={() => {
-                      handleWhatsAppClick()
-                      setMobileMenuOpen(false)
+                      handleWhatsAppClick();
+                      setMobileMenuOpen(false);
                     }}
                     className="w-full bg-[#25D366] text-black hover:bg-[#128C7E] rounded-md shadow hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 px-4 py-3"
                   >
@@ -188,7 +215,7 @@ const Header: React.FC = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -10,7 +10,7 @@ const VisaSupport = lazy(() => import("@/pages/services/VisaSupport"))
 const TestPreparation = lazy(() => import("@/pages/services/TestPreparation"))
 const CourseGuidance = lazy(() => import("@/pages/services/CourseGuidance"))
 const FuturePathways = lazy(() => import("@/pages/services/FuturePathways"))
-const PredepartureServices = lazy(() => import("@/pages/services/PostdepartureServices"))
+const PostdepartureServices = lazy(() => import("@/pages/services/PostdepartureServices"))
 const StudentAssessmentPage = lazy(() => import("@/pages/assesment/StudentAssessmentPage"))
 const ContactPage = lazy(() => import("@/pages/contact/ContactPage"))
 const StudyInNewZealandPage = lazy(() => import("@/pages/study-abroad/StudyInNewZealandPage"))
@@ -81,10 +81,10 @@ export const routes: RouteConfig[] = [
     },
   },
   {
-    path: "/services/pre-departure",
-    element: <PredepartureServices />,
+    path: "/services/post-departure",
+    element: <PostdepartureServices />,
     meta: {
-      title: "Pre-Departure Services - AGI Gateway",
+      title: "Post-Departure Services - AGI Gateway",
       description: "Get ready for life abroad with our pre-departure support.",
     },
   },
@@ -97,7 +97,7 @@ export const routes: RouteConfig[] = [
     },
   },
   {
-    path: "/contact",
+    path: "/contacts",
     element: <ContactPage />,
     meta: {
       title: "Contact Us - AGI Gateway",
