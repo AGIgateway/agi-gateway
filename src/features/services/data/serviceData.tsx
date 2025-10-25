@@ -93,7 +93,7 @@ export const courseGuidanceData: ServicePageData = {
     serviceDescription: [
         "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success."
     ],
-    formServiceOptions: ["Diploma Course selection", "Bachelor's Course selection", "Master's Course selection", "Phd Course selection", "School selection", "Pathway/bridging programs (Foundation, Pre-degree, Transfer options)", "Short-term study"],
+    formServiceOptions: ["Diploma Course selection", "Bachelor's Course selection", "Master's Course selection", "Phd Course selection", "School selection", "English Programs", "Pathway/bridging programs (Foundation, Pre-degree, Transfer options)", "Short-term study"],
     formDefaultService: " Course Guidance",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
@@ -147,13 +147,13 @@ export const postdepartureServicesData: ServicePageData = {
     serviceDescription: [
         "For many agencies, support ends once a visa is approved. For us, that’s only the beginning. We provide comprehensive pre-departure and settlement support, including airport pickup, accommodation solutions, bank account setup, SIM cards, and cultural orientation. Parents and families can rest assured knowing their children are guided and supported from the moment they land."
     ],
-    formServiceOptions: ["Airport pickup", "Accommodation Assistance", "Document Preparation", "Health system guidance"],
+    formServiceOptions: ["Airport pickup (On Request)", "Accommodation Assistance (On Request)", "Bank account (On Request)", "SIM Card (On Request)", "IRD Number (On Request)", "Health system guidance (On Request)"],
     formDefaultService: "Post-Departure Services",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
-        { country: "Australia", href: "/study-abroad/australia" },
-        { country: "Canada", href: "/study-abroad/canada" },
-        { country: "UK", href: "/study-abroad/uk" },
+        // { country: "Australia", href: "/study-abroad/australia" },
+        // { country: "Canada", href: "/study-abroad/canada" },
+        // { country: "UK", href: "/study-abroad/uk" },
     ],
     brochureUrl: "/brochures/post-departure.pdf",
     helpCtaImage: "/visa-consultation-office.jpg",
