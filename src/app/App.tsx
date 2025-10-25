@@ -1,8 +1,8 @@
 // src/app/App.tsx
 
 import React from 'react';
-import Routes from '@/app/AppRoutes';
+import AppRoutes from '@/app/AppRoutes';
 
-const App = () => <Routes />;
+const App = () => <AppRoutes />;
 
 export default App;
