@@ -6,8 +6,7 @@
 - [x] Logo  
 - [x] Navigation: 
   - [x] Home, 
-  - [x] Abwidth="100%"
-                                    out Us, 
+  - [x] About Us, 
   - [x] Study in New Zealand, 
   - [x] Services, 
   - [x] Universities
@@ -70,7 +69,7 @@
   - [x] Translation  
 - [x] Terms of Use & Privacy Policy  
 - [ ] About Us  
-- [ ] Study in New Zealand Page 
+- [x] Study in New Zealand Page 
 - [x] patch up services
 - [x] Patch up Contacts form on landing page
 - [x] Patch up Concats pages 

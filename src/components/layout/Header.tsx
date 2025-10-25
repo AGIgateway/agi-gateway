@@ -27,8 +27,8 @@ const handleWhatsAppClick = () => {
 // Nav items (no hardcoded active)
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services" },
-  { name: "Universities", href: "#university-partners" },
+  { name: "Services", href: "/#services" },
+  { name: "Universities", href: "/#university-partners" },
   { name: "Study in New Zealand", href: "/study-abroad/newzealand" }, // Updated Study in New Zealand link to point to the correct route
   { name: "Let's Connect", href: "/contacts" },
 ];
