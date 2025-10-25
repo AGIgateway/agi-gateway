@@ -1,6 +1,9 @@
 // src/routes/index.ts
 import { lazy } from "react"
 import type { RouteConfig } from "@/types/routes"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Suspense } from "react"
+import MainLayout from "@/components/layout/MainLayout"
 
 const HomePage = lazy(() => import("@/pages/landing"))
 const PrivacyPolicyPage = lazy(() => import("@/pages/policy/PrivacyPolicyPage"))
@@ -96,18 +99,14 @@ export const routes: RouteConfig[] = [
     },
   },
   {
-    path: "/contact",
+    path: "/contacts",
     element: <ContactPage />,
     meta: {
       title: "Contact Us - AGI Gateway",
       description: "Get in touch with our expert counselors for personalized guidance.",
     },
-  },
+  }
 ]
-// AppRoutes.tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Suspense } from "react"
-import MainLayout from "@/components/layout/MainLayout"
 
 const AppRoutes = () => (
   <BrowserRouter>
