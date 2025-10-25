@@ -82,7 +82,7 @@ export const testPreparationData: ServicePageData = {
     helpCtaButtonHref: "/contact",
 }
 
-export const languageTrainingData: ServicePageData = {
+export const courseGuidanceData: ServicePageData = {
     heroTitle: "COURSE GUIDANCE",
     heroBackgroundImage: "/language-classroom-learning.jpg",
     breadcrumbPath: [
@@ -93,7 +93,7 @@ export const languageTrainingData: ServicePageData = {
     serviceDescription: [
         "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success."
     ],
-    formServiceOptions: ["Course selection", "SOP Writing", "Pathway/bridging programs", "Short-term study"],
+    formServiceOptions: ["Diploma Course selection", "Bachelor's Course selection", "Master's Course selection", "Phd Course selection", "School selection", "Pathway/bridging programs (Foundation, Pre-degree, Transfer options)", "Short-term study"],
     formDefaultService: " Course Guidance",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },

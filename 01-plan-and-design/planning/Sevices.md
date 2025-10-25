@@ -18,7 +18,7 @@
 
 - **Document review & editing (CV, SOP, Recommendation letters)**
 
-- [ ] **Application tracking & follow-up**
+- [x] **Application tracking & follow-up**
 
 ## 🌍 Language & Test Preparation
 
