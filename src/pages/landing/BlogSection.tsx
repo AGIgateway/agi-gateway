@@ -1,9 +1,9 @@
 // @/landing/BlogSection.tsx
 import React from "react"
-import { Card, CardContent, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardTitle } from "components/ui/card"
+import { Button } from "components/ui/button"
 import { motion } from "framer-motion"
-import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations"
+import { fadeInUp, staggerContainer, staggerItem } from "lib/animations"
 
 interface BlogPost {
   id: string

@@ -11,7 +11,7 @@ export const admissionSupportData: ServicePageData = {
     serviceDescription: [
         "Your future is unique, and your study journey should reflect that. At AGI Gateway, we go beyond suggesting “popular courses.” We take time to understand your passions, strengths, and long-term goals. Using our deep local knowledge of New Zealand’s industries and global trends, we help you choose programs that lead to real careers, not just classrooms. Whether you’re starting a new degree, upskilling, or pursuing a PhD, we design a personalised roadmap for your success.",
     ],
-    formServiceOptions: ["University/Institute Applications", "Document review", "School Admission", "Application Assistance", "Scholarship Search"],
+    formServiceOptions: ["University/Institute Applications", "Document review", "School Admission", "Application Assistance", "Scholarship Search", "Application tracking & follow-up"],
     formDefaultService: "Admission Support",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
@@ -66,7 +66,7 @@ export const testPreparationData: ServicePageData = {
     serviceDescription: [
         "English proficiency tests like IELTS and PTE are not roadblocks; they are gateways to global opportunities. At AGI Gateway, we connect you with expert trainers who provide targeted coaching, realistic mock tests, and personalized feedback. Our approach goes beyond achieving a high score. With us, you don’t just prepare for an exam, but you build the confidence to succeed in classrooms, workplaces, and everyday life anywhere in the world."
     ],
-    formServiceOptions: ["IELTS", "PTE"],
+    formServiceOptions: ["IELTS Preparation", "PTE Academic Preparation"],
     formDefaultService: "Test preparations",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
@@ -137,18 +137,18 @@ export const futurePathwaysData: ServicePageData = {
 }
 
 export const predepartureServicesData: ServicePageData = {
-    heroTitle: "PRE-DEPARTURE SERVICES",
+    heroTitle: "POST-DEPARTURE SERVICES",
     heroBackgroundImage: "/passport-and-visa-documents.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
-        { label: "Pre-Departure Services", href: "/services/pre-departure" },
+        { label: "Post-Departure Services", href: "/services/pre-departure" },
     ],
     serviceTitle: "More Than Just a Visa",
     serviceDescription: [
         "For many agencies, support ends once a visa is approved. For us, that’s only the beginning. We provide comprehensive pre-departure and settlement support, including airport pickup, accommodation solutions, bank account setup, SIM cards, and cultural orientation. Parents and families can rest assured knowing their children are guided and supported from the moment they land."
     ],
-    formServiceOptions: ["Pre-Departure Services", "Accommodation Assistance", "Travel Planning", "Cultural Orientation"],
-    formDefaultService: "Pre-Departure Services",
+    formServiceOptions: ["Post-Departure Services", "Accommodation Assistance", "Travel Planning", "Cultural Orientation"],
+    formDefaultService: "Post-Departure Services",
     abroadStudyLinks: [
         { country: "New Zealand", href: "/study-abroad/newzealand" },
         { country: "Australia", href: "/study-abroad/australia" },

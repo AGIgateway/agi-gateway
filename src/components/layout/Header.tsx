@@ -35,7 +35,7 @@ const NAV_ITEMS: NavItem[] = [
   { name: "Services", active: true, href: "#services" }, // ✅ Same-page anchor
   { name: "Universities", active: true, href: "#university-partners" },
   { name: "Study in New Zealand", active: true, href: "#testimonials" },
-  { name: "Contact", active: true, href: "/contact" }, // Added Contact navigation item
+  { name: "Let's Connect", active: true, href: "/contact" }, // Added Contact navigation item
 ]
 
 const scrollToSection = (id: string) => {

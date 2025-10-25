@@ -1,9 +1,9 @@
 // src/features/about/AboutPage.tsx
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from 'components/ui/button';
+import { Card, CardContent } from 'components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from 'components/ui/avatar';
 import { ChevronRight } from 'lucide-react';
 
 // If using Vite, replace next/image with regular img

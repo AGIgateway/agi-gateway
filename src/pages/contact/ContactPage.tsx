@@ -1,16 +1,14 @@
-"use client"
-
 import type React from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { Button } from "components/ui/button"
+import { Card, CardContent } from "components/ui/card"
+import { Input } from "components/ui/input"
+import { Textarea } from "components/ui/textarea"
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react"
 import { FaWhatsapp, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "components/ui/form"
 
 // Contact form schema
 const contactFormSchema = z.object({

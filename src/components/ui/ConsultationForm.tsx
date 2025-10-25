@@ -1,4 +1,16 @@
 // src/components/ConsultationForm.tsx
+
+
+// Quick Enquiry Form
+// 	•	Full Name
+// 	•	Email Address
+// 	•	WhatsApp / Phone Number
+// 	•	Current Qualification
+// 	•	Preferred Course or Subject Area
+// 	•	Intended Intake (Month/Year)
+// 	•	Message / Question
+
+// [Submit & Get Free Consultation →]
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { consultationFormSchema } from '@/lib/schemas';
@@ -121,7 +133,7 @@ export function ConsultationForm() {
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
-                                        <SelectItem value="usa">United States</SelectItem>
+                                        <SelectItem value="newzealand">New Zealand</SelectItem>
                                         <SelectItem value="uk">United Kingdom</SelectItem>
                                         <SelectItem value="canada">Canada</SelectItem>
                                         <SelectItem value="australia">Australia</SelectItem>
@@ -225,6 +237,9 @@ export function ConsultationForm() {
                     </Button>
                 </form>
             </Form>
+
         </div>
     );
 }
+
+

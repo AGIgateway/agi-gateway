@@ -8,13 +8,16 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': '/src',
-      '@/app': '/src/app',
-      '@/assets': '/src/assets',
-      '@/features': '/src/features',
-      '@/styles': '/src/styles',
-      '@/constants': '/src/constants',
-      '@/shared': '/src/features/shared',
-      '@/layouts': '/src/features/layouts',
+      'app': '/src/app',
+      'assets': '/src/assets',
+      'components': '/src/components',
+      'config': '/src/config',
+      'features': '/src/features',
+      'hooks': '/src/hooks',
+      'lib': '/src/lib',
+      'pages': '/src/pages',
+      'styles': '/src/styles',
+      'types': '/src/features/types',
     },
   },
   server: {

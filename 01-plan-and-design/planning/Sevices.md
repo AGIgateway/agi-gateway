@@ -1,6 +1,6 @@
-## 🎓 Education & Course Guidance
+## 🎓 Education & Course Guidance -- 
 
-- **Course selection (School, Diplomas, Bachelor’s, Master’s, PhD, English Programs)**
+- [ ] **Course selection (School, Diplomas, Bachelor’s, Master’s, PhD, English Programs)**
 
 - **Pathway/bridging programs (Foundation, Pre-degree, Transfer options)**
 
@@ -18,13 +18,13 @@
 
 - **Document review & editing (CV, SOP, Recommendation letters)**
 
-- **Application tracking & follow-up**
+- [ ] **Application tracking & follow-up**
 
 ## 🌍 Language & Test Preparation
 
-- **IELTS preparation**
+- [x] **IELTS preparation**
 
-- **PTE Academic preparation**
+- [x] **PTE Academic preparation**
 
 - English for Academic Purposes (EAP)
 
@@ -42,13 +42,10 @@
 
 ## 🏡 Post-Departure & Settlement Services
 
-- **Airport pickup & welcome** (On Request)
-
-- **Accommodation arrangement (homestay, student flats, hostels)** (On Request)
-
-- **Bank account, SIM card, IRD (tax) number assistance** (On Request)
-
-- **Health system guidance (GP registration, insurance claims)** (On Request)
+- [ ] **Airport pickup & welcome** (On Request)
+- [ ] **Accommodation arrangement (homestay, student flats, hostels)** (On Request)
+- [ ] **Bank account, SIM card, IRD (tax) number assistance** (On Request)
+- [ ] **Health system guidance (GP registration, insurance claims)** (On Request)
 
 ## 💼 Career & Future Pathways
 

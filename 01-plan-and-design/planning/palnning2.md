@@ -13,7 +13,7 @@
 ---
 
 #### **Banner**
-- 3 rotating banners (by Hasib) one done
+- [ ] 3 rotating banners (by Hasib) one done
 
 ---
 
@@ -69,7 +69,10 @@
   - [x] Translation  
 - [x] Terms of Use & Privacy Policy  
 - [ ] About Us  
-- [ ] Study in New Zealand Page  
+- [ ] Study in New Zealand Page 
+- [ ] patch up services
+- [ ] Patch up Contacts form on landing page
+- [ ] Patch up Concats pages 
 - [x] Self Assessment Form
 - [x] subtitle under Self Assesment Form  "Ready to Study in New Zealand? Tell Us Your Story".
 
