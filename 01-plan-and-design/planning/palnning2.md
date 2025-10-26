@@ -68,13 +68,18 @@
   - [x] Airport Pick Up  
   - [x] Translation  
 - [x] Terms of Use & Privacy Policy  
-- [ ] About Us  
 - [x] Study in New Zealand Page 
 - [x] patch up services
 - [x] Patch up Contacts form on landing page
 - [x] Patch up Concats pages 
 - [x] Self Assessment Form
 - [x] subtitle under Self Assesment Form  "Ready to Study in New Zealand? Tell Us Your Story".
+- [ ] Create banner
+- [ ] Contact form set up
+- [ ] Email set up 
+- [x] Site Indexing
+- [ ] About Us
+- [ ] Student Testimonials
 
 ---
 

@@ -44,7 +44,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noCheck && vite build",
+    "build": "node src/scripts/generate-sitemap.mjs && tsc --noCheck && vite build",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md,json}\"",
     "preview": "vite preview",
     "serve": "vite preview",

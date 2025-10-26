@@ -274,7 +274,7 @@ export default function ContactPage() {
                                                 size="icon"
                                                 variant="outline"
                                                 className="hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] bg-transparent"
-                                                onClick={() => window.open("https://facebook.com", "_blank")}
+                                                onClick={() => window.open("https://www.facebook.com/profile.php?id=61578970088384", "_blank")}
                                             >
                                                 <FaFacebook className="w-5 h-5" />
                                             </Button>
@@ -282,7 +282,7 @@ export default function ContactPage() {
                                                 size="icon"
                                                 variant="outline"
                                                 className="hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] bg-transparent"
-                                                onClick={() => window.open("https://linkedin.com", "_blank")}
+                                                onClick={() => window.open("https://www.linkedin.com/company/agigateway", "_blank")}
                                             >
                                                 <FaLinkedin className="w-5 h-5" />
                                             </Button>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                                                 size="icon"
                                                 variant="outline"
                                                 className="hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] bg-transparent"
-                                                onClick={() => window.open("https://instagram.com", "_blank")}
+                                                onClick={() => window.open("https://www.instagram.com/agigateway/", "_blank")}
                                             >
                                                 <FaInstagram className="w-5 h-5" />
                                             </Button>

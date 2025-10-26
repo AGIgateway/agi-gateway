@@ -24,16 +24,16 @@ const Footer: React.FC = () => {
   const companyLinks: Link[] = useMemo(
     () => [
       { name: 'About us', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Contact us', href: '#' },
-      { name: 'Testimonials', href: '#testimonials' },
+      // { name: 'Blog', href: '#' },
+      { name: 'Contact us', href: '/contacts' },
+      { name: 'Testimonials', href: '/#testimonials' },
     ],
     []
   );
 
   const supportLinks: Link[] = useMemo(
     () => [
-      { name: 'Help center', href: '/help' }, // or '#' if not built yet
+      // { name: 'Help center', href: '/help' },
       { name: 'Terms of service', href: '/terms-of-use' },
       { name: 'Legal', href: '/terms-of-use' }, // or a dedicated /legal page if needed
       { name: 'Privacy policy', href: '/privacy-policy' },

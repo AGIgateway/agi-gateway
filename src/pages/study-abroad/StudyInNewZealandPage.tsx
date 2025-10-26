@@ -33,7 +33,7 @@ const StudyInNewZealandPage: React.FC = () => {
             description:
                 "From 3 November 2025, eligible full-time international students (NZQF Level 4 and above) can work up to 25 hours per week during term time and full-time in holidays. Gain valuable New Zealand experience while supporting your living costs.",
             source: "Immigration New Zealand – Student Visa Work Rights",
-            sourceUrl: "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/student-visa",
+            sourceUrl: "https://www.immigration.govt.nz/study/once-you-have-a-student-visa/working-on-a-student-visa/",
             color: "text-blue-600",
         },
         {

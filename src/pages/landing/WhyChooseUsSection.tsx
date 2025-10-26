@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { slideInLeft, slideInRight } from "@/lib/animations"
+import { Link } from "react-router-dom"
 
 type WhyChooseUsSectionProps = {}
 
@@ -70,7 +71,9 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                     className="min-w-45 rounded bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 sm:px-8 sm:py-3.5 sm:text-base"
                     aria-label="Learn more about our services"
                   >
-                    Learn More
+                    <Link to="/study-abroad/newzealand">
+                      Learn More
+                    </Link>
                   </Button>
                 </div>
               </motion.div>

@@ -1,0 +1,1 @@
+import{j as r}from"./index-B5zrx9PD.js";import{S as t,c as o}from"./serviceData-DOUbAZP6.js";import"./card-BeSILjZr.js";import"./textarea-CLwTVZO0.js";import"./select-B60wJuXu.js";import"./chevron-right-7aKJbdBx.js";import"./arrow-right-Bm-CZUu7.js";function c(){return r.jsx(t,{...o})}export{c as default};
