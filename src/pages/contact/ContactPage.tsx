@@ -43,28 +43,34 @@ export default function ContactPage() {
 
     async function onSubmit(data: ContactFormValues) {
         try {
-            const response = await fetch("http://localhost:3001/api/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    type: "contact",
-                    data: data,
-                }),
-            })
+            const response = await fetch(
+                " https://ojgejp8o3b.execute-api.ap-southeast-2.amazonaws.com/default/agigateway-send-email", // Replace with your API Gateway URL
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name: data.name,
+                        email: data.email,
+                        phone: data.phone,
+                        subject: data.subject,
+                        message: data.message,
+                    }),
+                }
+            );
 
-            if (!response.ok) {
-                throw new Error("Failed to send message")
+            const result = await response.json();
+
+            if (response.ok) {
+                alert("Thank you! Your message has been sent successfully.");
+                form.reset();
+            } else {
+                alert(`Error: ${result.error}`);
             }
-
-            alert("Thank you for contacting us! We will get back to you within 24 hours.")
-            form.reset()
         } catch (error) {
-            console.error("Error sending message:", error)
-            alert(
-                "Sorry, there was an error sending your message. Please try again or contact us directly at info@agigateway.co.nz",
-            )
+            console.error("Error sending email:", error);
+            alert("Failed to send message. Please try again.");
         }
     }
 
