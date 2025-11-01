@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "components/ui/card"
@@ -109,10 +111,31 @@ export default function StudentAssessmentPage() {
         }
     }
 
-    const onSubmit = (data: StudentAssessmentFormValues) => {
-        console.log("Form submitted:", data)
-        setIsSubmitted(true)
-        window.scrollTo({ top: 0, behavior: "smooth" })
+    const onSubmit = async (data: StudentAssessmentFormValues) => {
+        try {
+            const response = await fetch("http://localhost:3001/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    type: "assessment",
+                    data: data,
+                }),
+            })
+
+            if (!response.ok) {
+                throw new Error("Failed to submit assessment")
+            }
+
+            setIsSubmitted(true)
+            window.scrollTo({ top: 0, behavior: "smooth" })
+        } catch (error) {
+            console.error("Error submitting assessment:", error)
+            alert(
+                "Sorry, there was an error submitting your assessment. Please try again or contact us directly at info@agigateway.co.nz",
+            )
+        }
     }
 
     if (isSubmitted) {
@@ -143,9 +166,7 @@ export default function StudentAssessmentPage() {
                 {/* Header */}
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold mb-3">Student Self-Assessment</h1>
-                    <p className="text-muted-foreground text-lg">
-                        Ready to Study in New Zealand? Tell Us Your Story
-                    </p>
+                    <p className="text-muted-foreground text-lg">Ready to Study in New Zealand? Tell Us Your Story</p>
                 </div>
 
                 {/* Progress Bar */}

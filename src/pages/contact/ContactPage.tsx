@@ -1,4 +1,4 @@
-import type React from "react"
+"use client"
 import { Button } from "components/ui/button"
 import { Card, CardContent } from "components/ui/card"
 import { Input } from "components/ui/input"
@@ -41,10 +41,31 @@ export default function ContactPage() {
         window.open(url, "_blank", "noopener,noreferrer")
     }
 
-    function onSubmit(data: ContactFormValues) {
-        console.log("Contact form submitted:", data)
-        alert("Thank you for contacting us! We will get back to you within 24 hours.")
-        form.reset()
+    async function onSubmit(data: ContactFormValues) {
+        try {
+            const response = await fetch("http://localhost:3001/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    type: "contact",
+                    data: data,
+                }),
+            })
+
+            if (!response.ok) {
+                throw new Error("Failed to send message")
+            }
+
+            alert("Thank you for contacting us! We will get back to you within 24 hours.")
+            form.reset()
+        } catch (error) {
+            console.error("Error sending message:", error)
+            alert(
+                "Sorry, there was an error sending your message. Please try again or contact us directly at info@agigateway.co.nz",
+            )
+        }
     }
 
     return (
@@ -77,8 +98,8 @@ export default function ContactPage() {
                             {
                                 icon: <Mail className="w-8 h-8 text-emerald-600" />,
                                 title: "Email",
-                                content: "info@agigateway.com",
-                                action: "mailto:info@agigateway.com",
+                                content: "info@agigateway.co.nz",
+                                action: "mailto:info@agigateway.co.nz",
                             },
                             {
                                 icon: <MapPin className="w-8 h-8 text-emerald-600" />,

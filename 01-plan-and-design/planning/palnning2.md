@@ -59,7 +59,6 @@
 ### **Pending Sections (From Checklist)**
 - [x] Book a Free Consultation Form  
 - [x] Contact Us  
-- [ ] Blog Section  
 - [x] Services Content (detailed)  
   - [x] Visa  
   - [x] Offer Letters  
@@ -74,12 +73,11 @@
 - [x] Patch up Concats pages 
 - [x] Self Assessment Form
 - [x] subtitle under Self Assesment Form  "Ready to Study in New Zealand? Tell Us Your Story".
-- [ ] Create banner
-- [ ] Contact form set up
-- [ ] Email set up 
 - [x] Site Indexing
+- [x] Email set up 
+- [ ] Contact form set up
+- [ ] Create banner
 - [ ] About Us
-- [ ] Student Testimonials
 
 ---
 

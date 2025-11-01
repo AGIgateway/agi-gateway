@@ -1,3 +1,5 @@
+"use client"
+
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { consultationFormSchema } from "@/lib/schemas"
@@ -35,15 +37,36 @@ export function ConsultationForm({ variant = "light", showHeader = true, classNa
         },
     })
 
-    function onSubmit(data: ConsultationFormValues) {
+    async function onSubmit(data: ConsultationFormValues) {
         const formattedData = {
             ...data,
             mobile: "+880" + data.mobile,
         }
 
-        console.log("Form submitted:", formattedData)
-        alert("Thank you! Our counsellor will contact you soon.")
-        form.reset()
+        try {
+            const response = await fetch("http://localhost:3001/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    type: "consultation",
+                    data: formattedData,
+                }),
+            })
+
+            if (!response.ok) {
+                throw new Error("Failed to send consultation request")
+            }
+
+            alert("Thank you! Our counsellor will contact you soon.")
+            form.reset()
+        } catch (error) {
+            console.error("Error sending consultation request:", error)
+            alert(
+                "Sorry, there was an error submitting your request. Please try again or contact us directly at info@agigateway.co.nz",
+            )
+        }
     }
 
     const containerStyles = {
@@ -245,7 +268,6 @@ export function ConsultationForm({ variant = "light", showHeader = true, classNa
                                     </FormItem>
                                 )}
                             />
-
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 {/* Study Year */}

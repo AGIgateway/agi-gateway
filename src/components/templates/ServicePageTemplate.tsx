@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import { Link } from "react-router-dom"
 import { ChevronRight, ArrowRight, Download } from "lucide-react"
@@ -37,13 +39,35 @@ export default function ServicePageTemplate({
         },
     })
 
-    const handleSubmit = (data: any) => {
+    const handleSubmit = async (data: any) => {
         if (onFormSubmit) {
             onFormSubmit(data)
-        } else {
-            console.log("Form submitted:", data)
+            return
+        }
+
+        try {
+            const response = await fetch("http://localhost:3001/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    type: "service",
+                    data: data,
+                }),
+            })
+
+            if (!response.ok) {
+                throw new Error("Failed to send application")
+            }
+
             alert("Thank you! We will contact you soon.")
             form.reset()
+        } catch (error) {
+            console.error("Error sending application:", error)
+            alert(
+                "Sorry, there was an error submitting your application. Please try again or contact us directly at info@agigateway.co.nz",
+            )
         }
     }
 
