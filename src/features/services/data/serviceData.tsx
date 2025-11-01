@@ -24,7 +24,7 @@ export const admissionSupportData: ServicePageData = {
     helpCtaTitle: "YOU NEED HELP?",
     helpCtaSubtitle: "CONTACT US NOW",
     helpCtaButtonText: "GET IN TOUCH",
-    helpCtaButtonHref: "/contact",
+    helpCtaButtonHref: "/contacts",
 }
 
 export const visaConsultationData: ServicePageData = {
@@ -52,7 +52,7 @@ export const visaConsultationData: ServicePageData = {
     helpCtaTitle: "YOU NEED HELP?",
     helpCtaSubtitle: "CONTACT US NOW",
     helpCtaButtonText: "GET IN TOUCH",
-    helpCtaButtonHref: "/contact",
+    helpCtaButtonHref: "/contacts",
 }
 
 export const testPreparationData: ServicePageData = {
@@ -79,7 +79,7 @@ export const testPreparationData: ServicePageData = {
     helpCtaTitle: "YOU NEED HELP?",
     helpCtaSubtitle: "CONTACT US NOW",
     helpCtaButtonText: "GET IN TOUCH",
-    helpCtaButtonHref: "/contact",
+    helpCtaButtonHref: "/contacts",
 }
 
 export const courseGuidanceData: ServicePageData = {
@@ -106,7 +106,7 @@ export const courseGuidanceData: ServicePageData = {
     helpCtaTitle: "YOU NEED HELP?",
     helpCtaSubtitle: "CONTACT US NOW",
     helpCtaButtonText: "GET IN TOUCH",
-    helpCtaButtonHref: "/contact",
+    helpCtaButtonHref: "/contacts",
 }
 
 export const futurePathwaysData: ServicePageData = {
@@ -133,7 +133,7 @@ export const futurePathwaysData: ServicePageData = {
     helpCtaTitle: "YOU NEED HELP?",
     helpCtaSubtitle: "CONTACT US NOW",
     helpCtaButtonText: "GET IN TOUCH",
-    helpCtaButtonHref: "/contact",
+    helpCtaButtonHref: "/contacts",
 }
 
 export const postdepartureServicesData: ServicePageData = {
@@ -160,5 +160,5 @@ export const postdepartureServicesData: ServicePageData = {
     helpCtaTitle: "YOU NEED HELP?",
     helpCtaSubtitle: "CONTACT US NOW",
     helpCtaButtonText: "GET IN TOUCH",
-    helpCtaButtonHref: "/contact",
+    helpCtaButtonHref: "/contacts",
 }

@@ -66,7 +66,7 @@ export default function ServicePageTemplate({
         } catch (error) {
             console.error("Error sending application:", error)
             alert(
-                "Sorry, there was an error submitting your application. Please try again or contact us directly at info@agigateway.co.nz",
+                "Sorry, there was an error submitting your application. Please try again or contact us directly at connect@agigateway.co.nz",
             )
         }
     }
