@@ -12,6 +12,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import type { z } from "zod"
 import { Sparkles, Send } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { toast } from "sonner"
 
 type ConsultationFormValues = z.infer<typeof consultationFormSchema>
 
@@ -38,34 +39,40 @@ export function ConsultationForm({ variant = "light", showHeader = true, classNa
     })
 
     async function onSubmit(data: ConsultationFormValues) {
-        const formattedData = {
-            ...data,
-            mobile: "+880" + data.mobile,
-        }
-
         try {
-            const response = await fetch("http://localhost:3001/api/send-email", {
+            const WORKER_URL = import.meta.env.VITE_CLOUDFLARE_WORKER_URL || "http://localhost:8787"
+
+            const response = await fetch(WORKER_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     type: "consultation",
-                    data: formattedData,
+                    data: {
+                        ...data,
+                        mobile: data.mobile,
+                    },
                 }),
             })
 
             if (!response.ok) {
-                throw new Error("Failed to send consultation request")
+                const result = await response.json()
+                throw new Error(result.error || "Failed to send consultation request")
             }
 
-            alert("Thank you! Our counsellor will contact you soon.")
+            toast.success("Success!", {
+                description: "Thank you! Our counsellor will contact you soon.",
+            })
             form.reset()
         } catch (error) {
             console.error("Error sending consultation request:", error)
-            alert(
-                "Sorry, there was an error submitting your request. Please try again or contact us directly at info@agigateway.co.nz",
-            )
+            toast.error("Error", {
+                description:
+                    error instanceof Error
+                        ? error.message
+                        : "Sorry, there was an error submitting your request. Please try again.",
+            })
         }
     }
 

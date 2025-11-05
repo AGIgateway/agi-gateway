@@ -13,6 +13,7 @@ import { Checkbox } from "components/ui/checkbox"
 import { Field, FieldLabel, FieldDescription, FieldGroup } from "components/ui/field"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "components/ui/form"
 import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap, User, Users, Target } from "lucide-react"
+import { toast } from "sonner"
 
 type StudentAssessmentFormValues = {
     // Step 1: Personal Information
@@ -113,7 +114,9 @@ export default function StudentAssessmentPage() {
 
     const onSubmit = async (data: StudentAssessmentFormValues) => {
         try {
-            const response = await fetch("http://localhost:3001/api/send-email", {
+            const WORKER_URL = import.meta.env.VITE_CLOUDFLARE_WORKER_URL || "http://localhost:8787"
+
+            const response = await fetch(WORKER_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -125,16 +128,23 @@ export default function StudentAssessmentPage() {
             })
 
             if (!response.ok) {
-                throw new Error("Failed to submit assessment")
+                const result = await response.json()
+                throw new Error(result.error || "Failed to submit assessment")
             }
 
+            toast.success("Success!", {
+                description: "Thank you! Our team will review your information and contact you within 24-48 hours.",
+            })
             setIsSubmitted(true)
             window.scrollTo({ top: 0, behavior: "smooth" })
         } catch (error) {
             console.error("Error submitting assessment:", error)
-            alert(
-                "Sorry, there was an error submitting your assessment. Please try again or contact us directly at info@agigateway.co.nz",
-            )
+            toast.error("Error", {
+                description:
+                    error instanceof Error
+                        ? error.message
+                        : "Sorry, there was an error submitting your assessment. Please try again.",
+            })
         }
     }
 
@@ -191,10 +201,10 @@ export default function StudentAssessmentPage() {
                             <div key={step.id} className="flex flex-col items-center min-w-20 mt-4 flex-1">
                                 <div
                                     className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all ${isCompleted
-                                        ? "bg-primary text-primary-foreground"
-                                        : isActive
-                                            ? "bg-primary text-primary-foreground ring-4 ring-primary/20"
-                                            : "bg-muted text-muted-foreground"
+                                            ? "bg-primary text-primary-foreground"
+                                            : isActive
+                                                ? "bg-primary text-primary-foreground ring-4 ring-primary/20"
+                                                : "bg-muted text-muted-foreground"
                                         }`}
                                 >
                                     <StepIcon className="w-5 h-5" />

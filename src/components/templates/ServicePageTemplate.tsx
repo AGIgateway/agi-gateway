@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useForm } from "react-hook-form"
 import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form"
+import { toast } from "sonner"
 
 export default function ServicePageTemplate({
     heroTitle,
@@ -40,13 +41,10 @@ export default function ServicePageTemplate({
     })
 
     const handleSubmit = async (data: any) => {
-        if (onFormSubmit) {
-            onFormSubmit(data)
-            return
-        }
-
         try {
-            const response = await fetch("http://localhost:3001/api/send-email", {
+            const WORKER_URL = import.meta.env.VITE_CLOUDFLARE_WORKER_URL || "http://localhost:8787"
+
+            const response = await fetch(WORKER_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -58,16 +56,22 @@ export default function ServicePageTemplate({
             })
 
             if (!response.ok) {
-                throw new Error("Failed to send application")
+                const result = await response.json()
+                throw new Error(result.error || "Failed to send application")
             }
 
-            alert("Thank you! We will contact you soon.")
+            toast.success("Success!", {
+                description: "Thank you! We will contact you soon to discuss your application.",
+            })
             form.reset()
         } catch (error) {
             console.error("Error sending application:", error)
-            alert(
-                "Sorry, there was an error submitting your application. Please try again or contact us directly at connect@agigateway.co.nz",
-            )
+            toast.error("Error", {
+                description:
+                    error instanceof Error
+                        ? error.message
+                        : "Sorry, there was an error submitting your application. Please try again.",
+            })
         }
     }
 

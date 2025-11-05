@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "components/ui/form"
+import { toast } from "sonner"
 
 // Contact form schema
 const contactFormSchema = z.object({
@@ -22,7 +23,6 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>
 
 export default function ContactPage() {
-    // const ContactPage: React.FC = () => {
     const form = useForm<ContactFormValues>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
@@ -43,34 +43,39 @@ export default function ContactPage() {
 
     async function onSubmit(data: ContactFormValues) {
         try {
-            const response = await fetch(
-                " https://ojgejp8o3b.execute-api.ap-southeast-2.amazonaws.com/default/agigateway-send-email", // Replace with your API Gateway URL
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
+            const WORKER_URL = import.meta.env.VITE_CLOUDFLARE_WORKER_URL || "http://localhost:8787"
+
+            const response = await fetch(WORKER_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    type: "contact",
+                    data: {
                         name: data.name,
                         email: data.email,
                         phone: data.phone,
                         subject: data.subject,
                         message: data.message,
-                    }),
-                }
-            );
+                    },
+                }),
+            })
 
-            const result = await response.json();
-
-            if (response.ok) {
-                alert("Thank you! Your message has been sent successfully.");
-                form.reset();
-            } else {
-                alert(`Error: ${result.error}`);
+            if (!response.ok) {
+                const result = await response.json()
+                throw new Error(result.error || "Failed to send email")
             }
+
+            toast.success("Success!", {
+                description: "Your message has been sent successfully. We'll get back to you soon.",
+            })
+            form.reset()
         } catch (error) {
-            console.error("Error sending email:", error);
-            alert("Failed to send message. Please try again.");
+            console.error("Error sending email:", error)
+            toast.error("Error", {
+                description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+            })
         }
     }
 
