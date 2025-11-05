@@ -114,7 +114,7 @@ export default function StudentAssessmentPage() {
 
     const onSubmit = async (data: StudentAssessmentFormValues) => {
         try {
-            const WORKER_URL = import.meta.env.VITE_CLOUDFLARE_WORKER_URL || "http://localhost:8787"
+            const WORKER_URL = "https://agigateway-server.info-agigateway-196.workers.dev"
 
             const response = await fetch(WORKER_URL, {
                 method: "POST",
@@ -201,10 +201,10 @@ export default function StudentAssessmentPage() {
                             <div key={step.id} className="flex flex-col items-center min-w-20 mt-4 flex-1">
                                 <div
                                     className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all ${isCompleted
-                                            ? "bg-primary text-primary-foreground"
-                                            : isActive
-                                                ? "bg-primary text-primary-foreground ring-4 ring-primary/20"
-                                                : "bg-muted text-muted-foreground"
+                                        ? "bg-primary text-primary-foreground"
+                                        : isActive
+                                            ? "bg-primary text-primary-foreground ring-4 ring-primary/20"
+                                            : "bg-muted text-muted-foreground"
                                         }`}
                                 >
                                     <StepIcon className="w-5 h-5" />
