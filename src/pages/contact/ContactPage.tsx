@@ -43,7 +43,7 @@ export default function ContactPage() {
 
     async function onSubmit(data: ContactFormValues) {
         try {
-            const WORKER_URL = import.meta.env.VITE_CLOUDFLARE_WORKER_URL || "http://localhost:8787"
+            const WORKER_URL = "https://agigateway-server.info-agigateway-196.workers.dev"
 
             const response = await fetch(WORKER_URL, {
                 method: "POST",
