@@ -128,17 +128,17 @@ const ConsultationCtaSection: React.FC<ConsultationCtaSectionProps> = ({ title =
                         viewport={{ once: true, amount: 0.3 }}
                         variants={fadeInUp}
                     >
-                        <div className="flex flex-col items-center gap-3 p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl">
+                        <div className="flex flex-col items-center gap-3 p-4 bg-cyan-600   backdrop-blur-sm border border-white/20 rounded-xl">
                             <div className="p-3 bg-emerald-500/20 rounded-full">
                                 <CheckCircle2 className="w-6 h-6 text-lime-300" />
                             </div>
-                            <div className="text-center">
-                                <p className="font-semibold text-white">Expert Guidance</p>
+                            <div className="text-center ">
+                                <p className="font-semibold  text-white">Expert Guidance</p>
                                 <p className="text-sm text-emerald-200">Certified counselors</p>
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center gap-3 p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl">
+                        <div className="flex flex-col items-center gap-3 p-4 bg-cyan-600 backdrop-blur-sm border border-white/20 rounded-xl">
                             <div className="p-3 bg-lime-500/20 rounded-full">
                                 <Clock className="w-6 h-6 text-lime-300" />
                             </div>
@@ -148,7 +148,7 @@ const ConsultationCtaSection: React.FC<ConsultationCtaSectionProps> = ({ title =
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center gap-3 p-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl">
+                        <div className="flex flex-col items-center gap-3 p-4 bg-cyan-600 backdrop-blur-sm border border-white/20 rounded-xl">
                             <div className="p-3 bg-emerald-500/20 rounded-full">
                                 <Shield className="w-6 h-6 text-lime-300" />
                             </div>

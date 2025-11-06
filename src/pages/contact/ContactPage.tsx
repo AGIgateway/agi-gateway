@@ -82,8 +82,16 @@ export default function ContactPage() {
     return (
         <div className="flex flex-col min-h-screen bg-background">
             {/* Hero Section */}
-            <section className="w-full py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-lime-950 to-emerald-700 text-center">
-                <div className="container mx-auto px-4 md:px-6">
+            <section
+                className="w-full py-16 sm:py-24 lg:py-32 bg-cover bg-center bg-no-repeat relative"
+                style={{
+                    backgroundImage: `url('/images/img-contacts-bg2.jpg')`, // ✅ Make sure this image exists in /public/images/
+                }}
+            >
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-black/50"></div>
+
+                <div className="container mx-auto px-4 md:px-6 relative z-10">
                     <div className="flex flex-col items-center space-y-6 max-w-4xl mx-auto">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                             Get in Touch
@@ -96,45 +104,79 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Info Cards */}
-            <section className="w-full py-16 bg-background">
+            <section className="w-full py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                         {[
                             {
-                                icon: <Phone className="w-8 h-8 text-emerald-600" />,
+                                icon: <Phone className="w-8 h-8" />,
                                 title: "Phone",
                                 content: "+64 22 313 4766",
                                 action: "tel:+64223134766",
+                                gradient: "from-blue-500 to-cyan-500",
+                                hoverGradient: "hover:from-blue-600 hover:to-cyan-600",
+                                iconColor: "text-blue-600",
+                                bgColor: "bg-blue-50",
                             },
                             {
-                                icon: <Mail className="w-8 h-8 text-emerald-600" />,
+                                icon: <Mail className="w-8 h-8" />,
                                 title: "Email",
                                 content: "info@agigateway.co.nz",
                                 action: "mailto:info@agigateway.co.nz",
+                                gradient: "from-purple-500 to-pink-500",
+                                hoverGradient: "hover:from-purple-600 hover:to-pink-600",
+                                iconColor: "text-purple-600",
+                                bgColor: "bg-purple-50",
                             },
                             {
-                                icon: <MapPin className="w-8 h-8 text-emerald-600" />,
+                                icon: <MapPin className="w-8 h-8" />,
                                 title: "Office",
                                 content: "Christchurch, New Zealand",
                                 action: null,
+                                gradient: "from-emerald-500 to-teal-500",
+                                hoverGradient: "hover:from-emerald-600 hover:to-teal-600",
+                                iconColor: "text-emerald-600",
+                                bgColor: "bg-emerald-50",
                             },
                             {
-                                icon: <Clock className="w-8 h-8 text-emerald-600" />,
+                                icon: <Clock className="w-8 h-8" />,
                                 title: "Hours",
                                 content: "Mon-Fri: 9AM-6PM",
                                 action: null,
+                                gradient: "from-orange-500 to-red-500",
+                                hoverGradient: "hover:from-orange-600 hover:to-red-600",
+                                iconColor: "text-orange-600",
+                                bgColor: "bg-orange-50",
                             },
                         ].map((item, index) => (
-                            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
+                            <Card
+                                key={index}
+                                className={`border-none shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${item.bgColor} hover:bg-gradient-to-br ${item.hoverGradient} group cursor-pointer`}
+                            >
                                 <CardContent className="p-6 text-center">
-                                    <div className="flex justify-center mb-4">{item.icon}</div>
-                                    <h3 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
+                                    <div
+                                        className={`flex justify-center mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}
+                                    >
+                                        <div
+                                            className={`p-4 rounded-full bg-gradient-to-br ${item.gradient} group-hover:shadow-lg transition-all duration-300`}
+                                        >
+                                            <div className="text-white">{item.icon}</div>
+                                        </div>
+                                    </div>
+                                    <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-white transition-colors duration-300">
+                                        {item.title}
+                                    </h3>
                                     {item.action ? (
-                                        <a href={item.action} className="text-muted-foreground hover:text-emerald-600 transition-colors">
+                                        <a
+                                            href={item.action}
+                                            className="text-muted-foreground group-hover:text-white transition-colors duration-300 font-medium"
+                                        >
                                             {item.content}
                                         </a>
                                     ) : (
-                                        <p className="text-muted-foreground">{item.content}</p>
+                                        <p className="text-muted-foreground group-hover:text-white transition-colors duration-300 font-medium">
+                                            {item.content}
+                                        </p>
                                     )}
                                 </CardContent>
                             </Card>

@@ -14,6 +14,7 @@ const PostdepartureServices = lazy(() => import("@/pages/services/PostdepartureS
 const StudentAssessmentPage = lazy(() => import("@/pages/assesment/StudentAssessmentPage"))
 const ContactPage = lazy(() => import("@/pages/contact/ContactPage"))
 const StudyInNewZealandPage = lazy(() => import("@/pages/study-abroad/StudyInNewZealandPage"))
+const AboutUsPage = lazy(() => import("@/pages/about/AboutUsPage"))
 
 export const routes: RouteConfig[] = [
   {
@@ -111,6 +112,14 @@ export const routes: RouteConfig[] = [
       title: "Study in New Zealand - AGI Gateway",
       description:
         "Unlock world-class education in New Zealand with globally recognised qualifications and strong work rights.",
+    },
+  },
+  {
+    path: "/about",
+    element: <AboutUsPage />,
+    meta: {
+      title: "About Us - AGI Gateway",
+      description: "Learn about AGI Gateway's story, mission, and vision for empowering students worldwide.",
     },
   },
 ]

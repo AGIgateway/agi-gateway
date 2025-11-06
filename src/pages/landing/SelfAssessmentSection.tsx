@@ -66,9 +66,12 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
                   </p>
                 </div>
 
-                <Button onClick={handleAssessmentClick} className="w-full min-w-44 sm:w-auto">
+                <Button onClick={handleAssessmentClick}
+                  className="w-full min-w-44 sm:w-auto px-4 py-2 text-sm"
+                >
                   Free Assessment
                 </Button>
+
               </CardContent>
             </Card>
           </motion.div>

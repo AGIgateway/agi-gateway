@@ -1,16 +1,14 @@
 "use client"
 
-// @/landing/ServicesSection.tsx
-
 import type React from "react"
-import { Link } from "react-router-dom"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations"
+import { BookOpen, FileText, GraduationCap, Plane, TrendingUp, FileCheck } from "lucide-react"
 
 interface Service {
   id: string
-  icon: string
+  icon: React.ReactNode // Changed from string to ReactNode to support icon components
   title: string
   subtitle: string
   path: string
@@ -20,42 +18,54 @@ const ServicesSection: React.FC = () => {
   const services: Service[] = [
     {
       id: "1",
-      icon: "/images/img_icon.webp",
+      icon: (
+        <BookOpen className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" />
+      ),
       title: "Course Guidance",
       subtitle: "Finding Your Perfect Path",
       path: "/services/course-guidance",
     },
     {
       id: "2",
-      icon: "/images/img_icon_green_50.webp",
+      icon: (
+        <FileText className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" />
+      ),
       title: "Admission Support",
       subtitle: "Turning Your Application into a Story",
       path: "/services/admission-support",
     },
     {
       id: "3",
-      icon: "/images/img_icon_green_50_56x64.webp",
+      icon: (
+        <GraduationCap className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" />
+      ),
       title: "Test Preparation",
       subtitle: "Master English, Master Your Future",
       path: "/services/test-preparations",
     },
     {
       id: "4",
-      icon: "/images/img_icon_green_50_56x64.webp",
+      icon: (
+        <FileCheck className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" />
+      ),
       title: "Visa Support",
       subtitle: "Simplifying the Toughest Steps",
       path: "/services/visa-support",
     },
     {
       id: "5",
-      icon: "/images/img_icon.webp",
+      icon: (
+        <Plane className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" />
+      ),
       title: "Post Departure Services",
       subtitle: "More Than Just a Visa",
       path: "/services/post-departure",
     },
     {
       id: "6",
-      icon: "/images/img_icon_green_50.webp",
+      icon: (
+        <TrendingUp className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" />
+      ),
       title: "Future Pathways",
       subtitle: "Building a Life, Not Just a degree",
       path: "/services/future-pathways",
@@ -87,17 +97,11 @@ const ServicesSection: React.FC = () => {
           >
             {services.map((service) => (
               <motion.div key={service.id} variants={staggerItem}>
-                <Link to={service.path} className="block h-full">
-                  <Card className="flex flex-col justify-between h-full bg-card border border-border shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer">
+                <a href={service.path} className="block h-full group">
+                  <Card className="flex flex-col justify-between h-full bg-card border-2 border-border shadow-sm hover:shadow-2xl hover:scale-105 hover:-translate-y-2 hover:border-primary/50 transition-all duration-300 cursor-pointer">
                     <CardHeader className="flex flex-col items-center gap-3 sm:gap-4 lg:gap-4 px-8 sm:px-12 lg:px-14 pb-2">
-                      <img
-                        src={service.icon || "/placeholder.svg"}
-                        alt={service.title}
-                        className="w-12 h-10 object-contain sm:w-14 sm:h-12 lg:w-16 lg:h-14"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <CardTitle className="text-xl font-bold leading-tight text-center text-foreground sm:text-2xl lg:text-3xl">
+                      <div className="flex items-center justify-center">{service.icon}</div>
+                      <CardTitle className="text-xl font-bold leading-tight text-center text-foreground group-hover:text-primary transition-colors duration-300 sm:text-2xl lg:text-3xl">
                         {service.title}
                       </CardTitle>
                     </CardHeader>
@@ -105,7 +109,7 @@ const ServicesSection: React.FC = () => {
                       <p className="text-sm font-bold leading-5 text-muted-foreground">{service.subtitle}</p>
                     </CardContent>
                   </Card>
-                </Link>
+                </a>
               </motion.div>
             ))}
           </motion.div>

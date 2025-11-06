@@ -1,20 +1,21 @@
+"use client"
+
 // @/landing/index.tsx
 import type React from "react"
 import { Suspense, useEffect } from "react"
-import { useLocation } from 'react-router-dom';
-import HeroSection from "@/pages/landing/HeroSection"
+import { useLocation } from "react-router-dom"
+import HeroCarousel from "@/pages/landing/HeroCarousel"
 import ServicesSection from "@/pages/landing/ServicesSection"
 import UniversityPartnersSection from "@/pages/landing/UniversityPartnersSection"
 import WhyChooseUsSection from "@/pages/landing/WhyChooseUsSection"
 // import StatisticsSection from "./StatisticsSection"
 import SelfAssessmentSection from "@/pages/landing/SelfAssessmentSection"
 import TestimonialSection from "@/pages/landing/TestimonialSection"
-import BlogSection from "@/pages/landing/BlogSection"
 import ConsultationCtaSection from "@/pages/landing/ConsultationCtaSection"
 
 // Section data for better organization and maintainability
 const sections = [
-  { id: "hero", Component: HeroSection, label: "Hero section" },
+  { id: "hero", Component: HeroCarousel, label: "Hero section" },
   { id: "services", Component: ServicesSection, label: "Services section" },
   { id: "why-choose-us", Component: WhyChooseUsSection, label: "Why choose us section" },
   { id: "university-partners", Component: UniversityPartnersSection, label: "University partners section" },
@@ -26,20 +27,20 @@ const sections = [
 ]
 
 const HomePage: React.FC = () => {
-  const location = useLocation();
+  const location = useLocation()
 
   useEffect(() => {
     // Check if URL has a hash (e.g., /#consult)
     if (location.hash) {
-      const element = document.querySelector(location.hash);
+      const element = document.querySelector(location.hash)
       if (element) {
         // Scroll after a tiny delay to ensure DOM is ready
         setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+          element.scrollIntoView({ behavior: "smooth" })
+        }, 100)
       }
     }
-  }, [location]);
+  }, [location])
 
   return (
     <div className="w-full bg-background min-h-screen flex flex-col">

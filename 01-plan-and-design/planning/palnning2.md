@@ -75,9 +75,13 @@
 - [x] subtitle under Self Assesment Form  "Ready to Study in New Zealand? Tell Us Your Story".
 - [x] Site Indexing
 - [x] Email set up 
-- [ ] Contact form set up
-- [ ] Create banner
-- [ ] About Us
+- [x] Contact form set up
+- [x] contacts hover effect colorful 
+- [x] service icon selection
+- [x] logo clickable
+- [x] Create banner
+- [x] About Us
+- [ ] self assessment photo same size, button
 
 ---
 
