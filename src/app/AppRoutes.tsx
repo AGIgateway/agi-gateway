@@ -34,7 +34,7 @@ export const routes: RouteConfig[] = [
     },
   },
   {
-    path: "/termsofuse",
+    path: "/terms-of-use",
     element: <TermsOfUsePage />,
     meta: {
       title: "Terms of Use - AGI Gateway",
