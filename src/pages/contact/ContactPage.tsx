@@ -319,7 +319,7 @@ export default function ContactPage() {
                                                     <p className="text-muted-foreground">
                                                         Monday - Friday: 9:00 AM - 6:00 PM
                                                         <br />
-                                                        Sunday & Saturday: Closed (Upon request)
+                                                        Sunday & Saturday: Available upon request only
                                                     </p>
                                                 </div>
                                             </div>

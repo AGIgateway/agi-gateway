@@ -1,1 +1,0 @@
-import{j as r}from"./index-DDNFOicr.js";import{S as t,c as o}from"./serviceData-CB3TPVXN.js";import"./card-CN-JXsx5.js";import"./index-Cr86UYrj.js";import"./select-C0l_cEGb.js";import"./chevron-right-BAxX31Ba.js";import"./arrow-right-TgMvTrY5.js";function c(){return r.jsx(t,{...o})}export{c as default};
