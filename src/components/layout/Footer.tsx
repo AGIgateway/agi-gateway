@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
   const companyLinks: Link[] = useMemo(
     () => [
-      { name: 'About us', href: '#' },
+      { name: 'About us', href: '/about' },
       // { name: 'Blog', href: '#' },
       { name: 'Contact us', href: '/contacts' },
       { name: 'Testimonials', href: '/#testimonials' },
