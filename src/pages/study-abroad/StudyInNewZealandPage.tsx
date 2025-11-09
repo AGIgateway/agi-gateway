@@ -1,3 +1,4 @@
+"use client"
 
 import type React from "react"
 import { motion } from "framer-motion"
@@ -7,10 +8,6 @@ import { Badge } from "@/components/ui/badge"
 import { GraduationCap, Briefcase, Globe, Shield, Heart, ChevronRight, ExternalLink } from "lucide-react"
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations"
 import { useNavigate, Link } from "react-router-dom"
-
-
-
-
 
 const StudyInNewZealandPage: React.FC = () => {
     const navigate = useNavigate()
@@ -26,6 +23,8 @@ const StudyInNewZealandPage: React.FC = () => {
             description:
                 "New Zealand qualifications are part of the New Zealand Qualifications Framework (NZQF) — ensuring quality, consistency, and global recognition. All universities and institutes deliver education that blends theory with practical, real-world learning.",
             color: "text-emerald-600",
+            bgGradient: "from-emerald-50 to-teal-50",
+            iconBg: "from-emerald-100 to-teal-100",
         },
         {
             icon: Briefcase,
@@ -35,6 +34,8 @@ const StudyInNewZealandPage: React.FC = () => {
             source: "Immigration New Zealand – Student Visa Work Rights",
             sourceUrl: "https://www.immigration.govt.nz/study/once-you-have-a-student-visa/working-on-a-student-visa/",
             color: "text-blue-600",
+            bgGradient: "from-blue-50 to-indigo-50",
+            iconBg: "from-blue-100 to-indigo-100",
         },
         {
             icon: Globe,
@@ -44,6 +45,8 @@ const StudyInNewZealandPage: React.FC = () => {
             source: "Immigration New Zealand – Post-Study Work Visa",
             sourceUrl: "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/post-study-work-visa",
             color: "text-purple-600",
+            bgGradient: "from-purple-50 to-pink-50",
+            iconBg: "from-purple-100 to-pink-100",
         },
         {
             icon: Shield,
@@ -51,6 +54,8 @@ const StudyInNewZealandPage: React.FC = () => {
             description:
                 "Ranked among the world's safest nations, New Zealand offers a multicultural community that celebrates inclusiveness and care. International students enjoy high living standards, personal freedom, and strong protection under NZ's Code of Practice for the Pastoral Care of International Students.",
             color: "text-orange-600",
+            bgGradient: "from-orange-50 to-amber-50",
+            iconBg: "from-orange-100 to-amber-100",
         },
         {
             icon: Heart,
@@ -58,15 +63,22 @@ const StudyInNewZealandPage: React.FC = () => {
             description:
                 "From modern campuses and innovative cities to stunning outdoor adventures — New Zealand offers the perfect balance between academic excellence and personal growth.",
             color: "text-rose-600",
+            bgGradient: "from-rose-50 to-pink-50",
+            iconBg: "from-rose-100 to-pink-100",
         },
     ]
-
 
     return (
         <div className="flex flex-col min-h-screen bg-background">
             {/* Hero Section */}
-            <section className="section-spacing bg-gradient-to-br from-lime-950 to-emerald-700 text-white">
-                <div className="container-padding max-w-7xl mx-auto">
+            <section className="section-spacing relative text-white overflow-hidden">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <img src="/images/img_4.jpg" alt="New Zealand Landscape" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 to-gray-900/50"></div>
+                </div>
+
+                <div className="container-padding max-w-7xl mx-auto relative z-10">
                     <motion.div
                         initial="hidden"
                         animate="visible"
@@ -89,16 +101,14 @@ const StudyInNewZealandPage: React.FC = () => {
                         </motion.p>
 
                         <motion.p variants={fadeInUp} className="text-lg text-white/80 max-w-3xl leading-relaxed">
-                            New Zealand is one of the most trusted education destinations in the world. New Zealand offers globally recognised
-                            qualifications, strong work rights, and a lifestyle that balances study and well-being. At AGI Gateway, we
-                            make your dream of studying in New Zealand simple, transparent, and successful.
+                            New Zealand is one of the most trusted education destinations in the world. New Zealand offers globally
+                            recognised qualifications, strong work rights, and a lifestyle that balances study and well-being. At AGI
+                            Gateway, we make your dream of studying in New Zealand simple, transparent, and successful.
                         </motion.p>
 
                         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 pt-4">
                             <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 shadow-lg">
-                                <Link to="/#consult" >
-                                    Book Free Consultation
-                                </Link>
+                                <Link to="/#consult">Book Free Consultation</Link>
                                 <ChevronRight className="ml-2 h-5 w-5" />
                             </Button>
                             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
@@ -132,10 +142,12 @@ const StudyInNewZealandPage: React.FC = () => {
                                 const Icon = benefit.icon
                                 return (
                                     <motion.div key={index} variants={staggerItem}>
-                                        <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-2 hover:border-emerald-200">
+                                        <Card
+                                            className={`h-full bg-gradient-to-br ${benefit.bgGradient} border-2 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-1`}
+                                        >
                                             <CardHeader>
                                                 <div
-                                                    className={`w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-50 to-lime-50 flex items-center justify-center mb-4`}
+                                                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${benefit.iconBg} flex items-center justify-center mb-4 shadow-sm`}
                                                 >
                                                     <Icon className={`h-6 w-6 ${benefit.color}`} />
                                                 </div>
@@ -217,12 +229,15 @@ const StudyInNewZealandPage: React.FC = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                             <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 shadow-lg">
-                                <Link to="/#consult" >
-                                    Book Free Consultation
-                                </Link>
+                                <Link to="/#consult">Book Free Consultation</Link>
                                 <ChevronRight className="ml-2 h-5 w-5" />
                             </Button>
-                            <Button onClick={handleContactClick} size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
+                            <Button
+                                onClick={handleContactClick}
+                                size="lg"
+                                variant="outline"
+                                className="border-white text-white hover:bg-white/10 bg-transparent"
+                            >
                                 Contact Us
                             </Button>
                         </div>

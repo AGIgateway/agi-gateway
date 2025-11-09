@@ -3,6 +3,8 @@
 // @/landing/SelfAssessmentSection.tsx
 
 import type React from "react"
+import { Link } from "react-router-dom"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useNavigate } from "react-router-dom"
@@ -71,9 +73,11 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
 
                 <Button
                   onClick={handleAssessmentClick}
-                  className="w-full min-w-32 sm:w-auto px-3 py-1.5 text-xs sm:text-sm"
+                  className="min-w-45 rounded bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 sm:px-8 sm:py-3.5 sm:text-base"
                 >
-                  Free Assessment
+                  <Link to="/assessment">
+                    Free Assessment
+                  </Link>
                 </Button>
               </CardContent>
             </Card>

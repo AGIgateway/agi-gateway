@@ -76,12 +76,16 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className="w-full bg-secondary sticky top-0 z-50" role="banner" aria-label="Site header">
+    <header
+      className="w-full bg-secondary backdrop-blur-sm sticky top-0 z-50"
+      role="banner"
+      aria-label="Site header"
+    >
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4 sm:py-5">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-3 sm:gap-4">
+            <Link to="/" className="flex items-center gap-3 sm:gap-4 transition-transform hover:scale-105 duration-200">
               <div className="flex h-14 w-14 items-center justify-center rounded-lg">
                 <img
                   src={LogoLight || "/placeholder.svg"}
@@ -112,7 +116,7 @@ const Header: React.FC = () => {
                           e.preventDefault()
                           scrollToSection(item.href.substring(1))
                         }}
-                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-md font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ${isActive(item.href) ? "text-primary font-semibold" : "text-muted-foreground"
+                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-md font-medium transition-all duration-200 hover:bg-accent hover:text-accent-foreground hover:scale-105 hover:shadow-sm focus:bg-accent focus:text-accent-foreground focus:outline-none ${isActive(item.href) ? "text-primary font-semibold" : "text-muted-foreground"
                           }`}
                       >
                         {item.name}
@@ -120,7 +124,7 @@ const Header: React.FC = () => {
                     ) : (
                       <Link
                         to={item.href}
-                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-md font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ${isActive(item.href) ? "text-primary font-semibold" : "text-muted-foreground"
+                        className={`group inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-md font-medium transition-all duration-200 hover:bg-accent hover:text-accent-foreground hover:scale-105 hover:shadow-sm focus:bg-accent focus:text-accent-foreground focus:outline-none ${isActive(item.href) ? "text-primary font-semibold" : "text-muted-foreground"
                           }`}
                       >
                         {item.name}
@@ -147,7 +151,7 @@ const Header: React.FC = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-foreground hover:bg-secondary/50 rounded-md"
+                  className="text-foreground hover:bg-secondary/50 rounded-md hover:scale-105 transition-transform duration-200"
                   aria-label="Open menu"
                 >
                   <Menu className="h-6 w-6" />
@@ -166,9 +170,9 @@ const Header: React.FC = () => {
                       {item.href.startsWith("#") ? (
                         <Button
                           variant="ghost"
-                          className={`w-full justify-start text-left h-12 rounded-md px-3 ${isActive(item.href)
-                              ? "text-primary font-semibold bg-primary/10"
-                              : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                          className={`w-full justify-start text-left h-12 rounded-md px-3 transition-all duration-200 hover:scale-[1.02] ${isActive(item.href)
+                            ? "text-primary font-semibold bg-primary/10"
+                            : "text-muted-foreground hover:text-primary hover:bg-primary/5"
                             }`}
                           onClick={() => {
                             scrollToSection(item.href.substring(1))
@@ -181,9 +185,9 @@ const Header: React.FC = () => {
                         <Link to={item.href} onClick={() => setMobileMenuOpen(false)}>
                           <Button
                             variant="ghost"
-                            className={`w-full justify-start text-left h-12 rounded-md px-3 ${isActive(item.href)
-                                ? "text-primary font-semibold bg-primary/10"
-                                : "text-muted-foreground hover:text-primary hover:bg-primary/5"
+                            className={`w-full justify-start text-left h-12 rounded-md px-3 transition-all duration-200 hover:scale-[1.02] ${isActive(item.href)
+                              ? "text-primary font-semibold bg-primary/10"
+                              : "text-muted-foreground hover:text-primary hover:bg-primary/5"
                               }`}
                           >
                             {item.name}

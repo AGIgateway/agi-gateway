@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/features/services/types/service.types"
 
 export const admissionSupportData: ServicePageData = {
     heroTitle: "ADMISSION SUPPORT",
-    heroBackgroundImage: "/images/agi-gateway-story-bg.jpg",
+    heroBackgroundImage: "/images/img_1.jpeg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Admission Support", href: "/services/admission-support" },
@@ -57,7 +57,7 @@ export const visaConsultationData: ServicePageData = {
 
 export const testPreparationData: ServicePageData = {
     heroTitle: "TEST PREPARATIONS",
-    heroBackgroundImage: "/images/img_test_prep.jpg",
+    heroBackgroundImage: "/images/IMG_8353.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Test Preparations", href: "/services/test-preparations" },
@@ -84,7 +84,7 @@ export const testPreparationData: ServicePageData = {
 
 export const courseGuidanceData: ServicePageData = {
     heroTitle: "COURSE GUIDANCE",
-    heroBackgroundImage: "/images/img_course_guidance1.jpg",
+    heroBackgroundImage: "/images/IMG_8352.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Course Guidance", href: "/services/course-guidance" },
