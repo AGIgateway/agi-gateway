@@ -81,8 +81,8 @@
 - [x] logo clickable
 - [x] Create banner
 - [x] About Us
+- [x] services background images
 - [ ] self assessment photo same size, button
-- [ ] services background images
 
 ---
 
