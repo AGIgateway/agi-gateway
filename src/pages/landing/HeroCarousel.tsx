@@ -1,5 +1,3 @@
-"use client"
-
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Badge } from "@/components/ui/badge"
@@ -117,7 +115,8 @@ const HeroCarousel: React.FC = () => {
                         transition={{ duration: 0.5 }}
                         className="w-full py-8 px-4 md:py-12 lg:py-16"
                     >
-                        <div className="container mx-auto max-w-7xl">
+                        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+
                             <div className="hidden lg:grid lg:grid-cols-[1fr_2fr_1fr] lg:gap-8 lg:items-center">
                                 {/* Left Universities List */}
                                 <div className="space-y-4">
@@ -135,7 +134,7 @@ const HeroCarousel: React.FC = () => {
 
                                 {/* Center Map Image */}
                                 <div className="flex justify-center">
-                                    <img src="/images/hero-2.png" alt="New Zealand Universities Map" className="w-full h-auto" />
+                                    <img src="/images/img_nz_uni_map.png" alt="New Zealand Universities Map" className="w-full h-auto" />
                                 </div>
 
                                 {/* Right Institutes List */}
@@ -154,7 +153,7 @@ const HeroCarousel: React.FC = () => {
                             </div>
 
                             <div className="lg:hidden flex justify-center">
-                                <img src="/images/hero-2.png" alt="New Zealand Universities Map" className="w-full max-w-5xl h-auto" />
+                                <img src="/images/img_nz_uni_map.png" alt="New Zealand Universities Map" className="w-full max-w-5xl h-auto" />
                             </div>
                         </div>
                     </motion.div>
