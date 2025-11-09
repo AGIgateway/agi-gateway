@@ -19,22 +19,25 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
   }
 
   return (
-    <section className="w-full bg-muted" aria-labelledby="self-assessment-heading" role="region">
+    <section
+      className="w-full bg-muted py-16 sm:py-20 lg:py-24"
+      aria-labelledby="self-assessment-heading"
+      role="region"
+    >
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-10 sm:gap-12 lg:flex-row lg:gap-32 lg:items-center">
+        <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-16 lg:items-center">
           <motion.div
-            className="w-full max-w-md lg:w-1/3"
+            className="w-full max-w-lg lg:max-w-md lg:w-2/5 flex-shrink-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={slideInLeft}
             transition={{ duration: 0.7, ease: "easeOut" }}
-
           >
             <img
-              src="/images/assessment-lead.webp"
-              alt="Self-assessment person"
-              className="w-full h-auto object-contain mx-auto drop-shadow-md"
+              src="images/img_self_assessment.jpeg"
+              alt="Person working on digital assessment with checkboxes"
+              className="w-full h-auto object-cover rounded-lg shadow-lg"
               loading="lazy"
               decoding="async"
             />
@@ -45,7 +48,7 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={slideInRight}
-            className="w-full lg:w-2/3"
+            className="w-full lg:w-3/5"
           >
             <Card className="w-full bg-transparent border-none shadow-none">
               <CardContent className="flex flex-col gap-6 text-center lg:text-left p-0">
@@ -66,12 +69,12 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
                   </p>
                 </div>
 
-                <Button onClick={handleAssessmentClick}
-                  className="w-full min-w-44 sm:w-auto px-4 py-2 text-sm"
+                <Button
+                  onClick={handleAssessmentClick}
+                  className="w-full min-w-32 sm:w-auto px-3 py-1.5 text-xs sm:text-sm"
                 >
                   Free Assessment
                 </Button>
-
               </CardContent>
             </Card>
           </motion.div>
