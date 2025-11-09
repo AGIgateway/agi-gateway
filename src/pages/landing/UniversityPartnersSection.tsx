@@ -100,7 +100,7 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
             id="university-partners-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-foreground mb-4"
           >
-            University Partners
+            Our Distinguished University Network
           </h2>
           <p className="text-sm sm:text-base font-normal leading-relaxed text-muted-foreground max-w-3xl mx-auto">
             We are working with New Zealand's top universities

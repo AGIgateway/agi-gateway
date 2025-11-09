@@ -33,9 +33,9 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                   aria-label="Attentive listening — our team listens to your needs"
                 >
                   <img
-                    src="/images/img_attentive_listening.webp"
+                    src="/images/img_choose_us.jpg"
                     alt="Attentive listening — our team listens to your needs"
-                    className="w-full max-w-70 sm:max-w-75 lg:max-w-81 h-auto rounded-2xl object-cover shadow-md"
+                    className="w-full h-[500px] max-w-70 sm:max-w-75 lg:max-w-81 h-auto rounded-2xl object-cover shadow-md"
                     loading="lazy"
                     decoding="async"
                   />
@@ -54,7 +54,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                     id="why-choose-us-heading"
                     className="text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl"
                   >
-                    Why Choose Us?
+                    Why Partner with AGI Gateway?
                   </h2>
                   <p className="mx-auto max-w-prose text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
                     AGI Gateway isn’t just another education consultancy. It’s a bridge built by people who’ve walked

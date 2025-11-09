@@ -29,7 +29,7 @@ const TestimonialSection: React.FC = () => {
             <img
               src="/images/img_graduations.webp"
               alt="Testimonial person"
-              className="rounded-xl"
+              className="w-full h-[525px] object-cover rounded-lg shadow-lg"
               loading="lazy"
               decoding="async"
             />
