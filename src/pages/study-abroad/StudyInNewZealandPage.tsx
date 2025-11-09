@@ -85,9 +85,9 @@ const StudyInNewZealandPage: React.FC = () => {
                         variants={staggerContainer}
                         className="flex flex-col items-center text-center space-y-6"
                     >
-                        <motion.div variants={fadeInUp}>
+                        {/* <motion.div variants={fadeInUp}>
                             <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30 mb-4">Study Abroad</Badge>
-                        </motion.div>
+                        </motion.div> */}
 
                         <motion.h1
                             variants={fadeInUp}
