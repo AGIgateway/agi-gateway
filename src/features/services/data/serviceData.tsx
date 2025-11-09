@@ -2,7 +2,7 @@ import type { ServicePageData } from "@/features/services/types/service.types"
 
 export const admissionSupportData: ServicePageData = {
     heroTitle: "ADMISSION SUPPORT",
-    heroBackgroundImage: "/university-campus-aerial.png",
+    heroBackgroundImage: "/images/agi-gateway-story-bg.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Admission Support", href: "/services/admission-support" },
@@ -29,7 +29,7 @@ export const admissionSupportData: ServicePageData = {
 
 export const visaConsultationData: ServicePageData = {
     heroTitle: "VISA SUPPORT",
-    heroBackgroundImage: "/passport-and-visa-documents.jpg",
+    heroBackgroundImage: "/images/agi-gateway-story-bg.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Visa Support", href: "/services/visa-support" },
@@ -57,7 +57,7 @@ export const visaConsultationData: ServicePageData = {
 
 export const testPreparationData: ServicePageData = {
     heroTitle: "TEST PREPARATIONS",
-    heroBackgroundImage: "/modern-city-night.png",
+    heroBackgroundImage: "/images/agi-gateway-story-bg.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Test Preparations", href: "/services/test-preparations" },
@@ -84,7 +84,7 @@ export const testPreparationData: ServicePageData = {
 
 export const courseGuidanceData: ServicePageData = {
     heroTitle: "COURSE GUIDANCE",
-    heroBackgroundImage: "/language-classroom-learning.jpg",
+    heroBackgroundImage: "/images/agi-gateway-story-bg.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Course Guidance", href: "/services/course-guidance" },
@@ -111,7 +111,7 @@ export const courseGuidanceData: ServicePageData = {
 
 export const futurePathwaysData: ServicePageData = {
     heroTitle: "FUTURE PATHWAYS",
-    heroBackgroundImage: "/university-campus-aerial.png",
+    heroBackgroundImage: "/images/agi-gateway-story-bg.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Future Pathways", href: "/services/future-pathways" },
@@ -138,7 +138,7 @@ export const futurePathwaysData: ServicePageData = {
 
 export const postdepartureServicesData: ServicePageData = {
     heroTitle: "POST-DEPARTURE SERVICES",
-    heroBackgroundImage: "/passport-and-visa-documents.jpg",
+    heroBackgroundImage: "/images/agi-gateway-story-bg.jpg",
     breadcrumbPath: [
         { label: "Home", href: "/" },
         { label: "Post-Departure Services", href: "/services/post-departure" },
