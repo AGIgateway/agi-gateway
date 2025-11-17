@@ -77,7 +77,7 @@ const WhyPartnerPage: React.FC = () => {
                             Why Partner with AGI Gateway?
                         </h1>
                         <p className="mx-auto max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl">
-                            More than consultants — we're your mentors, guides, and partners in your educational journey
+                            More than consultants: we're your mentors, guides, and partners in your educational journey
                         </p>
                     </motion.div>
                 </div>
@@ -126,8 +126,8 @@ const WhyPartnerPage: React.FC = () => {
                                     </p>
                                     <p className="font-medium text-foreground">
                                         With AGI Gateway, you're not just choosing a consultancy. You're choosing mentors who have lived your
-                                        dream, faced the same challenges, and built a trusted path for your success — whether it is academically,
-                                        personally, or professionally.
+                                        dream, faced the same challenges, and built a trusted path for your success. Whether it is academically,
+                                        personally, or professionally AGI Gateway is with you all the way.
                                     </p>
                                 </div>
 

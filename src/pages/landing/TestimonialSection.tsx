@@ -83,13 +83,13 @@ const TestimonialSection: React.FC = () => {
 
               {/* CTA Link */}
               <div className="flex items-center gap-2 text-sm sm:text-base font-medium">
-                <span className="text-lg sm:text-xl font-semibold text-primary">Students Testimonials</span>
-                <img
+                {/* <span className="text-lg sm:text-xl font-semibold text-primary">Students Testimonials</span> */}
+                {/* <img
                   src="/images/img_24_arrows_directions_right.webp"
                   alt="Arrow right"
                   className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5"
                   loading="lazy"
-                />
+                /> */}
               </div>
             </div>
           </motion.div>
