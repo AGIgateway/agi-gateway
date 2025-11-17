@@ -63,19 +63,19 @@ const AboutUsPage: React.FC = () => {
                         </div>
                         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                             <p>
-                                AGI Gateway was founded with a clear purpose and a deep passion — to guide students from across the
-                                globe towards a future defined by knowledge, confidence, and success.
+                                AGI Gateway was founded with a clear purpose and a deep passion to guide students from across the
+                                globe towards a future defined by knowledge, confidence and success.
                             </p>
                             <p>
                                 Our journey began with a simple story: our founder was once an international student who faced the same
                                 hopes and challenges that many students experience today. That personal journey inspired the creation of
-                                AGI Gateway — a consultancy built on authenticity, care, and a genuine understanding of what it takes to
+                                AGI Gateway, a consultancy, built on authenticity and care with a genuine understanding of what it takes to
                                 start fresh in a new country.
                             </p>
                             <p>
-                                Today, we proudly connect students from Bangladesh, the Middle East, and beyond to New Zealand's
+                                Today, we proudly connect students from Bangladesh and the Middle East to New Zealand's
                                 world-class education providers. With a strong local presence and direct partnerships with trusted
-                                universities and institutions, we help every student find the right path — one that's transparent,
+                                universities and institutions, we help every student find the right path one that's transparent,
                                 trusted, and tailored to their future.
                             </p>
                         </div>
@@ -93,16 +93,16 @@ const AboutUsPage: React.FC = () => {
                         </div>
                         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
                             <p className="text-xl font-semibold text-foreground">
-                                We're more than education consultants — we're mentors, dream-builders, and passionate believers in the
+                                We're more than education consultants. We're mentors, dream-builders, and passionate believers in the
                                 power of learning.
                             </p>
                             <p>
-                                Our approach is personal, transparent, and deeply human. We don't just help you apply; we help you
+                                Our approach is personal, transparent and deeply human. We don't just help you apply; we help you
                                 belong. From your first consultation to your first day in New Zealand, we walk beside you every step of
-                                the way — offering honest advice, local guidance, and lifelong support.
+                                the way offering honest advice, local guidance, and lifelong support.
                             </p>
                             <p className="text-xl font-semibold text-foreground italic">
-                                Because your dreams deserve more than promises — they deserve a partner who truly cares.
+                                Because your dreams deserve more than a promise. They deserve a partner who truly cares.
                             </p>
                         </div>
                     </motion.div>
@@ -123,7 +123,7 @@ const AboutUsPage: React.FC = () => {
                                             <h3 className="text-2xl sm:text-3xl font-bold text-foreground">Our Mission</h3>
                                         </div>
                                         <p className="text-lg leading-relaxed text-muted-foreground">
-                                            To empower and walk beside every student on their journey — offering genuine, transparent, and
+                                            To empower and walk beside every student on their journey. We are offering genuine, transparent and
                                             compassionate guidance that helps them adapt with confidence, unlock their potential, and thrive
                                             within New Zealand's world-class education system and beyond.
                                         </p>
@@ -140,7 +140,7 @@ const AboutUsPage: React.FC = () => {
                                             <h3 className="text-2xl sm:text-3xl font-bold text-foreground">Our Vision</h3>
                                         </div>
                                         <p className="text-lg leading-relaxed text-muted-foreground">
-                                            To be New Zealand's most trusted and student-centred education consultancy — connecting bright
+                                            To be New Zealand's most trusted and student-centred education consultancy by connecting bright
                                             minds to world-class learning and shaping the global leaders and entrepreneurs of tomorrow.
                                         </p>
                                     </CardContent>
