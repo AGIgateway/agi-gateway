@@ -71,7 +71,7 @@ const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = () => {
                     className="min-w-45 rounded bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 sm:px-8 sm:py-3.5 sm:text-base"
                     aria-label="Learn more about our services"
                   >
-                    <Link to="/study-abroad/newzealand">
+                    <Link to="/why-partner">
                       Learn More
                     </Link>
                   </Button>

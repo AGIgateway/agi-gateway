@@ -15,6 +15,7 @@ const StudentAssessmentPage = lazy(() => import("@/pages/assesment/StudentAssess
 const ContactPage = lazy(() => import("@/pages/contact/ContactPage"))
 const StudyInNewZealandPage = lazy(() => import("@/pages/study-abroad/StudyInNewZealandPage"))
 const AboutUsPage = lazy(() => import("@/pages/about/AboutUsPage"))
+const WhyPartnerPage = lazy(() => import("@/pages/about/WhyPartnerPage"))
 
 export const routes: RouteConfig[] = [
   {
@@ -120,6 +121,14 @@ export const routes: RouteConfig[] = [
     meta: {
       title: "About Us - AGI Gateway",
       description: "Learn about AGI Gateway's story, mission, and vision for empowering students worldwide.",
+    },
+  },
+  {
+    path: "/why-partner",
+    element: <WhyPartnerPage />,
+    meta: {
+      title: "Why Partner with Us - AGI Gateway",
+      description: "Discover why AGI Gateway is the trusted choice for students seeking international education guidance.",
     },
   },
 ]
