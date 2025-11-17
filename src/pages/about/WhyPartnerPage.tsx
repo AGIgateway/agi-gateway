@@ -61,7 +61,7 @@ const WhyPartnerPage: React.FC = () => {
         <div className="flex flex-col min-h-screen bg-background">
             {/* Hero Section */}
             <section className="relative w-full py-20 sm:py-28 lg:py-36 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-lime-600 opacity-90" />
+                <div className="absolute inset-0 bg-primary opacity-90" />
                 <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10" />
 
                 <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -270,7 +270,7 @@ const WhyPartnerPage: React.FC = () => {
                             <Button
                                 size="lg"
                                 variant="outline"
-                                className="border-white text-white hover:bg-white/10"
+                                className="border-white text-black hover:bg-accent/10"
                             >
                                 <Link to="/study-abroad/newzealand">Learn About New Zealand</Link>
                             </Button>
