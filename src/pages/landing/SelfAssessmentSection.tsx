@@ -70,14 +70,13 @@ const SelfAssessmentSection: React.FC<SelfAssessmentSectionProps> = () => {
                     together.
                   </p>
                 </div>
-
                 <Button
-                  onClick={handleAssessmentClick}
-                  className="min-w-45 rounded bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 sm:px-8 sm:py-3.5 sm:text-base"
+                  asChild
+                  className="min-w-28 w-full rounded bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 
+             sm:px-8 sm:py-3.5 sm:text-base
+             lg:w-64"
                 >
-                  <Link to="/assessment">
-                    Free Assessment
-                  </Link>
+                  <Link to="/assessment">Free Assessment</Link>
                 </Button>
               </CardContent>
             </Card>
