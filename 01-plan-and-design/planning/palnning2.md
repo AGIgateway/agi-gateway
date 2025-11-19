@@ -83,8 +83,8 @@
 - [x] About Us
 - [x] services background images
 - [x] self assessment photo same size, button
-- [ ] hover effect on why partner
-- [ ] social media links like whatsapp
+- [x] social media links like whatsapp
+- [x] hover effect on why partner
 - [ ] university logo
 
 ---

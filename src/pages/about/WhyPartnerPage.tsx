@@ -1,8 +1,6 @@
-"use client"
-
 import type React from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { slideInLeft, slideInRight, staggerContainer, fadeIn, fadeInUp, staggerItem } from "@/lib/animations"
 import { Link } from "react-router-dom"
@@ -11,40 +9,52 @@ import { Heart, Users, Award, Globe, Handshake, Target, CheckCircle2 } from 'luc
 const WhyPartnerPage: React.FC = () => {
     const values = [
         {
-            icon: <Heart className="w-8 h-8" />,
+            icon: Heart,
             title: "Personal Connection",
             description: "We've walked in your shoes. As former international students ourselves, we understand the challenges, uncertainties, and dreams that come with studying abroad.",
-            gradient: "from-rose-100 to-pink-100"
+            gradient: "from-rose-100 to-pink-100",
+            iconBg: "from-rose-100 to-pink-100",
+            color: "text-rose-600"
         },
         {
-            icon: <Users className="w-8 h-8" />,
+            icon: Users,
             title: "New Zealand Expertise",
             description: "As a proudly New Zealand owned and operated consultancy, we offer insider knowledge and authentic guidance that only locals can provide.",
-            gradient: "from-blue-100 to-indigo-100"
+            gradient: "from-blue-50 to-indigo-50",
+            iconBg: "from-blue-100 to-indigo-100",
+            color: "text-blue-600"
         },
         {
-            icon: <Award className="w-8 h-8" />,
+            icon: Award,
             title: "Proven Track Record",
             description: "Years of successful student placements and countless success stories demonstrate our commitment to your academic and professional goals.",
-            gradient: "from-emerald-100 to-teal-100"
+            gradient: "from-emerald-50 to-teal-50",
+            iconBg: "from-emerald-100 to-teal-100",
+            color: "text-emerald-600"
         },
         {
-            icon: <Globe className="w-8 h-8" />,
+            icon: Globe,
             title: "Holistic Support",
             description: "From academic guidance to personal adaptation, we support every aspect of your journey to help you truly thrive in your new home.",
-            gradient: "from-orange-100 to-amber-100"
+            gradient: "from-orange-50 to-amber-50",
+            iconBg: "from-orange-100 to-amber-100",
+            color: "text-orange-600"
         },
         {
-            icon: <Handshake className="w-8 h-8" />,
+            icon: Handshake,
             title: "Trusted Partnership",
             description: "You're not just a client; you're part of our community. We build lasting relationships based on trust, transparency, and genuine care.",
-            gradient: "from-purple-100 to-pink-100"
+            gradient: "from-purple-50 to-pink-50",
+            iconBg: "from-purple-100 to-pink-100",
+            color: "text-purple-600"
         },
         {
-            icon: <Target className="w-8 h-8" />,
+            icon: Target,
             title: "Success-Focused",
             description: "Your success is our mission. We're dedicated to helping you achieve your goals academically, personally, and professionally.",
-            gradient: "from-cyan-100 to-blue-100"
+            gradient: "from-cyan-50 to-blue-50",
+            iconBg: "from-cyan-100 to-blue-100",
+            color: "text-cyan-600"
         }
     ]
 
@@ -61,7 +71,7 @@ const WhyPartnerPage: React.FC = () => {
         <div className="flex flex-col min-h-screen bg-background">
             {/* Hero Section */}
             <section className="relative w-full py-20 sm:py-28 lg:py-36 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-lime-600 opacity-90" />
+                <div className="absolute inset-0 bg-primary opacity-90" />
                 <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10" />
 
                 <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -150,83 +160,50 @@ const WhyPartnerPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* Core Values Section */}
-            <section className="w-full bg-muted py-16 sm:py-20 lg:py-24">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            {/* Why Choose New Zealand Section */}
+            <section className="section-spacing bg-background">
+                <div className="container-padding max-w-7xl mx-auto">
                     <motion.div
-                        className="text-center mb-12"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
-                        variants={fadeInUp}
-                    >
-                        <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl mb-4">
-                            What Makes Us Different
-                        </h2>
-                        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Our unique approach combines personal experience with professional expertise
-                        </p>
-                    </motion.div>
-
-                    <motion.div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
                         variants={staggerContainer}
                     >
-                        {values.map((value, index) => (
-                            <motion.div key={index} variants={staggerItem}>
-                                <Card className={`h-full bg-gradient-to-br ${value.gradient} border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
-                                    <CardContent className="p-6 flex flex-col gap-4">
-                                        <div className="w-14 h-14 rounded-full bg-white/80 flex items-center justify-center text-primary">
-                                            {value.icon}
-                                        </div>
-                                        <h3 className="text-xl font-bold text-foreground">{value.title}</h3>
-                                        <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                                    </CardContent>
-                                </Card>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
-            </section>
+                        <motion.div variants={fadeInUp} className="text-center mb-12">
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                                What Makes Us Different
+                            </h2>
+                            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                                Our unique approach combines personal experience with professional expertise
+                            </p>
+                        </motion.div>
 
-            {/* Benefits Section */}
-            <section className="w-full bg-background py-16 sm:py-20 lg:py-24">
-                <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-                    <motion.div
-                        className="text-center mb-12"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeIn}
-                    >
-                        <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl mb-4">
-                            What You Get with AGI Gateway
-                        </h2>
-                        <p className="text-lg text-muted-foreground">
-                            Comprehensive support for every step of your journey
-                        </p>
-                    </motion.div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                            {values.map((value, index) => {
+                                const Icon = value.icon
+                                return (
+                                    <motion.div key={index} variants={staggerItem}>
+                                        <Card
+                                            className={`h-full bg-gradient-to-br ${value.gradient} border-2 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-1`}
+                                        >
+                                            <CardHeader>
+                                                <div
+                                                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${value.iconBg} flex items-center justify-center mb-4 shadow-sm`}
+                                                >
+                                                    <Icon className={`h-6 w-6 ${value.color}`} />
+                                                </div>
+                                                <CardTitle className="text-xl font-bold text-foreground">{value.title}</CardTitle>
+                                            </CardHeader>
+                                            <CardContent className="space-y-4">
+                                                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
 
-                    <motion.div
-                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={staggerContainer}
-                    >
-                        {benefits.map((benefit, index) => (
-                            <motion.div
-                                key={index}
-                                variants={fadeIn}
-                                className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted transition-colors"
-                            >
-                                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                                <p className="text-lg text-foreground">{benefit}</p>
-                            </motion.div>
-                        ))}
+
+                                            </CardContent>
+                                        </Card>
+                                    </motion.div>
+                                )
+                            })}
+                        </div>
                     </motion.div>
                 </div>
             </section>
@@ -256,10 +233,11 @@ const WhyPartnerPage: React.FC = () => {
                             <Button
                                 size="lg"
                                 variant="outline"
-                                className="border-white text-white hover:bg-white/10"
+                                className="border-white text-white hover:bg-white/10 bg-transparent"
                             >
                                 <Link to="/study-abroad/newzealand">Learn About New Zealand</Link>
                             </Button>
+
                         </div>
                     </motion.div>
                 </div>

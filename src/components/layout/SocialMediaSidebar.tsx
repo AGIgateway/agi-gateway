@@ -49,7 +49,7 @@ const SocialMediaSidebar: React.FC = () => {
                 w-[230px] h-12 -mr-[200px]
                 ${social.bgColor} ${social.hoverColor}
                 text-white
-                transition-all duration-200 ease-in-out delay-200
+                transition -all duration-200 ease-in-out delay-200
                 shadow-[0_0_6px_0_rgba(62,61,61,0.5)]
                 hover:-mr-[30px]
                 cursor-pointer
