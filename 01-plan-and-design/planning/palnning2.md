@@ -82,7 +82,10 @@
 - [x] Create banner
 - [x] About Us
 - [x] services background images
-- [ ] self assessment photo same size, button
+- [x] self assessment photo same size, button
+- [ ] hover effect on why partner
+- [ ] social media links like whatsapp
+- [ ] university logo
 
 ---
 

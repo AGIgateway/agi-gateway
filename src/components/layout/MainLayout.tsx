@@ -4,6 +4,7 @@ import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
+import SocialMediaSidebar from '@/components/layout/SocialMediaSidebar';
 
 interface MainLayoutProps {
     children: React.ReactNode;
@@ -18,6 +19,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             </main>
             <Footer />
             <WhatsAppButton />
+            <SocialMediaSidebar />
         </>
     );
 };

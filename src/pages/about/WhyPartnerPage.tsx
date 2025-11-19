@@ -4,7 +4,7 @@ import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { slideInLeft, slideInRight, staggerContainer, fadeIn } from "@/lib/animations"
+import { slideInLeft, slideInRight, staggerContainer, fadeIn, fadeInUp, staggerItem } from "@/lib/animations"
 import { Link } from "react-router-dom"
 import { Heart, Users, Award, Globe, Handshake, Target, CheckCircle2 } from 'lucide-react'
 
@@ -61,7 +61,7 @@ const WhyPartnerPage: React.FC = () => {
         <div className="flex flex-col min-h-screen bg-background">
             {/* Hero Section */}
             <section className="relative w-full py-20 sm:py-28 lg:py-36 overflow-hidden">
-                <div className="absolute inset-0 bg-primary opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-lime-600 opacity-90" />
                 <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10" />
 
                 <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -70,14 +70,12 @@ const WhyPartnerPage: React.FC = () => {
                         initial="hidden"
                         animate="visible"
                         variants={fadeIn}
-
-                        transition={{ duration: 0.6, ease: "easeOut" }}
                     >
                         <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl mb-6">
                             Why Partner with AGI Gateway?
                         </h1>
                         <p className="mx-auto max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl">
-                            More than consultants: we're your mentors, guides, and partners in your educational journey
+                            More than consultants — we're your mentors, guides, and partners in your educational journey
                         </p>
                     </motion.div>
                 </div>
@@ -126,8 +124,8 @@ const WhyPartnerPage: React.FC = () => {
                                     </p>
                                     <p className="font-medium text-foreground">
                                         With AGI Gateway, you're not just choosing a consultancy. You're choosing mentors who have lived your
-                                        dream, faced the same challenges, and built a trusted path for your success. Whether it is academically,
-                                        personally, or professionally AGI Gateway is with you all the way.
+                                        dream, faced the same challenges, and built a trusted path for your success — whether it is academically,
+                                        personally, or professionally.
                                     </p>
                                 </div>
 
@@ -159,10 +157,8 @@ const WhyPartnerPage: React.FC = () => {
                         className="text-center mb-12"
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeIn}
-
-                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={fadeInUp}
                     >
                         <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl mb-4">
                             What Makes Us Different
@@ -176,15 +172,11 @@ const WhyPartnerPage: React.FC = () => {
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: true, margin: "-100px" }}
                         variants={staggerContainer}
                     >
                         {values.map((value, index) => (
-                            <motion.div key={index}
-                                variants={fadeIn}
-
-                                transition={{ duration: 0.6, ease: "easeOut" }}
-                            >
+                            <motion.div key={index} variants={staggerItem}>
                                 <Card className={`h-full bg-gradient-to-br ${value.gradient} border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
                                     <CardContent className="p-6 flex flex-col gap-4">
                                         <div className="w-14 h-14 rounded-full bg-white/80 flex items-center justify-center text-primary">
@@ -209,8 +201,6 @@ const WhyPartnerPage: React.FC = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeIn}
-
-                        transition={{ duration: 0.6, ease: "easeOut" }}
                     >
                         <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl mb-4">
                             What You Get with AGI Gateway
@@ -231,8 +221,6 @@ const WhyPartnerPage: React.FC = () => {
                             <motion.div
                                 key={index}
                                 variants={fadeIn}
-
-                                transition={{ duration: 0.6, ease: "easeOut" }}
                                 className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted transition-colors"
                             >
                                 <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
@@ -251,8 +239,6 @@ const WhyPartnerPage: React.FC = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeIn}
-
-                        transition={{ duration: 0.6, ease: "easeOut" }}
                     >
                         <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl mb-6">
                             Ready to Start Your Journey?
@@ -270,7 +256,7 @@ const WhyPartnerPage: React.FC = () => {
                             <Button
                                 size="lg"
                                 variant="outline"
-                                className="border-white text-black hover:bg-accent/10"
+                                className="border-white text-white hover:bg-white/10"
                             >
                                 <Link to="/study-abroad/newzealand">Learn About New Zealand</Link>
                             </Button>
