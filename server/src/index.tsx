@@ -102,7 +102,7 @@ const handler = {
 
             const emailResult = await resend.emails.send({
                 from: "AGI Gateway <no-reply@agigateway.co.nz>",
-                to: ["info.agigateway@gmail.com"],
+                to: ["md.abdulawal@icloud.com"],
                 subject: subject,
                 html: html,
             })

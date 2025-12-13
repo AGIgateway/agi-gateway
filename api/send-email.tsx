@@ -113,8 +113,8 @@ export default async function handler(req: any, res: any) {
 
         // Send email using Resend
         const response = await resend.emails.send({
-            from: "AGI Gateway <info.agigateway@gmail.com>",
-            to: ["info.agigateway@gmail.com"],
+            from: "AGI Gateway <no-reply@agigateway.co.nz>",
+            to: ["md.abdulawal@icloud.com"],
             subject: subject,
             html: emailContent,
             replyTo: data.email,
