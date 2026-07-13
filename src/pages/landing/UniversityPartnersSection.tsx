@@ -59,83 +59,83 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
       website: "https://www.ara.ac.nz",
       category: "polytechnics",
     },
-    {
-      id: "2",
-      logo: "/images/img_mask_group.webp",
-      name: "University of Canterbury",
-      website: "https://www.canterbury.ac.nz",
-      category: "universities",
-    },
-    {
-      id: "3",
-      logo: "/images/img_lincoln_logo.webp",
-      name: "Lincoln University",
-      website: "https://www.lincoln.ac.nz",
-      category: "universities",
-    },
-    {
-      id: "4",
-      logo: "/images/img_university_of_a.webp",
-      name: "University of Auckland",
-      website: "https://www.auckland.ac.nz",
-      category: "universities",
-    },
-    {
-      id: "5",
-      logo: "/images/img_images_1_1.webp",
-      name: "Massey University",
-      website: "https://www.massey.ac.nz",
-      category: "universities",
-    },
-    {
-      id: "6",
-      logo: "/images/img_shield_1.webp",
-      name: "Victoria University of Wellington",
-      website: "https://www.wgtn.ac.nz",
-      category: "universities",
-    },
-    {
-      id: "7",
-      logo: "/images/EIT.webp",
-      name: "Eastern Institute of Technology (EIT)",
-      website: "https://www.eit.ac.nz",
-      category: "polytechnics",
-    },
-    {
-      id: "8",
-      logo: "/images/MIT.webp",
-      name: "Manukau Institute of Technology (MIT)",
-      website: "https://www.manukau.ac.nz",
-      category: "polytechnics",
-    },
-    {
-      id: "9",
-      logo: "/images/otago-poly.webp",
-      name: "Otago Polytechnic",
-      website: "https://www.op.ac.nz",
-      category: "polytechnics",
-    },
-    {
-      id: "10",
-      logo: "/images/SIT.webp",
-      name: "Southern Institute of Technology",
-      website: "https://www.sit.ac.nz",
-      category: "polytechnics",
-    },
-    {
-      id: "11",
-      logo: "/images/wit.webp",
-      name: "Waikato Institute of Technology (Wintec)",
-      website: "https://www.wintec.ac.nz/",
-      category: "polytechnics",
-    },
-    {
-      id: "12",
-      logo: "/images/WTT.webp",
-      name: "Western Institute of Technology at Taranaki (WITT)",
-      website: "https://www.witt.ac.nz",
-      category: "polytechnics",
-    },
+    // {
+    //   id: "2",
+    //   logo: "/images/img_mask_group.webp",
+    //   name: "University of Canterbury",
+    //   website: "https://www.canterbury.ac.nz",
+    //   category: "universities",
+    // },
+    // {
+    //   id: "3",
+    //   logo: "/images/img_lincoln_logo.webp",
+    //   name: "Lincoln University",
+    //   website: "https://www.lincoln.ac.nz",
+    //   category: "universities",
+    // },
+    // {
+    //   id: "4",
+    //   logo: "/images/img_university_of_a.webp",
+    //   name: "University of Auckland",
+    //   website: "https://www.auckland.ac.nz",
+    //   category: "universities",
+    // },
+    // {
+    //   id: "5",
+    //   logo: "/images/img_images_1_1.webp",
+    //   name: "Massey University",
+    //   website: "https://www.massey.ac.nz",
+    //   category: "universities",
+    // },
+    // {
+    //   id: "6",
+    //   logo: "/images/img_shield_1.webp",
+    //   name: "Victoria University of Wellington",
+    //   website: "https://www.wgtn.ac.nz",
+    //   category: "universities",
+    // },
+    // {
+    //   id: "7",
+    //   logo: "/images/EIT.webp",
+    //   name: "Eastern Institute of Technology (EIT)",
+    //   website: "https://www.eit.ac.nz",
+    //   category: "polytechnics",
+    // },
+    // {
+    //   id: "8",
+    //   logo: "/images/MIT.webp",
+    //   name: "Manukau Institute of Technology (MIT)",
+    //   website: "https://www.manukau.ac.nz",
+    //   category: "polytechnics",
+    // },
+    // {
+    //   id: "9",
+    //   logo: "/images/otago-poly.webp",
+    //   name: "Otago Polytechnic",
+    //   website: "https://www.op.ac.nz",
+    //   category: "polytechnics",
+    // },
+    // {
+    //   id: "10",
+    //   logo: "/images/SIT.webp",
+    //   name: "Southern Institute of Technology",
+    //   website: "https://www.sit.ac.nz",
+    //   category: "polytechnics",
+    // },
+    // {
+    //   id: "11",
+    //   logo: "/images/wit.webp",
+    //   name: "Waikato Institute of Technology (Wintec)",
+    //   website: "https://www.wintec.ac.nz/",
+    //   category: "polytechnics",
+    // },
+    // {
+    //   id: "12",
+    //   logo: "/images/WTT.webp",
+    //   name: "Western Institute of Technology at Taranaki (WITT)",
+    //   website: "https://www.witt.ac.nz",
+    //   category: "polytechnics",
+    // },
   ]
 
   const filteredUniversities =
@@ -168,9 +168,9 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
               <TabsTrigger value="all" className="text-sm sm:text-base">
                 All Institutions
               </TabsTrigger>
-              <TabsTrigger value="universities" className="text-sm sm:text-base">
+              {/* <TabsTrigger value="universities" className="text-sm sm:text-base">
                 Universities
-              </TabsTrigger>
+              </TabsTrigger> */}
               <TabsTrigger value="polytechnics" className="text-sm sm:text-base">
                 Polytechnics
               </TabsTrigger>
