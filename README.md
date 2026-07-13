@@ -85,6 +85,21 @@ This project uses Tailwind CSS for styling. The configuration includes:
 - Responsive design utilities
 - PostCSS and Autoprefixer integration
 
+## Site preview
+
+Preview Front end
+
+```bash
+cd src && \
+npm run dev -- --port 8080
+```
+Preview Server 
+
+```bash
+cd server && \
+npx wrangler dev
+```
+
 
 ## 📦 Deployment
 
