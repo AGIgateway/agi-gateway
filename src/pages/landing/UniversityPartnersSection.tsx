@@ -66,13 +66,13 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
     //   website: "https://www.canterbury.ac.nz",
     //   category: "universities",
     // },
-    // {
-    //   id: "3",
-    //   logo: "/images/img_lincoln_logo.webp",
-    //   name: "Lincoln University",
-    //   website: "https://www.lincoln.ac.nz",
-    //   category: "universities",
-    // },
+    {
+       id: "3",
+     logo: "/images/img_lincoln_logo.webp",
+      name: "Lincoln University",
+       website: "https://www.lincoln.ac.nz",
+      category: "universities",
+     },
     // {
     //   id: "4",
     //   logo: "/images/img_university_of_a.webp",
