@@ -155,7 +155,7 @@ const UniversityPartnersSection: React.FC = (): ReactElement => {
             id="university-partners-heading"
             className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-900 mb-4"
           >
-            Our Distinguished  <span className="text-white bg-green-900 px-2"> Intitutional Network</span>
+             Distinguished  <span className="text-white bg-green-900 px-2"> Intitutional Network</span>
           </h2>
           <p className="text-base sm:text-lg font-normal leading-relaxed text-gray-700 max-w-3xl mx-auto">
             Gain experience in your industry, make contacts, and be work-ready after graduation
